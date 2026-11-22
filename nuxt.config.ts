@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     dataDir: process.env.DATA_DIR || './data',
     passThreshold: 0.9,
     public: {
-      siteName: 'slide-course',
+      siteName: 'Lectern',
     },
   },
 

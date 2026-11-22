@@ -98,7 +98,7 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
     size: 'A4',
     layout: 'landscape',
     margin: 0,
-    info: { Title: `${labels.title} — ${input.courseTitle}`, Author: 'slide-course' },
+    info: { Title: `${labels.title} — ${input.courseTitle}`, Author: 'Lectern' },
   })
 
   doc.registerFont('latin', readFileSync(LATIN))

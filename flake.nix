@@ -1,5 +1,5 @@
 {
-  description = "slide-course — courses that are pptx decks (Nuxt 4 + baked slide images)";
+  description = "Lectern — courses that are pptx decks (Nuxt 4 + baked slide images)";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -16,11 +16,12 @@
             libreoffice        # soffice --convert-to pdf
             qrencode           # QR on the certificate
             git
+            gh                 # create repos, push, manage releases
           ];
           shellHook = ''
             export COURSE_ROOT="''${COURSE_ROOT:-$PWD/courses}"
             export DATA_DIR="''${DATA_DIR:-$PWD/data}"
-            echo "slide-course: node $(node -v) · $(soffice --version 2>/dev/null | head -1)"
+            echo "Lectern: node $(node -v) · $(soffice --version 2>/dev/null | head -1)"
           '';
         };
       });

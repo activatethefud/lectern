@@ -1,5 +1,5 @@
 {
-  "name": "slide-course",
+  "name": "lectern",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -35,5 +35,6 @@
     "typescript": "^5.9.3",
     "vitest": "^4.0.2",
     "vue-tsc": "^2.2.10"
-  }
+  },
+  "description": "Courses that are presentations: read a slide, answer, earn a certificate"
 }

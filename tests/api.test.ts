@@ -77,7 +77,7 @@ describe('player api', async () => {
     build: true,
     env: {
       // keep test attempts out of the real database
-      DATA_DIR: mkdtempSync(join(tmpdir(), 'slide-course-test-')),
+      DATA_DIR: mkdtempSync(join(tmpdir(), 'Lectern-test-')),
       COURSE_ROOT: join(process.cwd(), 'courses'),
     },
   })

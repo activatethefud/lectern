@@ -30,7 +30,7 @@ courses/<slug>/
 | `npm run bake:check` | fails if `manifest.deckSha` ≠ sha256 of `slides.pptx` |
 | `npm run build && npm start` | production node server on `.output/server/index.mjs` |
 | `npm run typecheck` | `vue-tsc` over app + server |
-| `docker compose up -d --build` | container on 127.0.0.1:8765, data in the `course-data` volume |
+| `docker compose up -d --build` | container on 127.0.0.1:8765, data in the `lectern-data` volume |
 | `docker compose run --rm bake` | re-bake decks inside a container (LibreOffice stays out of the runtime image) |
 
 Runtime images are **Node only** on purpose — if you find yourself adding `libreoffice`,

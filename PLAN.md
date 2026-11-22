@@ -1,4 +1,4 @@
-# slide-course — plan (v2)
+# Lectern — plan (v2)
 
 **Status:** working up to the report. Nuxt 4 app; catalogue + search + 3 locales; per-course cover;
 player with server-enforced answer locking and resume; `.pptx` download; slide images baked and
@@ -46,7 +46,7 @@ npm registry is reachable (nuxt 4.6.4, @nuxtjs/i18n 10.6.0, pdf-lib 1.17.1 resol
 ## 3. Layout
 
 ```
-~/slide-course/
+~/Lectern/
   nuxt.config.ts  package.json  vitest.config.ts  flake.nix  serve  test
   PLAN.md  README.md  AGENTS.md
   app/
@@ -322,7 +322,7 @@ docker compose run --rm bake        # re-bake courses/*/slides/*.jpg in a contai
 
 - Runtime image is Node-only (~180 MB); LibreOffice lives only in the `bake` stage/profile,
   keeping the design honest: **production serves pre-baked images and a small Node process.**
-- `course-data` volume → `NUXT_DATA_DIR=/data` (SQLite survives rebuilds); `courses/` is read-only
+- `lectern-data` volume → `NUXT_DATA_DIR=/data` (SQLite survives rebuilds); `courses/` is read-only
   inside the image (bind-mount it if you prefer adding decks without a rebuild).
 - Behind Caddy/nginx: TLS, brotli/gzip, `immutable` caching for `/c/*/slides/*.jpg`.
 - CI/deploy gate: `npm run bake:check` fails when a deck changed without re-baking.

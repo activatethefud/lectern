@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-# slide-course — production image is plain Node: slides are pre-baked to jpg and committed,
+# Lectern — production image is plain Node: slides are pre-baked to jpg and committed,
 # so LibreOffice and poppler are only needed by the `bake` stage (authoring machine / CI).
 
 ########## base ##########

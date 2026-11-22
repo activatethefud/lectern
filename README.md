@@ -1,4 +1,4 @@
-# slide-course
+# Lectern
 
 A no-login course website where **a course is a `.pptx` deck**. You read a slide, answer the
 4-option question pinned under it, move on; at the end you get a report (wrong answers marked,
@@ -30,7 +30,7 @@ curl -s localhost:8765/api/health   # ok + course count
 ```
 
 - The runtime image is **Node only** (~180 MB): slides are pre-baked, so no LibreOffice in prod.
-- The `course-data` volume holds `course.db` (attempts, certificates) and survives rebuilds.
+- The `lectern-data` volume holds `course.db` (attempts, certificates) and survives rebuilds.
 - Re-bake decks without installing LibreOffice on the host: `docker compose run --rm bake`
   (writes `courses/*/slides/` back into your working tree).
 - Courses are baked into the image; bind-mount `./courses:/app/courses:ro` in

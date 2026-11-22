@@ -3,8 +3,8 @@ services:
     build:
       context: .
       target: runtime
-    image: slide-course:latest
-    container_name: slide-course
+    image: lectern:latest
+    container_name: lectern
     ports:
       - "8765:3000"
     environment:
@@ -16,7 +16,7 @@ services:
       NUXT_CERTIFICATE_SECRET: ${CERTIFICATE_SECRET:-}
     volumes:
       # attempts + certificates db; survives image rebuilds
-      - course-data:/data
+      - lectern-data:/data
       # uncomment to add courses without rebuilding the image
       # - ./courses:/app/courses:ro
     restart: unless-stopped
@@ -39,4 +39,4 @@ services:
       - ./courses:/app/courses
 
 volumes:
-  course-data:
+  lectern-data:
