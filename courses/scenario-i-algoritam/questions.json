@@ -1,0 +1,80 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Шта је задатак у овом сценарију?",
+        "en": "What is the task in this scenario?",
+        "zh-CN": "这个场景中的任务是什么？"
+      },
+      "options": [
+        {
+          "sr": "Сабери два учитана броја и испиши њихов збир",
+          "en": "Add two input numbers and write their sum",
+          "zh-CN": "将两个输入数字相加并写出它们的和"
+        },
+        {
+          "sr": "Учитати три броја и исписати њихов производ",
+          "en": "Read three numbers and print their product",
+          "zh-CN": "读取三个数字并打印它们的乘积"
+        },
+        {
+          "sr": "Сабрати два броја и исписати разлику",
+          "en": "Add two numbers and print the difference",
+          "zh-CN": "将两个数字相加并打印它们的差"
+        },
+        {
+          "sr": "Учитати један број и исписати квадрат",
+          "en": "Read one number and print its square",
+          "zh-CN": "读取一个数字并打印它的平方"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Задатак је да се саберу два броја и испише њихов збир.",
+        "en": "The task is to add two numbers and write their sum.",
+        "zh-CN": "任务是将两个数字相加并写出它们的和。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Која активност траје најдуже у сценарију?",
+        "en": "Which activity lasts the longest in the scenario?",
+        "zh-CN": "在场景中哪个活动持续时间最长？"
+      },
+      "options": [
+        {
+          "sr": "Говори:”Алгоритам је упутство...”",
+          "en": "Says: 'An algorithm is an instruction...'",
+          "zh-CN": "说：“算法是一个指令...”"
+        },
+        {
+          "sr": "Говори:”Шта је алгоритам?”",
+          "en": "Says: 'What is an algorithm?'",
+          "zh-CN": "说：“什么是算法？”"
+        },
+        {
+          "sr": "Говори:”Знам!”",
+          "en": "Says: 'I know!'",
+          "zh-CN": "说：“我知道！”"
+        },
+        {
+          "sr": "Мења костим",
+          "en": "Changes costume",
+          "zh-CN": "换服装"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Активност 'Говори:”Алгоритам је упутство...”' траје 5 секунди.",
+        "en": "The activity 'Says: 'An algorithm is an instruction...'' lasts 5 seconds.",
+        "zh-CN": "活动“说：‘算法是一个指令...’持续5秒。"
+      }
+    }
+  ]
+}

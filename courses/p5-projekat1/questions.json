@@ -1,0 +1,152 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koliko faza ima projektna nastava?",
+        "en": "How many phases does project-based learning have?",
+        "zh-CN": "项目式学习有多少个阶段？"
+      },
+      "options": [
+        {
+          "sr": "5",
+          "en": "5",
+          "zh-CN": "5"
+        },
+        {
+          "sr": "3",
+          "en": "3",
+          "zh-CN": "3"
+        },
+        {
+          "sr": "4",
+          "en": "4",
+          "zh-CN": "4"
+        },
+        {
+          "sr": "6",
+          "en": "6",
+          "zh-CN": "6"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Projektna nastava se realizuje u 5 faza.",
+        "en": "Project-based learning is carried out in 5 phases.",
+        "zh-CN": "项目式学习分为5个阶段。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koja tema se ne pominje u prezentaciji?",
+        "en": "Which topic is not mentioned in the presentation?",
+        "zh-CN": "演示文稿中没有提到哪个主题？"
+      },
+      "options": [
+        {
+          "sr": "Digitalno nasilje",
+          "en": "Digital violence",
+          "zh-CN": "数字暴力"
+        },
+        {
+          "sr": "Ekologija",
+          "en": "Ecology",
+          "zh-CN": "生态学"
+        },
+        {
+          "sr": "Autorska prava",
+          "en": "Copyright",
+          "zh-CN": "版权"
+        },
+        {
+          "sr": "Zaštita ličnih podataka",
+          "en": "Protection of personal data",
+          "zh-CN": "个人数据保护"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Tema ekologije se ne pominje u prezentaciji.",
+        "en": "The topic of ecology is not mentioned in the presentation.",
+        "zh-CN": "演示文稿中没有提到生态学主题。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koji tim ima zadatak da analizira prikupljeni materijal?",
+        "en": "Which team is responsible for analyzing the collected material?",
+        "zh-CN": "哪个团队负责分析收集的材料？"
+      },
+      "options": [
+        {
+          "sr": "Tim Aca i Jece",
+          "en": "Team Aca and Jece",
+          "zh-CN": "阿察和耶察团队"
+        },
+        {
+          "sr": "Tim Mica i Peca",
+          "en": "Team Mica and Peca",
+          "zh-CN": "米查和佩查团队"
+        },
+        {
+          "sr": "Tim Aca, Jece, Mica, Peca",
+          "en": "Team Aca, Jece, Mica, Peca",
+          "zh-CN": "阿察、耶察、米查、佩查团队"
+        },
+        {
+          "sr": "Tim samo Mica",
+          "en": "Team only Mica",
+          "zh-CN": "仅米查团队"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Tim Aca, Jece, Mica, Peca analizira prikupljeni materijal.",
+        "en": "Team Aca, Jece, Mica, Peca analyzes the collected material.",
+        "zh-CN": "阿察、耶察、米查、佩查团队分析收集的材料。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta je deo izrade projekta?",
+        "en": "What is part of the project creation?",
+        "zh-CN": "项目创建的组成部分是什么？"
+      },
+      "options": [
+        {
+          "sr": "Prikupljanje materijala",
+          "en": "Collecting materials",
+          "zh-CN": "收集材料"
+        },
+        {
+          "sr": "Samo pisanje",
+          "en": "Just writing",
+          "zh-CN": "仅仅写作"
+        },
+        {
+          "sr": "Samo prezentacija",
+          "en": "Just presentation",
+          "zh-CN": "仅仅演示"
+        },
+        {
+          "sr": "Samo analiza",
+          "en": "Just analysis",
+          "zh-CN": "仅仅分析"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Prikupljanje materijala je deo izrade projekta.",
+        "en": "Collecting materials is part of project creation.",
+        "zh-CN": "收集材料是项目创建的一部分。"
+      }
+    }
+  ]
+}

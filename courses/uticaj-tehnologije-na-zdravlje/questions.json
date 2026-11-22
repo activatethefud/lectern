@@ -1,0 +1,388 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koji je cilj časa?",
+        "en": "What is the goal of the lesson?",
+        "zh-CN": "本课的目标是什么？"
+      },
+      "options": [
+        {
+          "sr": "Procena vremena provedenog pred ekranom",
+          "en": "Assessing time spent in front of the screen",
+          "zh-CN": "评估在屏幕前花费的时间"
+        },
+        {
+          "sr": "Učenje o istoriji tehnologije",
+          "en": "Learning about the history of technology",
+          "zh-CN": "了解技术的历史"
+        },
+        {
+          "sr": "Razgovor o popularnim video igricama",
+          "en": "Discussion about popular video games",
+          "zh-CN": "讨论流行的视频游戏"
+        },
+        {
+          "sr": "Učenje o različitim vrstama računara",
+          "en": "Learning about different types of computers",
+          "zh-CN": "了解不同类型的计算机"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Cilj časa je procena vremena provedenog pred ekranom.",
+        "en": "The goal of the lesson is to assess the time spent in front of the screen.",
+        "zh-CN": "本课的目标是评估在屏幕前花费的时间。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koliko se preporučuje vremena pred ekranom van škole?",
+        "en": "How much screen time is recommended outside of school?",
+        "zh-CN": "学校外推荐的屏幕时间是多少？"
+      },
+      "options": [
+        {
+          "sr": "2 sata",
+          "en": "2 hours",
+          "zh-CN": "2小时"
+        },
+        {
+          "sr": "4 sata",
+          "en": "4 hours",
+          "zh-CN": "4小时"
+        },
+        {
+          "sr": "1 sat",
+          "en": "1 hour",
+          "zh-CN": "1小时"
+        },
+        {
+          "sr": "6 sati",
+          "en": "6 hours",
+          "zh-CN": "6小时"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Preporučeno vreme pred ekranom van škole je 2 sata.",
+        "en": "The recommended screen time outside of school is 2 hours.",
+        "zh-CN": "学校外推荐的屏幕时间是2小时。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koji deo tela može biti pogođen zbog lošeg gledanja u ekran?",
+        "en": "Which part of the body can be affected by poor screen viewing?",
+        "zh-CN": "哪个身体部位可能会受到不良屏幕观看的影响？"
+      },
+      "options": [
+        {
+          "sr": "Oči",
+          "en": "Eyes",
+          "zh-CN": "眼睛"
+        },
+        {
+          "sr": "Stopala",
+          "en": "Feet",
+          "zh-CN": "脚"
+        },
+        {
+          "sr": "Ruke",
+          "en": "Hands",
+          "zh-CN": "手"
+        },
+        {
+          "sr": "Uši",
+          "en": "Ears",
+          "zh-CN": "耳朵"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Loše gledanje u ekran može izazvati probleme sa očima.",
+        "en": "Poor screen viewing can cause issues with the eyes.",
+        "zh-CN": "不良的屏幕观看可能会导致眼睛问题。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Koje pravilo se preporučuje za pravilno sedenje?",
+        "en": "What rule is recommended for proper sitting?",
+        "zh-CN": "什么规则建议正确坐姿？"
+      },
+      "options": [
+        {
+          "sr": "Ekran na 50–70 cm od očiju",
+          "en": "Screen at 50–70 cm from the eyes",
+          "zh-CN": "屏幕距离眼睛50-70厘米"
+        },
+        {
+          "sr": "Sedenje bez naslona",
+          "en": "Sitting without back support",
+          "zh-CN": "没有靠背的坐姿"
+        },
+        {
+          "sr": "Ruke pod uglom od 180°",
+          "en": "Hands at an angle of 180°",
+          "zh-CN": "手的角度为180°"
+        },
+        {
+          "sr": "Ekran na krilu",
+          "en": "Screen on the lap",
+          "zh-CN": "屏幕放在腿上"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Preporučuje se da ekran bude na udaljenosti od 50–70 cm od očiju.",
+        "en": "It is recommended that the screen be at a distance of 50–70 cm from the eyes.",
+        "zh-CN": "建议屏幕距离眼睛50-70厘米。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Šta je pravilo 20-20-20?",
+        "en": "What is the 20-20-20 rule?",
+        "zh-CN": "什么是20-20-20规则？"
+      },
+      "options": [
+        {
+          "sr": "Svaka 20 minuta, gledaj 20 sekundi u objekat na 6 metara",
+          "en": "Every 20 minutes, look at an object 6 meters away for 20 seconds",
+          "zh-CN": "每20分钟，看6米外的物体20秒"
+        },
+        {
+          "sr": "Svaka 20 minuta, ustani i trči 20 metara",
+          "en": "Every 20 minutes, stand up and run 20 meters",
+          "zh-CN": "每20分钟，站起来跑20米"
+        },
+        {
+          "sr": "Svaka 20 minuta, menjaj aktivnost 20 minuta",
+          "en": "Every 20 minutes, change activity for 20 minutes",
+          "zh-CN": "每20分钟，改变活动20分钟"
+        },
+        {
+          "sr": "Svaka 20 minuta, provedi 20 minuta bez ekrana",
+          "en": "Every 20 minutes, spend 20 minutes without a screen",
+          "zh-CN": "每20分钟，花20分钟不看屏幕"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Pravilo 20-20-20 podrazumeva gledanje u objekat na 6 metara svake 20 minuta.",
+        "en": "The 20-20-20 rule involves looking at an object 6 meters away every 20 minutes.",
+        "zh-CN": "20-20-20规则是每20分钟看6米外的物体。"
+      }
+    },
+    {
+      "n": 7,
+      "skip": true
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Koji znak može ukazivati na zavisnost od tehnologije?",
+        "en": "What sign can indicate technology addiction?",
+        "zh-CN": "什么迹象可能表明对技术的上瘾？"
+      },
+      "options": [
+        {
+          "sr": "Nervoz bez uređaja",
+          "en": "Nervousness without devices",
+          "zh-CN": "没有设备时的紧张"
+        },
+        {
+          "sr": "Više vremena za sport",
+          "en": "More time for sports",
+          "zh-CN": "更多时间用于运动"
+        },
+        {
+          "sr": "Povećana pažnja u školi",
+          "en": "Increased attention in school",
+          "zh-CN": "在学校注意力提高"
+        },
+        {
+          "sr": "Zadovoljstvo bez tehnologije",
+          "en": "Satisfaction without technology",
+          "zh-CN": "没有技术的满足感"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Nervoz bez uređaja može biti znak zavisnosti od tehnologije.",
+        "en": "Nervousness without devices can be a sign of technology addiction.",
+        "zh-CN": "没有设备时的紧张可能是对技术上瘾的迹象。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Kako plavo svetlo utiče na san?",
+        "en": "How does blue light affect sleep?",
+        "zh-CN": "蓝光如何影响睡眠？"
+      },
+      "options": [
+        {
+          "sr": "Usporava stvaranje melatonina",
+          "en": "Slows down melatonin production",
+          "zh-CN": "减缓褪黑激素的产生"
+        },
+        {
+          "sr": "Povećava kvalitet sna",
+          "en": "Improves sleep quality",
+          "zh-CN": "改善睡眠质量"
+        },
+        {
+          "sr": "Pomaže bržem uspavljivanju",
+          "en": "Helps to fall asleep faster",
+          "zh-CN": "帮助更快入睡"
+        },
+        {
+          "sr": "Smanjuje umor tokom dana",
+          "en": "Reduces fatigue during the day",
+          "zh-CN": "减少白天的疲劳"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Plavo svetlo usporava stvaranje melatonina, što otežava san.",
+        "en": "Blue light slows down melatonin production, making it harder to sleep.",
+        "zh-CN": "蓝光减缓褪黑激素的产生，使入睡变得更加困难。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Koji primer je zdrav?",
+        "en": "Which example is healthy?",
+        "zh-CN": "哪个例子是健康的？"
+      },
+      "options": [
+        {
+          "sr": "Nakon 20 minuta rada, gledam kroz prozor 20 sekundi",
+          "en": "After 20 minutes of work, I look out the window for 20 seconds",
+          "zh-CN": "工作20分钟后，我看窗外20秒"
+        },
+        {
+          "sr": "Telefon mi je na jastuku, proveravam poruke pre spavanja",
+          "en": "My phone is on the pillow, I check messages before sleeping",
+          "zh-CN": "我的手机放在枕头上，我在睡前查看消息"
+        },
+        {
+          "sr": "Učim dva sata bez pauze, pa nastavim da igram",
+          "en": "I study for two hours without a break, then continue to play",
+          "zh-CN": "我学习两个小时没有休息，然后继续玩"
+        },
+        {
+          "sr": "Sjedim u fotelji, ekran na nivou očiju, stopala na podu",
+          "en": "I sit in a chair, screen at eye level, feet on the floor",
+          "zh-CN": "我坐在椅子上，屏幕在眼睛水平，脚放在地上"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Gledanje kroz prozor nakon rada je zdrav način da se napravi pauza.",
+        "en": "Looking out the window after working is a healthy way to take a break.",
+        "zh-CN": "工作后看窗外是健康的休息方式。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Koje pravilo se preporučuje za zdravu upotrebu tehnologije?",
+        "en": "What rule is recommended for healthy technology use?",
+        "zh-CN": "什么规则建议健康使用技术？"
+      },
+      "options": [
+        {
+          "sr": "Telefon van spavaće sobe",
+          "en": "Phone out of the bedroom",
+          "zh-CN": "手机放在卧室外"
+        },
+        {
+          "sr": "Korišćenje tehnologije bez pauza",
+          "en": "Using technology without breaks",
+          "zh-CN": "不休息地使用技术"
+        },
+        {
+          "sr": "Sedenje bez naslona",
+          "en": "Sitting without back support",
+          "zh-CN": "没有靠背的坐姿"
+        },
+        {
+          "sr": "Gledanje u ekran više od 4 sata",
+          "en": "Looking at the screen for more than 4 hours",
+          "zh-CN": "看屏幕超过4小时"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Preporučuje se da telefon bude van spavaće sobe radi boljeg sna.",
+        "en": "It is recommended to keep the phone out of the bedroom for better sleep.",
+        "zh-CN": "建议将手机放在卧室外以获得更好的睡眠。"
+      }
+    },
+    {
+      "n": 12,
+      "q": {
+        "sr": "Šta treba da uradite za svaku aktivnost u dnevniku ekrana?",
+        "en": "What should you do for each activity in the screen diary?",
+        "zh-CN": "在屏幕日记中，每项活动应该做什么？"
+      },
+      "options": [
+        {
+          "sr": "Zapisati vreme i da li ste napravili pauzu",
+          "en": "Record the time and whether you took a break",
+          "zh-CN": "记录时间和是否休息过"
+        },
+        {
+          "sr": "Samo zabeležiti vreme",
+          "en": "Just note the time",
+          "zh-CN": "只记录时间"
+        },
+        {
+          "sr": "Zaboraviti na pauze",
+          "en": "Forget about breaks",
+          "zh-CN": "忘记休息"
+        },
+        {
+          "sr": "Zapisati samo aktivnosti bez vremena",
+          "en": "Record only activities without time",
+          "zh-CN": "只记录活动而不记录时间"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Za svaku aktivnost u dnevniku ekrana treba zabeležiti vreme i da li je napravljena pauza.",
+        "en": "For each activity in the screen diary, you should record the time and whether a break was taken.",
+        "zh-CN": "在屏幕日记中，每项活动都应记录时间和是否休息。"
+      }
+    },
+    {
+      "n": 13,
+      "skip": true
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    },
+    {
+      "n": 16,
+      "skip": true
+    }
+  ]
+}

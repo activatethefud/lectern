@@ -1,0 +1,79 @@
+{
+  "lang": "en",
+  "deckSha": "1d1c97fc4d5c4694018cff25092e25f834241a627f413721fa655a027fa85bfb",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "Н",
+        "иске (стрингови)"
+      ],
+      "dst": [
+        "Strings",
+        ""
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "С",
+        "лова, цифре, размак, интерпункцијске знакове ",
+        "(",
+        "нпр. тачку, ",
+        "запету",
+        ", ",
+        "упитник, узвичник) ",
+        "једним ",
+        "именом називамо ",
+        "карактери",
+        ".",
+        "Низ ",
+        "карактера чини ",
+        "ниску",
+        " или ",
+        "стринг",
+        " ",
+        "."
+      ],
+      "dst": [
+        "Letters, numbers, spaces, punctuation marks (e.g., period, comma, question mark, exclamation mark)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "are collectively called characters.",
+        "",
+        "",
+        "",
+        "A sequence of characters forms a string.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Операције над стринговима"
+      ],
+      "dst": [
+        "Operations on strings"
+      ]
+    },
+    {
+      "n": 4,
+      "src": [
+        "Функције за рад са стринговима"
+      ],
+      "dst": [
+        "Functions for working with strings"
+      ]
+    }
+  ]
+}

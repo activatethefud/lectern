@@ -1,0 +1,21 @@
+{
+  "slug": "petlje",
+  "title": {
+    "sr": "Ponavljanje u programiranju",
+    "en": "Repetition in Programming",
+    "zh-CN": "编程中的重复"
+  },
+  "description": {
+    "sr": "Učenje o ponavljanju u programiranju kroz primere.",
+    "en": "Learning about repetition in programming through examples.",
+    "zh-CN": "通过示例学习编程中的重复。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred",
+    "programiranje",
+    "petlje"
+  ],
+  "lang": "sr",
+  "order": 40
+}

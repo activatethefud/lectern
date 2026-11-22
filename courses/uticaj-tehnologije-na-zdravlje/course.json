@@ -1,0 +1,22 @@
+{
+  "slug": "uticaj-tehnologije-na-zdravlje",
+  "title": {
+    "sr": "Uticaj tehnologije na zdravlje",
+    "en": "The Impact of Technology on Health",
+    "zh-CN": "技术对健康的影响"
+  },
+  "description": {
+    "sr": "Razumevanje kako tehnologija utiče na naše zdravlje i pravila za zdravu upotrebu ekrana.",
+    "en": "Understanding how technology affects our health and rules for healthy screen use.",
+    "zh-CN": "了解技术如何影响我们的健康以及健康使用屏幕的规则。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred",
+    "zdravlje",
+    "tehnologija",
+    "ekran"
+  ],
+  "lang": "sr",
+  "order": 16
+}

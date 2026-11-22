@@ -1,0 +1,19 @@
+{
+  "slug": "logicke-operacije",
+  "title": {
+    "sr": "Matematička Logika",
+    "en": "Mathematical Logic",
+    "zh-CN": "数学逻辑"
+  },
+  "description": {
+    "sr": "Ovaj kviz pomaže učenicima da razumeju osnovne pojmove matematičke logike.",
+    "en": "This quiz helps students understand the basic concepts of mathematical logic.",
+    "zh-CN": "这个测验帮助学生理解数学逻辑的基本概念。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred"
+  ],
+  "lang": "sr",
+  "order": 15
+}

@@ -1,0 +1,152 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koliko faza ima projektna nastava?",
+        "en": "How many phases does project-based learning have?",
+        "zh-CN": "项目式学习有多少个阶段？"
+      },
+      "options": [
+        {
+          "sr": "3",
+          "en": "3",
+          "zh-CN": "3"
+        },
+        {
+          "sr": "5",
+          "en": "5",
+          "zh-CN": "5"
+        },
+        {
+          "sr": "7",
+          "en": "7",
+          "zh-CN": "7"
+        },
+        {
+          "sr": "4",
+          "en": "4",
+          "zh-CN": "4"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Projektna nastava se realizuje u 5 faza.",
+        "en": "Project-based learning is carried out in 5 phases.",
+        "zh-CN": "项目式学习分为5个阶段。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koja tema nije navedena u prezentaciji?",
+        "en": "Which topic is not mentioned in the presentation?",
+        "zh-CN": "演示文稿中没有提到哪个主题？"
+      },
+      "options": [
+        {
+          "sr": "Biologija",
+          "en": "Biology",
+          "zh-CN": "生物学"
+        },
+        {
+          "sr": "Geografija",
+          "en": "Geography",
+          "zh-CN": "地理"
+        },
+        {
+          "sr": "Matematika",
+          "en": "Mathematics",
+          "zh-CN": "数学"
+        },
+        {
+          "sr": "Istorija",
+          "en": "History",
+          "zh-CN": "历史"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Tema 'Matematika' nije navedena u prezentaciji.",
+        "en": "The topic 'Mathematics' is not mentioned in the presentation.",
+        "zh-CN": "演示文稿中没有提到“数学”主题。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koji deo aktivnosti traje 15 minuta?",
+        "en": "Which activity lasts 15 minutes?",
+        "zh-CN": "哪个活动持续15分钟？"
+      },
+      "options": [
+        {
+          "sr": "Izrada scenarija kviza",
+          "en": "Creating the quiz scenario",
+          "zh-CN": "创建测验方案"
+        },
+        {
+          "sr": "Prikupljanje materijala",
+          "en": "Collecting materials",
+          "zh-CN": "收集材料"
+        },
+        {
+          "sr": "Dizajniranje",
+          "en": "Designing",
+          "zh-CN": "设计"
+        },
+        {
+          "sr": "Programiranje",
+          "en": "Programming",
+          "zh-CN": "编程"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Izrada scenarija kviza traje 15 minuta.",
+        "en": "Creating the quiz scenario lasts 15 minutes.",
+        "zh-CN": "创建测验方案持续15分钟。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta se ne radi tokom izrade projekta?",
+        "en": "What is not done during project creation?",
+        "zh-CN": "在项目创建过程中不做什么？"
+      },
+      "options": [
+        {
+          "sr": "Prikupljanje materijala",
+          "en": "Collecting materials",
+          "zh-CN": "收集材料"
+        },
+        {
+          "sr": "Izrada projektne dokumentacije",
+          "en": "Creating project documentation",
+          "zh-CN": "创建项目文档"
+        },
+        {
+          "sr": "Pisanje eseja",
+          "en": "Writing an essay",
+          "zh-CN": "写论文"
+        },
+        {
+          "sr": "Priprema za izlaganje",
+          "en": "Preparing for presentation",
+          "zh-CN": "准备演示"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Pisanje eseja nije deo izrade projekta.",
+        "en": "Writing an essay is not part of project creation.",
+        "zh-CN": "写论文不是项目创建的一部分。"
+      }
+    }
+  ]
+}

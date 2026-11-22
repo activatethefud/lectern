@@ -1,0 +1,21 @@
+{
+  "slug": "p6-projekat1",
+  "title": {
+    "sr": "Projekat 1",
+    "en": "Project 1",
+    "zh-CN": "项目 1"
+  },
+  "description": {
+    "sr": "Ovaj projekat obuhvata faze planiranja, izrade i evaluacije.",
+    "en": "This project includes the phases of planning, execution, and evaluation.",
+    "zh-CN": "该项目包括规划、执行和评估阶段。"
+  },
+  "tags": [
+    "informatika",
+    "projekat",
+    "6. razred",
+    "učenje"
+  ],
+  "lang": "sr",
+  "order": 46
+}

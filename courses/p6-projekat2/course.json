@@ -1,0 +1,21 @@
+{
+  "slug": "p6-projekat2",
+  "title": {
+    "sr": "Projekat",
+    "en": "Project",
+    "zh-CN": "项目"
+  },
+  "description": {
+    "sr": "Učenje o fazama i aktivnostima u izradi projekta.",
+    "en": "Learning about the phases and activities in project development.",
+    "zh-CN": "学习项目开发中的阶段和活动。"
+  },
+  "tags": [
+    "informatika",
+    "projekat",
+    "6. razred",
+    "učenje"
+  ],
+  "lang": "sr",
+  "order": 47
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "word-podsetnik",
+  "title": {
+    "sr": "Osnovi Microsoft WORD-a",
+    "en": "Basics of Microsoft WORD",
+    "zh-CN": "Microsoft WORD基础知识"
+  },
+  "description": {
+    "sr": "Učenje osnovnih funkcija Microsoft WORD-a.",
+    "en": "Learning the basic functions of Microsoft WORD.",
+    "zh-CN": "学习Microsoft WORD的基本功能。"
+  },
+  "tags": [
+    "informatika",
+    "6. razred",
+    "microsoft",
+    "word",
+    "osnovno"
+  ],
+  "lang": "sr",
+  "order": 23
+}

@@ -1,0 +1,420 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koje su ključne tačke koje učenik treba da razume na kraju časa?",
+        "en": "What are the key points the student should understand by the end of the lesson?",
+        "zh-CN": "学生在课程结束时应该理解哪些关键点？"
+      },
+      "options": [
+        {
+          "sr": "Razlikuje URL, DNS i IP adresu",
+          "en": "Distinguishes URL, DNS, and IP address",
+          "zh-CN": "区分URL、DNS和IP地址"
+        },
+        {
+          "sr": "Razume kako se koristi Microsoft Word",
+          "en": "Understands how to use Microsoft Word",
+          "zh-CN": "了解如何使用Microsoft Word"
+        },
+        {
+          "sr": "Zna kako da programira u Pythonu",
+          "en": "Knows how to program in Python",
+          "zh-CN": "知道如何用Python编程"
+        },
+        {
+          "sr": "Ima znanje o hardveru računara",
+          "en": "Has knowledge about computer hardware",
+          "zh-CN": "了解计算机硬件"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Učenik treba da razume osnovne pojmove vezane za internet.",
+        "en": "The student should understand basic concepts related to the internet.",
+        "zh-CN": "学生应该理解与互联网相关的基本概念。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koji je prvi korak kada se unese adresa u pretraživač?",
+        "en": "What is the first step when an address is entered in the browser?",
+        "zh-CN": "在浏览器中输入地址时的第一步是什么？"
+      },
+      "options": [
+        {
+          "sr": "Ukućuje se adresa",
+          "en": "The address is entered",
+          "zh-CN": "输入地址"
+        },
+        {
+          "sr": "Računar traži IP adresu",
+          "en": "The computer searches for the IP address",
+          "zh-CN": "计算机搜索IP地址"
+        },
+        {
+          "sr": "DNS vraća stranicu",
+          "en": "DNS returns the page",
+          "zh-CN": "DNS返回页面"
+        },
+        {
+          "sr": "Zahtev ide serveru",
+          "en": "The request goes to the server",
+          "zh-CN": "请求发送到服务器"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Prvi korak je unos adrese u pretraživač.",
+        "en": "The first step is entering the address in the browser.",
+        "zh-CN": "第一步是在浏览器中输入地址。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Šta predstavlja deo 'https' u URL adresi?",
+        "en": "What does the 'https' part in a URL address represent?",
+        "zh-CN": "URL地址中的'http'部分代表什么？"
+      },
+      "options": [
+        {
+          "sr": "Protokol komunikacije",
+          "en": "Communication protocol",
+          "zh-CN": "通信协议"
+        },
+        {
+          "sr": "Ime servera",
+          "en": "Name of the server",
+          "zh-CN": "服务器名称"
+        },
+        {
+          "sr": "Putanja do datoteke",
+          "en": "Path to the file",
+          "zh-CN": "文件路径"
+        },
+        {
+          "sr": "Domena sajta",
+          "en": "Domain of the site",
+          "zh-CN": "网站域名"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "'https' označava protokol komunikacije koji se koristi.",
+        "en": "'https' indicates the communication protocol being used.",
+        "zh-CN": "'https'表示正在使用的通信协议。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Koja je ispravna IPv4 adresa?",
+        "en": "Which is a valid IPv4 address?",
+        "zh-CN": "哪个是有效的IPv4地址？"
+      },
+      "options": [
+        {
+          "sr": "192.168.1.10",
+          "en": "192.168.1.10",
+          "zh-CN": "192.168.1.10"
+        },
+        {
+          "sr": "256.100.50.25",
+          "en": "256.100.50.25",
+          "zh-CN": "256.100.50.25"
+        },
+        {
+          "sr": "192.168.1.300",
+          "en": "192.168.1.300",
+          "zh-CN": "192.168.1.300"
+        },
+        {
+          "sr": "192.168.1",
+          "en": "192.168.1",
+          "zh-CN": "192.168.1"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ispravna adresa mora imati oktete između 0 i 255.",
+        "en": "A valid address must have octets between 0 and 255.",
+        "zh-CN": "有效地址的八位字节必须在0到255之间。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Šta DNS radi kada korisnik unese ime domena?",
+        "en": "What does DNS do when a user enters a domain name?",
+        "zh-CN": "用户输入域名时，DNS会做什么？"
+      },
+      "options": [
+        {
+          "sr": "Prevodi ime u IP adresu",
+          "en": "Translates the name into an IP address",
+          "zh-CN": "将名称转换为IP地址"
+        },
+        {
+          "sr": "Otvara stranicu direktno",
+          "en": "Opens the page directly",
+          "zh-CN": "直接打开页面"
+        },
+        {
+          "sr": "Šalje zahtev serveru",
+          "en": "Sends a request to the server",
+          "zh-CN": "向服务器发送请求"
+        },
+        {
+          "sr": "Čuva istoriju pretrage",
+          "en": "Saves the search history",
+          "zh-CN": "保存搜索历史"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "DNS prevodi ljudski čitljivo ime u IP adresu.",
+        "en": "DNS translates human-readable names into IP addresses.",
+        "zh-CN": "DNS将人类可读的名称转换为IP地址。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Šta označava domen najvišeg nivoa (TLD)?",
+        "en": "What does the top-level domain (TLD) indicate?",
+        "zh-CN": "顶级域（TLD）表示什么？"
+      },
+      "options": [
+        {
+          "sr": "Tip ili zemlju sajta",
+          "en": "Type or country of the site",
+          "zh-CN": "网站的类型或国家"
+        },
+        {
+          "sr": "IP adresu servera",
+          "en": "IP address of the server",
+          "zh-CN": "服务器的IP地址"
+        },
+        {
+          "sr": "Protokol komunikacije",
+          "en": "Communication protocol",
+          "zh-CN": "通信协议"
+        },
+        {
+          "sr": "Putanju do datoteke",
+          "en": "Path to the file",
+          "zh-CN": "文件路径"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Domen najvišeg nivoa često otkriva tip ili zemlju sajta.",
+        "en": "The top-level domain often reveals the type or country of the site.",
+        "zh-CN": "顶级域通常揭示网站的类型或国家。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Šta je hipertekst?",
+        "en": "What is hypertext?",
+        "zh-CN": "什么是超文本？"
+      },
+      "options": [
+        {
+          "sr": "Tekst povezan vezama",
+          "en": "Text linked by connections",
+          "zh-CN": "通过连接链接的文本"
+        },
+        {
+          "sr": "Običan tekst bez veza",
+          "en": "Plain text without links",
+          "zh-CN": "没有链接的普通文本"
+        },
+        {
+          "sr": "Samo slike povezane",
+          "en": "Only linked images",
+          "zh-CN": "仅链接的图像"
+        },
+        {
+          "sr": "Tekst bez formata",
+          "en": "Unformatted text",
+          "zh-CN": "未格式化文本"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Hipertekst je tekst čiji su delovi povezani vezama.",
+        "en": "Hypertext is text whose parts are linked by connections.",
+        "zh-CN": "超文本是其部分通过连接链接的文本。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Koje vrste hipervеза postoje?",
+        "en": "What types of hyperlinks exist?",
+        "zh-CN": "超链接有哪些类型？"
+      },
+      "options": [
+        {
+          "sr": "Na deo istog dokumenta, drugi dokument, sadržaj na internetu, imejl adresu",
+          "en": "To a part of the same document, another document, content on the internet, email address",
+          "zh-CN": "指向同一文档的一部分、另一文档、互联网内容、电子邮件地址"
+        },
+        {
+          "sr": "Samo na drugi dokument",
+          "en": "Only to another document",
+          "zh-CN": "仅指向另一文档"
+        },
+        {
+          "sr": "Samo na internet sadržaj",
+          "en": "Only to internet content",
+          "zh-CN": "仅指向互联网内容"
+        },
+        {
+          "sr": "Samo na deo istog dokumenta",
+          "en": "Only to a part of the same document",
+          "zh-CN": "仅指向同一文档的一部分"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Postoji više vrsta hiperveza koje vode na različite sadržaje.",
+        "en": "There are multiple types of hyperlinks that lead to different content.",
+        "zh-CN": "有多种类型的超链接指向不同的内容。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Kako se dodaje hiperveza u dokument?",
+        "en": "How is a hyperlink added to a document?",
+        "zh-CN": "如何在文档中添加超链接？"
+      },
+      "options": [
+        {
+          "sr": "Označi tekst, otvori dijalog za vezu, izaberi cilj, potvrdi",
+          "en": "Highlight text, open link dialog, choose target, confirm",
+          "zh-CN": "突出显示文本，打开链接对话框，选择目标，确认"
+        },
+        {
+          "sr": "Samo uneseš URL",
+          "en": "Just enter the URL",
+          "zh-CN": "只需输入URL"
+        },
+        {
+          "sr": "Nema potrebe za potvrdom",
+          "en": "No need for confirmation",
+          "zh-CN": "无需确认"
+        },
+        {
+          "sr": "Samo klikneš na sliku",
+          "en": "Just click on the image",
+          "zh-CN": "只需单击图像"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Postupak uključuje više koraka za dodavanje hiperveze.",
+        "en": "The process involves multiple steps to add a hyperlink.",
+        "zh-CN": "该过程涉及多个步骤以添加超链接。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Koja je greška u adresi 'htp://www.skola.rs'?",
+        "en": "What is the mistake in the address 'htp://www.skola.rs'?",
+        "zh-CN": "地址'htp://www.skola.rs'中的错误是什么？"
+      },
+      "options": [
+        {
+          "sr": "Protokol je pogrešan",
+          "en": "The protocol is incorrect",
+          "zh-CN": "协议不正确"
+        },
+        {
+          "sr": "Domen je pogrešan",
+          "en": "The domain is incorrect",
+          "zh-CN": "域名不正确"
+        },
+        {
+          "sr": "Putanja je pogrešna",
+          "en": "The path is incorrect",
+          "zh-CN": "路径不正确"
+        },
+        {
+          "sr": "IP adresa je pogrešna",
+          "en": "The IP address is incorrect",
+          "zh-CN": "IP地址不正确"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Protokol treba da bude 'http' umesto 'htp'.",
+        "en": "The protocol should be 'http' instead of 'htp'.",
+        "zh-CN": "协议应该是'http'而不是'htp'。"
+      }
+    },
+    {
+      "n": 12,
+      "q": {
+        "sr": "Šta je privatni režim u pretraživaču?",
+        "en": "What is private mode in a browser?",
+        "zh-CN": "浏览器中的隐私模式是什么？"
+      },
+      "options": [
+        {
+          "sr": "Ne čuva lokalnu istoriju i kolačiće",
+          "en": "Does not save local history and cookies",
+          "zh-CN": "不保存本地历史和Cookie"
+        },
+        {
+          "sr": "Skriva IP adresu",
+          "en": "Hides the IP address",
+          "zh-CN": "隐藏IP地址"
+        },
+        {
+          "sr": "Omogućava anonimno pretraživanje",
+          "en": "Allows anonymous browsing",
+          "zh-CN": "允许匿名浏览"
+        },
+        {
+          "sr": "Čuva sve podatke",
+          "en": "Saves all data",
+          "zh-CN": "保存所有数据"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Privatni režim ne čuva lokalne podatke, ali ne čini korisnika anonimnim.",
+        "en": "Private mode does not save local data but does not make the user anonymous.",
+        "zh-CN": "隐私模式不保存本地数据，但不会使用户匿名。"
+      }
+    },
+    {
+      "n": 13,
+      "skip": true
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    },
+    {
+      "n": 16,
+      "skip": true
+    }
+  ]
+}

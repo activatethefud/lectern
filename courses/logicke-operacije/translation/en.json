@@ -1,0 +1,265 @@
+{
+  "lang": "en",
+  "deckSha": "a61da8adc86e68c07b24c8b36f5190caf1e69abf8911a4c315f5080c33525f93",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "МАТЕМАТИЧКА ЛОГИКА",
+        "почни"
+      ],
+      "dst": [
+        "MATHEMATICAL LOGIC",
+        "start"
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "Здраво! Помоћи ћу ти да кроз овај квиз научиш значење неких речи МАТЕМАТИЧКЕ ЛОГИКЕ (начина размишљања). ",
+        "Немој бринути ако у току квиза одабереш погрешан одговор- и то је део учења! Пажљиво читај питања и дај себи времена да размислиш. ",
+        "Бићу ту за тебе, ако ти затреба помоћ. Само кликни на мене!  ",
+        "даље"
+      ],
+      "dst": [
+        "Hello! I will help you learn the meaning of some words of MATHEMATICAL LOGIC (ways of thinking) through this quiz.",
+        "Don't worry if you choose the wrong answer during the quiz - that's part of learning! Read the questions carefully and give yourself time to think.",
+        "I will be here for you if you need help. Just click on me!",
+        "next"
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Новина у раду ће бити блокови за ",
+        "ГРАНАЊЕ:",
+        "у које се умећу блокови који представљају  УСЛОВЕ:",
+        "даље"
+      ],
+      "dst": [
+        "A new feature will be blocks for BRANCHING:",
+        "",
+        "into which blocks representing CONDITIONS are inserted:",
+        "next"
+      ]
+    },
+    {
+      "n": 4,
+      "src": [
+        "даље",
+        "АКО је услов испуњен, наредба ће бити извршена",
+        "ПОМОЋ",
+        "Погледај слику, па на основу ње одабери шта ће бити извршено:",
+        "Покренуће се лопта",
+        "Исписаће се “Здраво!”",
+        "Наредба “изговори” се неће извршити"
+      ],
+      "dst": [
+        "next",
+        "IF the condition is met, the command will be executed",
+        "HELP",
+        "Look at the picture, then choose what will be executed based on it:",
+        "A ball will be launched",
+        "“Hello!” will be printed",
+        "The command “speak” will not be executed"
+      ]
+    },
+    {
+      "n": 5,
+      "src": [
+        "даље",
+        "АКО је услов ",
+        "испуњен",
+        ", извршиће се ",
+        "прва",
+        " наредба. ",
+        "У",
+        " ",
+        "СУПРОТНОМ ",
+        "(ако није испуњен)",
+        " извршиће се ",
+        "друга",
+        " наредба.",
+        "ПОМОЋ",
+        "Погледај слику, па на основу ње одабери шта ће бити извршено:",
+        "Неће бити извршена ни једна “изговори”наредба",
+        "Исписаће се “Довиђења!”",
+        "Исписаће се “Добар дан!”",
+        "назад"
+      ],
+      "dst": [
+        "next",
+        "IF the condition is met, the first command will be executed. OTHERWISE (if it is not met) the second command will be executed.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "HELP",
+        "Look at the picture, then choose what will be executed based on it:",
+        "No “speak” command will be executed",
+        "“Goodbye!” will be printed",
+        "“Good day!” will be printed",
+        "back"
+      ]
+    },
+    {
+      "n": 6,
+      "src": [
+        "даље",
+        "Ако су испуњени ",
+        "И један И други",
+        " део услова- ",
+        "прва",
+        " наредба ",
+        "ће бити ",
+        "извршена. У сваком другом случају биће извршена друга наредба.",
+        "ПОМОЋ",
+        "Погледај слику, па на основу ње одабери шта ће бити извршено:",
+        "Исписаће ",
+        "се “Ја сам прва наредба!” ",
+        "Неће бити извршена ни једна “изговори”наредба",
+        "Исписаће се “Ја сам ",
+        "друга ",
+        "наредба!” ",
+        "назад"
+      ],
+      "dst": [
+        "next",
+        "If both parts of the condition are met - the first command will be executed. In every other case, the second command will be executed.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "HELP",
+        "Look at the picture, then choose what will be executed based on it:",
+        "“I am the first command!” will be printed",
+        "",
+        "No “speak” command will be executed",
+        "“I am the second command!” will be printed",
+        "",
+        "",
+        "back"
+      ]
+    },
+    {
+      "n": 7,
+      "src": [
+        "даље",
+        "Довољно је да буде испуњен ",
+        " један ИЛИ други",
+        " део услова и ",
+        "прва",
+        " наредба ",
+        "ће бити ",
+        "извршена. Друга наредба ће се извршити само ако оба услова нису испуњена .",
+        "ПОМОЋ",
+        "Погледај слику, па на основу ње одабери шта ће бити извршено:",
+        "Исписаће ",
+        "се “Ја сам прва наредба!” ",
+        "Неће бити извршена ни једна “изговори”наредба",
+        "Исписаће се “Ја сам ",
+        "друга ",
+        "наредба!” ",
+        "назад"
+      ],
+      "dst": [
+        "next",
+        "It is enough for either part of the condition to be met for the first command to be executed. The second command will be executed only if both conditions are not met.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "HELP",
+        "Look at the picture, then choose what will be executed based on it:",
+        "“I am the first command!” will be printed",
+        "",
+        "No “speak” command will be executed",
+        "“I am the second command!” will be printed",
+        "",
+        "",
+        "back"
+      ]
+    },
+    {
+      "n": 8,
+      "src": [
+        "даље",
+        "Овде је услов мало “наопако”. Испуњен је ако НИЈЕ ТАЧНО да ",
+        "ПОМОЋ",
+        "Погледај слику, па на основу ње одабери шта ће бити извршено:",
+        "Неће бити извршена ни једна “изговори”наредба",
+        "Исписаће се ",
+        "“Ја сам прва наредба!”",
+        "Исписаће се ",
+        "“",
+        "Ја сам друга наредба",
+        "!”",
+        "назад"
+      ],
+      "dst": [
+        "next",
+        "Here the condition is a bit “upside down”. It is met if it is NOT TRUE that",
+        "HELP",
+        "Look at the picture, then choose what will be executed based on it:",
+        "No “speak” command will be executed",
+        "“I am the first command!” will be printed",
+        "",
+        "“I am the second command!” will be printed",
+        "",
+        "",
+        "",
+        "back"
+      ]
+    },
+    {
+      "n": 9,
+      "src": [
+        "БРАВО!",
+        " Сада пробај да урадиш следеће задатке у Скречу. На следећој страни су решења. Немој да вириш док не направиш све програме које знаш, јер кад одеш на решења- нема назад! Ако ти треба помоћ, врати се стрелицама кроз квиз и погледај опет објашњења задатака.",
+        "1. Направи програм који ће да пита “Колико је 4+5?” и уколико одговор буде “9”- испише “Тачно!”, а за било који други одговор испише “Нетачно!”.",
+        "2. Направи програм који за два унета броја исписује већи (за унете бројеве 4 и 5- исписаће 5, за 5 и 5- исписаће 5).",
+        "3. Направи програм који за два унета броја исписује онај  који је већи, или исписује да су једнаки. Немој користити више од два блока за гранање.",
+        "даље",
+        "назад"
+      ],
+      "dst": [
+        "WELL DONE!",
+        "Now try to do the following tasks in Scratch. The solutions are on the next page. Don't peek until you make all the programs you know, because once you go to the solutions - there's no going back! If you need help, go back with the arrows through the quiz and look at the task explanations again.",
+        "1. Create a program that asks “What is 4+5?” and if the answer is “9” - it prints “Correct!”, and for any other answer it prints “Incorrect!”.",
+        "2. Create a program that prints the larger of two entered numbers (for the entered numbers 4 and 5 - it will print 5, for 5 and 5 - it will print 5).",
+        "3. Create a program that prints the larger of two entered numbers, or states that they are equal. Do not use more than two blocks for branching.",
+        "next",
+        "back"
+      ]
+    },
+    {
+      "n": 10,
+      "src": [
+        "1.",
+        "2.",
+        "3",
+        ".",
+        "крај"
+      ],
+      "dst": [
+        "1.",
+        "2.",
+        "3.",
+        "",
+        "end"
+      ]
+    }
+  ]
+}

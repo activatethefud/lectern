@@ -1,0 +1,19 @@
+{
+  "slug": "scenario-i-algoritam",
+  "title": {
+    "sr": "Сценарио и алгоритам",
+    "en": "Scenario and Algorithm",
+    "zh-CN": "场景和算法"
+  },
+  "description": {
+    "sr": "Упознавање са сценаријима и алгоритмима у информатици.",
+    "en": "Introduction to scenarios and algorithms in informatics.",
+    "zh-CN": "计算机科学中的场景和算法介绍。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred"
+  ],
+  "lang": "sr",
+  "order": 41
+}

@@ -1,0 +1,368 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Зашто је важно бити пристојан на интернету?",
+        "en": "Why is it important to be polite on the internet?",
+        "zh-CN": "为什么在互联网上保持礼貌很重要？"
+      },
+      "options": [
+        {
+          "sr": "Зато што су с друге стране живи људи.",
+          "en": "Because there are real people on the other side.",
+          "zh-CN": "因为另一边是活生生的人。"
+        },
+        {
+          "sr": "Зато што је интернет само за забаву.",
+          "en": "Because the internet is only for entertainment.",
+          "zh-CN": "因为互联网只是为了娱乐。"
+        },
+        {
+          "sr": "Зато што нико не чита поруке.",
+          "en": "Because no one reads messages.",
+          "zh-CN": "因为没有人阅读消息。"
+        },
+        {
+          "sr": "Зато што је интернет анониман.",
+          "en": "Because the internet is anonymous.",
+          "zh-CN": "因为互联网是匿名的。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Важно је бити пристојан јер комуницирамо са живим људима.",
+        "en": "It is important to be polite because we are communicating with real people.",
+        "zh-CN": "保持礼貌很重要，因为我们正在与真实的人交流。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Шта треба користити у комуникацији?",
+        "en": "What should be used in communication?",
+        "zh-CN": "在交流中应该使用什么？"
+      },
+      "options": [
+        {
+          "sr": "Емотиконе",
+          "en": "Emoticons",
+          "zh-CN": "表情符号"
+        },
+        {
+          "sr": "Слике без текста",
+          "en": "Images without text",
+          "zh-CN": "没有文字的图片"
+        },
+        {
+          "sr": "Само текст",
+          "en": "Only text",
+          "zh-CN": "仅文本"
+        },
+        {
+          "sr": "Непристојне речи",
+          "en": "Rude words",
+          "zh-CN": "粗鲁的词语"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Емотикони помажу у изражавању емоција у комуникацији.",
+        "en": "Emoticons help express emotions in communication.",
+        "zh-CN": "表情符号有助于在交流中表达情感。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Шта не треба радити у комуникацији?",
+        "en": "What should not be done in communication?",
+        "zh-CN": "在交流中不应该做什么？"
+      },
+      "options": [
+        {
+          "sr": "Не вичи",
+          "en": "Do not shout",
+          "zh-CN": "不要大喊"
+        },
+        {
+          "sr": "Питај свакога",
+          "en": "Ask everyone",
+          "zh-CN": "问每个人"
+        },
+        {
+          "sr": "Користи само велика слова",
+          "en": "Use only capital letters",
+          "zh-CN": "仅使用大写字母"
+        },
+        {
+          "sr": "Пиши кратке поруке",
+          "en": "Write short messages",
+          "zh-CN": "写简短的消息"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Не вичи јер то може бити непристојно и непријатно.",
+        "en": "Do not shout because it can be rude and uncomfortable.",
+        "zh-CN": "不要大喊，因为这可能是无礼和不舒服的。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Како се треба представити на интернету?",
+        "en": "How should you introduce yourself on the internet?",
+        "zh-CN": "你应该如何在互联网上自我介绍？"
+      },
+      "options": [
+        {
+          "sr": "Увек се представи",
+          "en": "Always introduce yourself",
+          "zh-CN": "总是自我介绍"
+        },
+        {
+          "sr": "Не представљај се",
+          "en": "Do not introduce yourself",
+          "zh-CN": "不要自我介绍"
+        },
+        {
+          "sr": "Користи лажна имена",
+          "en": "Use fake names",
+          "zh-CN": "使用假名"
+        },
+        {
+          "sr": "Не кажи своје име",
+          "en": "Do not say your name",
+          "zh-CN": "不要说你的名字"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Увек се представи да би другима било лакше да те познају.",
+        "en": "Always introduce yourself so others can get to know you better.",
+        "zh-CN": "总是自我介绍，以便他人更好地了解你。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Зашто је важно чувати личне податке?",
+        "en": "Why is it important to protect personal data?",
+        "zh-CN": "保护个人数据为什么重要？"
+      },
+      "options": [
+        {
+          "sr": "Да не би неко злоупотребио твоје податке.",
+          "en": "So that no one can misuse your data.",
+          "zh-CN": "以免有人滥用你的数据。"
+        },
+        {
+          "sr": "Да би сви могли да их виде.",
+          "en": "So that everyone can see them.",
+          "zh-CN": "以便每个人都能看到它们。"
+        },
+        {
+          "sr": "Да би се лакше комуницирало.",
+          "en": "To make communication easier.",
+          "zh-CN": "为了更容易交流。"
+        },
+        {
+          "sr": "Да би добио више порука.",
+          "en": "To receive more messages.",
+          "zh-CN": "为了收到更多消息。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Важно је чувати личне податке да би се избегле злоупотребе.",
+        "en": "It is important to protect personal data to avoid misuse.",
+        "zh-CN": "保护个人数据很重要，以避免滥用。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Шта је приватно власништво на интернету?",
+        "en": "What is private property on the internet?",
+        "zh-CN": "互联网上的私有财产是什么？"
+      },
+      "options": [
+        {
+          "sr": "Лозинка",
+          "en": "Password",
+          "zh-CN": "密码"
+        },
+        {
+          "sr": "Сви подаци",
+          "en": "All data",
+          "zh-CN": "所有数据"
+        },
+        {
+          "sr": "Слике свих корисника",
+          "en": "Pictures of all users",
+          "zh-CN": "所有用户的图片"
+        },
+        {
+          "sr": "Сви текстови на интернету",
+          "en": "All texts on the internet",
+          "zh-CN": "互联网上的所有文本"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Лозинка је приватно власништво и не треба је делити.",
+        "en": "A password is private property and should not be shared.",
+        "zh-CN": "密码是私有财产，不应共享。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Шта не треба радити у интернет комуникацији?",
+        "en": "What should not be done in internet communication?",
+        "zh-CN": "在互联网交流中不应该做什么？"
+      },
+      "options": [
+        {
+          "sr": "Не учествуј у свађама.",
+          "en": "Do not participate in arguments.",
+          "zh-CN": "不要参与争论。"
+        },
+        {
+          "sr": "Слање порука свима.",
+          "en": "Sending messages to everyone.",
+          "zh-CN": "给每个人发消息。"
+        },
+        {
+          "sr": "Користити само слике.",
+          "en": "Use only images.",
+          "zh-CN": "仅使用图像。"
+        },
+        {
+          "sr": "Писати само о себи.",
+          "en": "Write only about yourself.",
+          "zh-CN": "只写关于你自己的内容。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Не учествуј у свађама јер то може довести до непријатности.",
+        "en": "Do not participate in arguments as it can lead to discomfort.",
+        "zh-CN": "不要参与争论，因为这可能会导致不适。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Шта треба урадити ако добијеш поруку од непознатог?",
+        "en": "What should you do if you receive a message from an unknown person?",
+        "zh-CN": "如果你收到来自陌生人的消息，你应该怎么做？"
+      },
+      "options": [
+        {
+          "sr": "Не одговарај на поруку.",
+          "en": "Do not respond to the message.",
+          "zh-CN": "不要回复消息。"
+        },
+        {
+          "sr": "Одговори одмах.",
+          "en": "Respond immediately.",
+          "zh-CN": "立即回复。"
+        },
+        {
+          "sr": "Пошаљи своје личне податке.",
+          "en": "Send your personal data.",
+          "zh-CN": "发送你的个人数据。"
+        },
+        {
+          "sr": "Објави поруку на друштвеним мрежама.",
+          "en": "Post the message on social media.",
+          "zh-CN": "在社交媒体上发布消息。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Не одговарај на поруке непознатих да би се избегле опасности.",
+        "en": "Do not respond to messages from unknowns to avoid dangers.",
+        "zh-CN": "不要回复来自陌生人的消息，以避免危险。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Зашто је важно проверити информације на интернету?",
+        "en": "Why is it important to verify information on the internet?",
+        "zh-CN": "为什么在互联网上验证信息很重要？"
+      },
+      "options": [
+        {
+          "sr": "Да би се избегле нетачне информације.",
+          "en": "To avoid inaccurate information.",
+          "zh-CN": "以避免不准确的信息。"
+        },
+        {
+          "sr": "Да би сви могли да их виде.",
+          "en": "So that everyone can see them.",
+          "zh-CN": "以便每个人都能看到它们。"
+        },
+        {
+          "sr": "Да би добио више лајкова.",
+          "en": "To get more likes.",
+          "zh-CN": "为了获得更多的赞。"
+        },
+        {
+          "sr": "Да би се лакше комуницирало.",
+          "en": "To make communication easier.",
+          "zh-CN": "为了更容易交流。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Важно је проверити информације да би се избегле заблуде.",
+        "en": "It is important to verify information to avoid misconceptions.",
+        "zh-CN": "验证信息很重要，以避免误解。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Како се борити против дигиталног насиља?",
+        "en": "How to fight against digital violence?",
+        "zh-CN": "如何对抗数字暴力？"
+      },
+      "options": [
+        {
+          "sr": "Информиши се о томе.",
+          "en": "Get informed about it.",
+          "zh-CN": "了解它。"
+        },
+        {
+          "sr": "Игнориши све.",
+          "en": "Ignore everything.",
+          "zh-CN": "忽视一切。"
+        },
+        {
+          "sr": "Не причај никоме.",
+          "en": "Do not talk to anyone.",
+          "zh-CN": "不和任何人交谈。"
+        },
+        {
+          "sr": "Пошаљи све поруке.",
+          "en": "Send all messages.",
+          "zh-CN": "发送所有消息。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Информисање о дигиталном насиљу је први корак у борби против њега.",
+        "en": "Getting informed about digital violence is the first step in fighting it.",
+        "zh-CN": "了解数字暴力是对抗它的第一步。"
+      }
+    }
+  ]
+}

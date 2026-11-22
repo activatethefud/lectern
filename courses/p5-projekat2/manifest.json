@@ -1,0 +1,52 @@
+{
+  "deckSha": "3cbbf8c7b16e52d6ba356320e3ad8b3609c14ca79b087cd2d95bdf361fdb7436",
+  "baseLang": "sr",
+  "slideCount": 5,
+  "answeredSlides": 4,
+  "images": [
+    "001.jpg",
+    "002.jpg",
+    "003.jpg",
+    "004.jpg",
+    "005.jpg"
+  ],
+  "variants": {
+    "sr": {
+      "deck": "slides.pptx",
+      "deckSha": "3cbbf8c7b16e52d6ba356320e3ad8b3609c14ca79b087cd2d95bdf361fdb7436",
+      "dir": "slides",
+      "images": [
+        "001.jpg",
+        "002.jpg",
+        "003.jpg",
+        "004.jpg",
+        "005.jpg"
+      ]
+    },
+    "en": {
+      "deck": "slides.en.pptx",
+      "deckSha": "3191143c006ee7095a58693ef0830f91e54062e4a8dd0ba1857d150d256eacb8",
+      "dir": "slides/en",
+      "images": [
+        "001.jpg",
+        "002.jpg",
+        "003.jpg",
+        "004.jpg",
+        "005.jpg"
+      ]
+    },
+    "zh-CN": {
+      "deck": "slides.zh-CN.pptx",
+      "deckSha": "d2ad8b5b9bc8cf45fc54c2e7933f191d2c0767de5192f3126d2301c534298d64",
+      "dir": "slides/zh-CN",
+      "images": [
+        "001.jpg",
+        "002.jpg",
+        "003.jpg",
+        "004.jpg",
+        "005.jpg"
+      ]
+    }
+  },
+  "builtAt": "2026-11-22T23:08:03.713Z"
+}

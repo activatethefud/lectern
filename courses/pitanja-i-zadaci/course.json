@@ -1,0 +1,22 @@
+{
+  "slug": "pitanja-i-zadaci",
+  "title": {
+    "sr": "Informatička nastava - 7. razred",
+    "en": "Informatics Class - Grade 7",
+    "zh-CN": "信息技术课 - 七年级"
+  },
+  "description": {
+    "sr": "Ova prezentacija pokriva osnovne koncepte informatičke nastave za 7. razred.",
+    "en": "This presentation covers the basic concepts of informatics for grade 7.",
+    "zh-CN": "本演示文稿涵盖了七年级信息技术的基本概念。"
+  },
+  "tags": [
+    "informatika",
+    "7. razred",
+    "grafika",
+    "animacija",
+    "tekst"
+  ],
+  "lang": "sr",
+  "order": 30
+}

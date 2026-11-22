@@ -1,0 +1,116 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Шта чини низ карактера?",
+        "en": "What constitutes a string of characters?",
+        "zh-CN": "字符串由什么构成？"
+      },
+      "options": [
+        {
+          "sr": "Слова, цифре, размак и интерпункцијске знакове",
+          "en": "Words, numbers, spaces, and punctuation marks",
+          "zh-CN": "单词、数字、空格和标点符号"
+        },
+        {
+          "sr": "Само слова и цифре",
+          "en": "Only words and numbers",
+          "zh-CN": "只有单词和数字"
+        },
+        {
+          "sr": "Само интерпункцијске знакове",
+          "en": "Only punctuation marks",
+          "zh-CN": "只有标点符号"
+        },
+        {
+          "sr": "Само размаке",
+          "en": "Only spaces",
+          "zh-CN": "只有空格"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Низ карактера укључује све наведене елементе.",
+        "en": "A string of characters includes all the mentioned elements.",
+        "zh-CN": "字符串包括所有提到的元素。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Које операције можемо извршити над стринговима?",
+        "en": "What operations can we perform on strings?",
+        "zh-CN": "我们可以对字符串执行哪些操作？"
+      },
+      "options": [
+        {
+          "sr": "Операције као што су спајање и делљење",
+          "en": "Operations such as concatenation and division",
+          "zh-CN": "诸如连接和分割的操作"
+        },
+        {
+          "sr": "Само операције сабирања",
+          "en": "Only addition operations",
+          "zh-CN": "只有加法操作"
+        },
+        {
+          "sr": "Само операције одузимања",
+          "en": "Only subtraction operations",
+          "zh-CN": "只有减法操作"
+        },
+        {
+          "sr": "Нема операција над стринговима",
+          "en": "No operations on strings",
+          "zh-CN": "没有对字符串的操作"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Над стринговима можемо извршити различите операције, укључујући спајање.",
+        "en": "Various operations can be performed on strings, including concatenation.",
+        "zh-CN": "可以对字符串执行各种操作，包括连接。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Које функције се користе за рад са стринговима?",
+        "en": "What functions are used to work with strings?",
+        "zh-CN": "用于处理字符串的函数是什么？"
+      },
+      "options": [
+        {
+          "sr": "Функције за манипулацију текстом",
+          "en": "Functions for text manipulation",
+          "zh-CN": "用于文本操作的函数"
+        },
+        {
+          "sr": "Функције за математичке операције",
+          "en": "Functions for mathematical operations",
+          "zh-CN": "用于数学运算的函数"
+        },
+        {
+          "sr": "Функције за графику",
+          "en": "Functions for graphics",
+          "zh-CN": "用于图形的函数"
+        },
+        {
+          "sr": "Функције за управљање базама података",
+          "en": "Functions for database management",
+          "zh-CN": "用于数据库管理的函数"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Функције за рад са стринговима укључују манипулацију текстом.",
+        "en": "Functions for working with strings include text manipulation.",
+        "zh-CN": "用于处理字符串的函数包括文本操作。"
+      }
+    }
+  ]
+}

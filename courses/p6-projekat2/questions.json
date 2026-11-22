@@ -1,0 +1,156 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koja je prva faza u izradi projekta?",
+        "en": "What is the first phase in project development?",
+        "zh-CN": "项目开发的第一阶段是什么？"
+      },
+      "options": [
+        {
+          "sr": "Izrada",
+          "en": "Execution",
+          "zh-CN": "执行"
+        },
+        {
+          "sr": "Predstavljanje i vrednovanje",
+          "en": "Presentation and Evaluation",
+          "zh-CN": "展示和评估"
+        },
+        {
+          "sr": "Planiranje",
+          "en": "Planning",
+          "zh-CN": "规划"
+        },
+        {
+          "sr": "Izbor teme",
+          "en": "Choosing a Topic",
+          "zh-CN": "选择主题"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Prva faza je planiranje.",
+        "en": "The first phase is planning.",
+        "zh-CN": "第一阶段是规划。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koja tema nije navedena u listi?",
+        "en": "Which topic is not listed?",
+        "zh-CN": "哪个主题没有列出？"
+      },
+      "options": [
+        {
+          "sr": "Sinteza podataka",
+          "en": "Data Synthesis",
+          "zh-CN": "数据综合"
+        },
+        {
+          "sr": "Sinteza i logičke greške",
+          "en": "Syntax and Logical Errors",
+          "zh-CN": "语法和逻辑错误"
+        },
+        {
+          "sr": "Ispis sadržaja liste korišćenjem petlji",
+          "en": "Printing List Contents Using Loops",
+          "zh-CN": "使用循环打印列表内容"
+        },
+        {
+          "sr": "Izvlačenje cifara broja korišćenjem petlji",
+          "en": "Extracting Digits from a Number Using Loops",
+          "zh-CN": "使用循环提取数字"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Tema 'Sinteza podataka' nije navedena.",
+        "en": "The topic 'Data Synthesis' is not listed.",
+        "zh-CN": "主题“数据综合”没有列出。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koja aktivnost se ne odvija tokom faze planiranja?",
+        "en": "Which activity does not occur during the planning phase?",
+        "zh-CN": "哪个活动不在规划阶段进行？"
+      },
+      "options": [
+        {
+          "sr": "Odašiljanje teme",
+          "en": "Choosing a Topic",
+          "zh-CN": "选择主题"
+        },
+        {
+          "sr": "Definisanje faza i aktivnosti",
+          "en": "Defining Phases and Activities",
+          "zh-CN": "定义阶段和活动"
+        },
+        {
+          "sr": "Prikupljanje podataka",
+          "en": "Collecting Data",
+          "zh-CN": "收集数据"
+        },
+        {
+          "sr": "Podela zadataka u grupi",
+          "en": "Task Distribution in the Group",
+          "zh-CN": "小组任务分配"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Prikupljanje podataka se odvija tokom realizacije.",
+        "en": "Data collection occurs during the execution phase.",
+        "zh-CN": "数据收集发生在执行阶段。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta se ne radi tokom izrade projekta?",
+        "en": "What is not done during project development?",
+        "zh-CN": "项目开发期间不做什么？"
+      },
+      "options": [
+        {
+          "sr": "Prikupljanje i analiza materijala",
+          "en": "Collecting and Analyzing Materials",
+          "zh-CN": "收集和分析材料"
+        },
+        {
+          "sr": "Izrada programa/proizvoda",
+          "en": "Creating Program/Product",
+          "zh-CN": "创建程序/产品"
+        },
+        {
+          "sr": "Izrada projektne dokumentacije",
+          "en": "Creating Project Documentation",
+          "zh-CN": "创建项目文档"
+        },
+        {
+          "sr": "Planiranje teme",
+          "en": "Planning the Topic",
+          "zh-CN": "规划主题"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "sr": "Planiranje teme se radi pre izrade projekta.",
+        "en": "Planning the topic is done before project development.",
+        "zh-CN": "主题规划是在项目开发之前进行的。"
+      }
+    },
+    {
+      "n": 6,
+      "skip": true
+    }
+  ]
+}

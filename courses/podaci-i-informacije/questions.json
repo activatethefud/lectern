@@ -1,0 +1,392 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Šta učenik treba da ume na kraju časa?",
+        "en": "What should the student be able to do by the end of the lesson?",
+        "zh-CN": "学生在课结束时应该能做什么？"
+      },
+      "options": [
+        {
+          "sr": "Razlikovati podatak od informacije",
+          "en": "Differentiate between data and information",
+          "zh-CN": "区分数据和信息"
+        },
+        {
+          "sr": "Pretraživati internet bez ikakvih pravila",
+          "en": "Search the internet without any rules",
+          "zh-CN": "不遵循任何规则地搜索互联网"
+        },
+        {
+          "sr": "Objavljivati lične podatke na mreži",
+          "en": "Publish personal data online",
+          "zh-CN": "在网上发布个人数据"
+        },
+        {
+          "sr": "Zaboraviti sve naučeno",
+          "en": "Forget everything learned",
+          "zh-CN": "忘记所有学到的东西"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Učenik treba da zna razliku između podataka i informacija.",
+        "en": "The student should know the difference between data and information.",
+        "zh-CN": "学生应该知道数据和信息之间的区别。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Šta je podatak?",
+        "en": "What is data?",
+        "zh-CN": "什么是数据？"
+      },
+      "options": [
+        {
+          "sr": "Pojedinačna činjenica bez konteksta",
+          "en": "An individual fact without context",
+          "zh-CN": "没有上下文的单一事实"
+        },
+        {
+          "sr": "Smisleni skup povezanih informacija",
+          "en": "A meaningful set of related information",
+          "zh-CN": "一组有意义的相关信息"
+        },
+        {
+          "sr": "Razumevanje informacija",
+          "en": "Understanding information",
+          "zh-CN": "理解信息"
+        },
+        {
+          "sr": "Odlučivanje na osnovu informacija",
+          "en": "Making decisions based on information",
+          "zh-CN": "基于信息做出决策"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Podatak je pojedinačna činjenica bez konteksta.",
+        "en": "Data is an individual fact without context.",
+        "zh-CN": "数据是没有上下文的单一事实。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Šta je informacija?",
+        "en": "What is information?",
+        "zh-CN": "什么是信息？"
+      },
+      "options": [
+        {
+          "sr": "Pojedinačna činjenica",
+          "en": "An individual fact",
+          "zh-CN": "单一事实"
+        },
+        {
+          "sr": "Smisleni skup povezanih podataka",
+          "en": "A meaningful set of related data",
+          "zh-CN": "一组有意义的相关数据"
+        },
+        {
+          "sr": "Samo broj bez konteksta",
+          "en": "Just a number without context",
+          "zh-CN": "没有上下文的数字"
+        },
+        {
+          "sr": "Neproverena tvrdnja",
+          "en": "An unverified claim",
+          "zh-CN": "未经验证的声明"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Informacija je smisleni skup povezanih podataka.",
+        "en": "Information is a meaningful set of related data.",
+        "zh-CN": "信息是一组有意义的相关数据。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Kako se formira informacija iz podataka?",
+        "en": "How is information formed from data?",
+        "zh-CN": "信息是如何从数据中形成的？"
+      },
+      "options": [
+        {
+          "sr": "Povezivanjem podataka u smislenu celinu",
+          "en": "By connecting data into a meaningful whole",
+          "zh-CN": "通过将数据连接成有意义的整体"
+        },
+        {
+          "sr": "Samo dodavanjem više podataka",
+          "en": "Just by adding more data",
+          "zh-CN": "仅通过添加更多数据"
+        },
+        {
+          "sr": "Zaboravljanjem podataka",
+          "en": "By forgetting the data",
+          "zh-CN": "通过忘记数据"
+        },
+        {
+          "sr": "Objavljivanjem podataka na internetu",
+          "en": "By publishing data on the internet",
+          "zh-CN": "通过在互联网上发布数据"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Informacija se formira povezivanjem podataka u smislenu celinu.",
+        "en": "Information is formed by connecting data into a meaningful whole.",
+        "zh-CN": "信息是通过将数据连接成有意义的整体形成的。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Koje su ključne reči za precizno pretraživanje?",
+        "en": "What are the keywords for precise searching?",
+        "zh-CN": "精确搜索的关键字是什么？"
+      },
+      "options": [
+        {
+          "sr": "„temperatura Bеograd juče”",
+          "en": "\"temperature Belgrade yesterday\"",
+          "zh-CN": "“贝尔格莱德的温度昨天”"
+        },
+        {
+          "sr": "Cela rečenica",
+          "en": "The whole sentence",
+          "zh-CN": "整个句子"
+        },
+        {
+          "sr": "Samo slike",
+          "en": "Only images",
+          "zh-CN": "仅图像"
+        },
+        {
+          "sr": "Slučajni tekst",
+          "en": "Random text",
+          "zh-CN": "随机文本"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ključne reči se koriste za precizno pretraživanje, a ne cele rečenice.",
+        "en": "Keywords are used for precise searching, not whole sentences.",
+        "zh-CN": "关键字用于精确搜索，而不是整个句子。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Šta znači kada je rezultat pretrage sponzorisano?",
+        "en": "What does it mean when a search result is sponsored?",
+        "zh-CN": "当搜索结果是赞助时，这意味着什么？"
+      },
+      "options": [
+        {
+          "sr": "To je često plaćeni sadržaj koji nije proveren.",
+          "en": "It is often paid content that is not verified.",
+          "zh-CN": "这通常是未经过验证的付费内容。"
+        },
+        {
+          "sr": "To je uvek tačan izvor informacija.",
+          "en": "It is always an accurate source of information.",
+          "zh-CN": "这总是一个准确的信息来源。"
+        },
+        {
+          "sr": "To je rezultat koji je najrelevantniji.",
+          "en": "It is the result that is the most relevant.",
+          "zh-CN": "这是最相关的结果。"
+        },
+        {
+          "sr": "To je rezultat koji se ne može proveriti.",
+          "en": "It is a result that cannot be verified.",
+          "zh-CN": "这是一个无法验证的结果。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Sponzorisani sadržaj je često plaćen i može biti nepouzdan.",
+        "en": "Sponsored content is often paid and may be unreliable.",
+        "zh-CN": "赞助内容通常是付费的，可能不可靠。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Koji domen je najpouzdaniji za zdravstvene savete?",
+        "en": "Which domain is the most reliable for health advice?",
+        "zh-CN": "哪个域名对健康建议最可靠？"
+      },
+      "options": [
+        {
+          "sr": ".info",
+          "en": ".info",
+          "zh-CN": ".info"
+        },
+        {
+          "sr": ".gov.rs",
+          "en": ".gov.rs",
+          "zh-CN": ".gov.rs"
+        },
+        {
+          "sr": ".blog",
+          "en": ".blog",
+          "zh-CN": ".blog"
+        },
+        {
+          "sr": ".com",
+          "en": ".com",
+          "zh-CN": ".com"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": ".gov.rs je državni domen i obezbeđuje pouzdane informacije.",
+        "en": ".gov.rs is a government domain and provides reliable information.",
+        "zh-CN": ".gov.rs是政府域名，提供可靠的信息。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Šta treba proveriti pre nego što poverujemo izvoru?",
+        "en": "What should we check before trusting a source?",
+        "zh-CN": "在相信一个来源之前，我们应该检查什么？"
+      },
+      "options": [
+        {
+          "sr": "A) autora, datum i domen",
+          "en": "A) author, date, and domain",
+          "zh-CN": "A) 作者、日期和域名"
+        },
+        {
+          "sr": "B) boju stranice",
+          "en": "B) the color of the page",
+          "zh-CN": "B) 页面颜色"
+        },
+        {
+          "sr": "C) broj poseta sajtu",
+          "en": "C) the number of visits to the site",
+          "zh-CN": "C) 网站访问量"
+        },
+        {
+          "sr": "D) izgled sajta",
+          "en": "D) the appearance of the site",
+          "zh-CN": "D) 网站外观"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Proveravanje autora, datuma i domena je ključno za pouzdanost izvora.",
+        "en": "Checking the author, date, and domain is crucial for the reliability of the source.",
+        "zh-CN": "检查作者、日期和域名对于来源的可靠性至关重要。"
+      }
+    },
+    {
+      "n": 10,
+      "skip": true
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Koje informacije je Marko ostavio na internetu?",
+        "en": "What information did Marko leave on the internet?",
+        "zh-CN": "马尔科在互联网上留下了什么信息？"
+      },
+      "options": [
+        {
+          "sr": "Ime i prezime, razred i školu",
+          "en": "Name and surname, grade and school",
+          "zh-CN": "姓名、年级和学校"
+        },
+        {
+          "sr": "Samo omiljenu igricu",
+          "en": "Only his favorite game",
+          "zh-CN": "仅仅是他最喜欢的游戏"
+        },
+        {
+          "sr": "Samo sliku kuće",
+          "en": "Only a picture of his house",
+          "zh-CN": "仅仅是他家的照片"
+        },
+        {
+          "sr": "Samo ime i prezime",
+          "en": "Only name and surname",
+          "zh-CN": "仅仅是姓名"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Marko je ostavio više ličnih informacija na internetu.",
+        "en": "Marko left multiple personal information on the internet.",
+        "zh-CN": "马尔科在互联网上留下了多条个人信息。"
+      }
+    },
+    {
+      "n": 12,
+      "q": {
+        "sr": "Koji izvor je pouzdaniji?",
+        "en": "Which source is more reliable?",
+        "zh-CN": "哪个来源更可靠？"
+      },
+      "options": [
+        {
+          "sr": "A) Aнонимni sajt",
+          "en": "A) Anonymous site",
+          "zh-CN": "A) 匿名网站"
+        },
+        {
+          "sr": "B) Ministarstvo zdravlja",
+          "en": "B) Ministry of Health",
+          "zh-CN": "B) 卫生部"
+        },
+        {
+          "sr": "C) Blog bez autora",
+          "en": "C) Blog without an author",
+          "zh-CN": "C) 没有作者的博客"
+        },
+        {
+          "sr": "D) Wikipedia članak",
+          "en": "D) Wikipedia article",
+          "zh-CN": "D) 维基百科文章"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Ministarstvo zdravlja je zvanični izvor i pruža proverene informacije.",
+        "en": "The Ministry of Health is an official source and provides verified information.",
+        "zh-CN": "卫生部是官方来源，提供经过验证的信息。"
+      }
+    },
+    {
+      "n": 13,
+      "skip": true
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    },
+    {
+      "n": 16,
+      "skip": true
+    },
+    {
+      "n": 17,
+      "skip": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "internet-bonton",
+  "title": {
+    "sr": "Internet bonton",
+    "en": "Internet Etiquette",
+    "zh-CN": "互联网礼仪"
+  },
+  "description": {
+    "sr": "Učenje o pravilima ponašanja na internetu.",
+    "en": "Learning about the rules of behavior on the internet.",
+    "zh-CN": "学习互联网行为规则。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred",
+    "internet",
+    "bonton",
+    "etika"
+  ],
+  "lang": "sr",
+  "order": 18
+}

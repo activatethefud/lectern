@@ -1,0 +1,61 @@
+{
+  "lang": "en",
+  "deckSha": "8d06419ec6048ca2eb0b66f28d31695dfa490724e0e92ffb60e3a25aab6699f9",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "НАРЕДБЕ ПОНАВЉАЊА- ПЕТЉЕ"
+      ],
+      "dst": [
+        "REPEAT COMMANDS - LOOPS"
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "Шта ради овај програм? Број блокова је превелики. Може ли се смањити?"
+      ],
+      "dst": [
+        "What does this program do? The number of blocks is too large. Can it be reduced?"
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Како да изменимо програм и омогућимо мачку да непрекидно шета од ивице до ивице",
+        "?"
+      ],
+      "dst": [
+        "How can we modify the program to allow the cat to walk continuously from edge to edge?",
+        ""
+      ]
+    },
+    {
+      "n": 4,
+      "src": [
+        "Колико пута ће се понављати следећи блок?",
+        "Постави позадину ",
+        "blue ",
+        "sky2",
+        " ",
+        "и лика ",
+        "cat2",
+        " ",
+        "и сложи следећи програм."
+      ],
+      "dst": [
+        "How many times will the following block repeat?",
+        "Set the background to blue sky2 and the character to cat2 and assemble the following program.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ]
+}

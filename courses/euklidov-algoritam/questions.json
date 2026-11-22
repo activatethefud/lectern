@@ -1,0 +1,264 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Који су бројеvi за које тражимо НЗД?",
+        "en": "What are the numbers for which we are finding the GCD?",
+        "zh-CN": "我们要找出哪个数字的最大公约数？"
+      },
+      "options": [
+        {
+          "sr": "А=126 и Б=54",
+          "en": "A=126 and B=54",
+          "zh-CN": "A=126 和 B=54"
+        },
+        {
+          "sr": "А=72 и Б=54",
+          "en": "A=72 and B=54",
+          "zh-CN": "A=72 和 B=54"
+        },
+        {
+          "sr": "А=54 и Б=126",
+          "en": "A=54 and B=126",
+          "zh-CN": "A=54 和 B=126"
+        },
+        {
+          "sr": "А=100 и Б=50",
+          "en": "A=100 and B=50",
+          "zh-CN": "A=100 和 B=50"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Тражимо НЗД за А=126 и Б=54.",
+        "en": "We are finding the GCD for A=126 and B=54.",
+        "zh-CN": "我们要找出 A=126 和 B=54 的最大公约数。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Колико је у првом кораку А?",
+        "en": "What is the value of A in the first step?",
+        "zh-CN": "第一步中 A 的值是多少？"
+      },
+      "options": [
+        {
+          "sr": "72",
+          "en": "72",
+          "zh-CN": "72"
+        },
+        {
+          "sr": "126",
+          "en": "126",
+          "zh-CN": "126"
+        },
+        {
+          "sr": "54",
+          "en": "54",
+          "zh-CN": "54"
+        },
+        {
+          "sr": "0",
+          "en": "0",
+          "zh-CN": "0"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "У првом кораку А постаје 72.",
+        "en": "In the first step, A becomes 72.",
+        "zh-CN": "在第一步中，A 变为 72。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Колико је у другом кораку Б?",
+        "en": "What is the value of B in the second step?",
+        "zh-CN": "第二步中 B 的值是多少？"
+      },
+      "options": [
+        {
+          "sr": "54",
+          "en": "54",
+          "zh-CN": "54"
+        },
+        {
+          "sr": "72",
+          "en": "72",
+          "zh-CN": "72"
+        },
+        {
+          "sr": "18",
+          "en": "18",
+          "zh-CN": "18"
+        },
+        {
+          "sr": "36",
+          "en": "36",
+          "zh-CN": "36"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "У другом кораку Б остаје 54.",
+        "en": "In the second step, B remains 54.",
+        "zh-CN": "在第二步中，B 保持为 54。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Колико је у трећем кораку А?",
+        "en": "What is the value of A in the third step?",
+        "zh-CN": "第三步中 A 的值是多少？"
+      },
+      "options": [
+        {
+          "sr": "18",
+          "en": "18",
+          "zh-CN": "18"
+        },
+        {
+          "sr": "72",
+          "en": "72",
+          "zh-CN": "72"
+        },
+        {
+          "sr": "54",
+          "en": "54",
+          "zh-CN": "54"
+        },
+        {
+          "sr": "36",
+          "en": "36",
+          "zh-CN": "36"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "У трећем кораку А постаје 18.",
+        "en": "In the third step, A becomes 18.",
+        "zh-CN": "在第三步中，A 变为 18。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Колико је у четвртом кораку Б?",
+        "en": "What is the value of B in the fourth step?",
+        "zh-CN": "第四步中 B 的值是多少？"
+      },
+      "options": [
+        {
+          "sr": "18",
+          "en": "18",
+          "zh-CN": "18"
+        },
+        {
+          "sr": "36",
+          "en": "36",
+          "zh-CN": "36"
+        },
+        {
+          "sr": "54",
+          "en": "54",
+          "zh-CN": "54"
+        },
+        {
+          "sr": "0",
+          "en": "0",
+          "zh-CN": "0"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "У четвртом кораку Б постаје 18.",
+        "en": "In the fourth step, B becomes 18.",
+        "zh-CN": "在第四步中，B 变为 18。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Колико је у петом кораку Б?",
+        "en": "What is the value of B in the fifth step?",
+        "zh-CN": "第五步中 B 的值是多少？"
+      },
+      "options": [
+        {
+          "sr": "0",
+          "en": "0",
+          "zh-CN": "0"
+        },
+        {
+          "sr": "18",
+          "en": "18",
+          "zh-CN": "18"
+        },
+        {
+          "sr": "36",
+          "en": "36",
+          "zh-CN": "36"
+        },
+        {
+          "sr": "54",
+          "en": "54",
+          "zh-CN": "54"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "У петом кораку Б постаје 0.",
+        "en": "In the fifth step, B becomes 0.",
+        "zh-CN": "在第五步中，B 变为 0。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Када алгоритам завршава?",
+        "en": "When does the algorithm terminate?",
+        "zh-CN": "算法何时终止？"
+      },
+      "options": [
+        {
+          "sr": "Када је Б нула",
+          "en": "When B is zero",
+          "zh-CN": "当 B 为零时"
+        },
+        {
+          "sr": "Када је А нула",
+          "en": "When A is zero",
+          "zh-CN": "当 A 为零时"
+        },
+        {
+          "sr": "Када је А веће од Б",
+          "en": "When A is greater than B",
+          "zh-CN": "当 A 大于 B 时"
+        },
+        {
+          "sr": "Када је А мање од Б",
+          "en": "When A is less than B",
+          "zh-CN": "当 A 小于 B 时"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Алгоритам завршава када Б постане нула.",
+        "en": "The algorithm terminates when B becomes zero.",
+        "zh-CN": "当 B 变为零时，算法终止。"
+      }
+    },
+    {
+      "n": 9,
+      "skip": true
+    }
+  ]
+}

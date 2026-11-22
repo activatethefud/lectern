@@ -1,0 +1,21 @@
+{
+  "slug": "euklidov-algoritam",
+  "title": {
+    "sr": "Еуклидов алгоритам",
+    "en": "Euclidean Algorithm",
+    "zh-CN": "欧几里得算法"
+  },
+  "description": {
+    "sr": "Учење о Еуклидовом алгоритму за проналажење НЗД.",
+    "en": "Learning about the Euclidean algorithm for finding GCD.",
+    "zh-CN": "学习欧几里得算法以找到最大公约数。"
+  },
+  "tags": [
+    "informatika",
+    "6. razred",
+    "algoritmi",
+    "matematika"
+  ],
+  "lang": "sr",
+  "order": 21
+}

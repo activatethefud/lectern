@@ -1,0 +1,86 @@
+{
+  "lang": "en",
+  "deckSha": "901419c98a924df76783665eeebfd6e6bfc7bd14c819a869b73c5f2a1c7cff5f",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "СЦЕНАРИО И АЛГОРИТАМ"
+      ],
+      "dst": [
+        "SCENARIO AND ALGORITHM"
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "Покушај написати сценарио за следећи задатак и представити га дијаграмом тока алгоритма",
+        ":",
+        "Сабери два учитана",
+        " броја и испиши њихов збир",
+        "учитај сабирке",
+        "сабери",
+        " сабирке",
+        "испиши збир",
+        "СЦЕНАРИО:",
+        "ДИЈАГРАМ:",
+        "ЗАДАТАК",
+        ":"
+      ],
+      "dst": [
+        "Try to write a scenario for the following task and present it as a flowchart of the algorithm:",
+        "",
+        "Add two input numbers and write their sum",
+        "",
+        "read the addends",
+        "add the addends",
+        "",
+        "write the sum",
+        "SCENARIO:",
+        "DIAGRAM:",
+        "TASK:",
+        ""
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Сценарио за програм “Разговор Еби и Девина”",
+        "трајање",
+        "АКТИВНОСТИ",
+        "говори:”Шта је алгоритам?”",
+        "?",
+        "2 сек",
+        "?",
+        "говори:”Знам!”",
+        "2 сек",
+        "?",
+        "говори:”Алгоритам је упутство...”",
+        "5 сек",
+        "мења ",
+        "костим",
+        "мења костим",
+        "-"
+      ],
+      "dst": [
+        "Scenario for the program “Ebi and Devin Conversation”",
+        "duration",
+        "ACTIVITIES",
+        "says: “What is an algorithm?”",
+        "?",
+        "2 sec",
+        "?",
+        "says: “I know!”",
+        "2 sec",
+        "?",
+        "says: “An algorithm is an instruction...”",
+        "5 sec",
+        "changes costume",
+        "",
+        "changes costume",
+        "-"
+      ]
+    }
+  ]
+}

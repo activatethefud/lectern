@@ -1,0 +1,260 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koji format se koristi za čuvanje crteža?",
+        "en": "What format is used for saving drawings?",
+        "zh-CN": "保存图形使用什么格式？"
+      },
+      "options": [
+        {
+          "sr": "JPEG",
+          "en": "JPEG",
+          "zh-CN": "JPEG"
+        },
+        {
+          "sr": "TXT",
+          "en": "TXT",
+          "zh-CN": "TXT"
+        },
+        {
+          "sr": "PDF",
+          "en": "PDF",
+          "zh-CN": "PDF"
+        },
+        {
+          "sr": "PNG",
+          "en": "PNG",
+          "zh-CN": "PNG"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "sr": "PNG je jedan od formata za čuvanje crteža.",
+        "en": "PNG is one of the formats for saving drawings.",
+        "zh-CN": "PNG是保存图形的格式之一。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Šta se koristi za upravljanje selekcijom?",
+        "en": "What is used for managing selection?",
+        "zh-CN": "用于管理选择的是什么？"
+      },
+      "options": [
+        {
+          "sr": "Alat za selekciju",
+          "en": "Selection tool",
+          "zh-CN": "选择工具"
+        },
+        {
+          "sr": "Alat za tekst",
+          "en": "Text tool",
+          "zh-CN": "文本工具"
+        },
+        {
+          "sr": "Alat za boje",
+          "en": "Color tool",
+          "zh-CN": "颜色工具"
+        },
+        {
+          "sr": "Alat za oblike",
+          "en": "Shapes tool",
+          "zh-CN": "形状工具"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Alat za selekciju se koristi za upravljanje selekcijom.",
+        "en": "The selection tool is used for managing selection.",
+        "zh-CN": "选择工具用于管理选择。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koje boje se koriste kao prva i druga boja?",
+        "en": "Which colors are used as the first and second color?",
+        "zh-CN": "第一种和第二种颜色使用什么颜色？"
+      },
+      "options": [
+        {
+          "sr": "Zelena i plava",
+          "en": "Green and blue",
+          "zh-CN": "绿色和蓝色"
+        },
+        {
+          "sr": "Crvena i žuta",
+          "en": "Red and yellow",
+          "zh-CN": "红色和黄色"
+        },
+        {
+          "sr": "Crna i bela",
+          "en": "Black and white",
+          "zh-CN": "黑色和白色"
+        },
+        {
+          "sr": "Prva i druga boja",
+          "en": "First and second color",
+          "zh-CN": "第一种和第二种颜色"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "sr": "Prva i druga boja se koriste za crtanje.",
+        "en": "First and second color are used for drawing.",
+        "zh-CN": "第一种和第二种颜色用于绘图。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Koji program je Gimp?",
+        "en": "What type of program is Gimp?",
+        "zh-CN": "Gimp是什么类型的程序？"
+      },
+      "options": [
+        {
+          "sr": "Program za tekst",
+          "en": "Text program",
+          "zh-CN": "文本程序"
+        },
+        {
+          "sr": "Program za računarsku grafiku",
+          "en": "Computer graphics program",
+          "zh-CN": "计算机图形程序"
+        },
+        {
+          "sr": "Program za muziku",
+          "en": "Music program",
+          "zh-CN": "音乐程序"
+        },
+        {
+          "sr": "Program za video",
+          "en": "Video program",
+          "zh-CN": "视频程序"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Gimp je program za računarsku grafiku.",
+        "en": "Gimp is a computer graphics program.",
+        "zh-CN": "Gimp是一个计算机图形程序。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Šta se podešava u radnom okruženju Gimp-a?",
+        "en": "What is set in the Gimp working environment?",
+        "zh-CN": "在Gimp工作环境中设置什么？"
+      },
+      "options": [
+        {
+          "sr": "Veličina slike",
+          "en": "Image size",
+          "zh-CN": "图像大小"
+        },
+        {
+          "sr": "Boje pozadine",
+          "en": "Background colors",
+          "zh-CN": "背景颜色"
+        },
+        {
+          "sr": "Tip fonta",
+          "en": "Font type",
+          "zh-CN": "字体类型"
+        },
+        {
+          "sr": "Muzika",
+          "en": "Music",
+          "zh-CN": "音乐"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Veličina slike se podešava u radnom okruženju Gimp-a.",
+        "en": "Image size is set in the Gimp working environment.",
+        "zh-CN": "在Gimp工作环境中设置图像大小。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Koja veličina slike se podešava u Gimp-u?",
+        "en": "What image size is set in Gimp?",
+        "zh-CN": "在Gimp中设置什么图像大小？"
+      },
+      "options": [
+        {
+          "sr": "800x600",
+          "en": "800x600",
+          "zh-CN": "800x600"
+        },
+        {
+          "sr": "640x400",
+          "en": "640x400",
+          "zh-CN": "640x400"
+        },
+        {
+          "sr": "1024x768",
+          "en": "1024x768",
+          "zh-CN": "1024x768"
+        },
+        {
+          "sr": "1280x720",
+          "en": "1280x720",
+          "zh-CN": "1280x720"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "640x400 je veličina slike koja se podešava.",
+        "en": "640x400 is the image size that is set.",
+        "zh-CN": "640x400是设置的图像大小。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Šta se koristi za pozadinu u Gimp-u?",
+        "en": "What is used for the background in Gimp?",
+        "zh-CN": "在Gimp中用于背景的是什么？"
+      },
+      "options": [
+        {
+          "sr": "Slojevi",
+          "en": "Layers",
+          "zh-CN": "图层"
+        },
+        {
+          "sr": "Oblici",
+          "en": "Shapes",
+          "zh-CN": "形状"
+        },
+        {
+          "sr": "Tekst",
+          "en": "Text",
+          "zh-CN": "文本"
+        },
+        {
+          "sr": "Boje",
+          "en": "Colors",
+          "zh-CN": "颜色"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Slojevi se koriste za pozadinu u Gimp-u.",
+        "en": "Layers are used for the background in Gimp.",
+        "zh-CN": "图层用于Gimp中的背景。"
+      }
+    }
+  ]
+}

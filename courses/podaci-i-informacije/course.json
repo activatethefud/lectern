@@ -1,0 +1,22 @@
+{
+  "slug": "podaci-i-informacije",
+  "title": {
+    "sr": "Podaci i informacije na internetu",
+    "en": "Data and Information on the Internet",
+    "zh-CN": "互联网上的数据和信息"
+  },
+  "description": {
+    "sr": "Učenje o razlikama između podataka i informacija, kao i kako bezbedno preuzimati sadržaj sa interneta.",
+    "en": "Learning about the differences between data and information, as well as how to safely download content from the internet.",
+    "zh-CN": "学习数据和信息之间的区别，以及如何安全地从互联网上下载内容。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred",
+    "internet",
+    "bezbednost",
+    "proveravanje"
+  ],
+  "lang": "sr",
+  "order": 17
+}

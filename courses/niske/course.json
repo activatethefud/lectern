@@ -1,0 +1,22 @@
+{
+  "slug": "niske",
+  "title": {
+    "sr": "Nizovi karaktera",
+    "en": "Strings",
+    "zh-CN": "字符串"
+  },
+  "description": {
+    "sr": "Uvod u nizove karaktera i njihove operacije.",
+    "en": "Introduction to strings and their operations.",
+    "zh-CN": "字符串及其操作的介绍。"
+  },
+  "tags": [
+    "informatika",
+    "6. razred",
+    "nizovi",
+    "karakteri",
+    "programiranje"
+  ],
+  "lang": "sr",
+  "order": 45
+}

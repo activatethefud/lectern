@@ -1,0 +1,19 @@
+{
+  "slug": "p5-projekat2",
+  "title": {
+    "sr": "Projektna nastava",
+    "en": "Project-Based Learning",
+    "zh-CN": "项目式学习"
+  },
+  "description": {
+    "sr": "Ova prezentacija objašnjava faze projektne nastave.",
+    "en": "This presentation explains the phases of project-based learning.",
+    "zh-CN": "本演示文稿解释了项目式学习的阶段。"
+  },
+  "tags": [
+    "informatika",
+    "5. razred"
+  ],
+  "lang": "sr",
+  "order": 44
+}

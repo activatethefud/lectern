@@ -1,0 +1,456 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Šta učenik treba da ume na kraju časa?",
+        "en": "What should the student be able to do by the end of the lesson?",
+        "zh-CN": "学生在课结束时应该能做什么？"
+      },
+      "options": [
+        {
+          "sr": "Kreirati e-mail nalog",
+          "en": "Create an e-mail account",
+          "zh-CN": "创建电子邮件账户"
+        },
+        {
+          "sr": "Ispisati poruku",
+          "en": "Print a message",
+          "zh-CN": "打印消息"
+        },
+        {
+          "sr": "Snimiti video",
+          "en": "Record a video",
+          "zh-CN": "录制视频"
+        },
+        {
+          "sr": "Kreirati web stranicu",
+          "en": "Create a web page",
+          "zh-CN": "创建网页"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Učenik treba da ume da kreira e-mail nalog.",
+        "en": "The student should be able to create an e-mail account.",
+        "zh-CN": "学生应该能够创建电子邮件账户。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Šta od navedenog je deo e-mail adrese?",
+        "en": "Which of the following is a part of an e-mail address?",
+        "zh-CN": "以下哪个是电子邮件地址的一部分？"
+      },
+      "options": [
+        {
+          "sr": "Korisničko ime",
+          "en": "Username",
+          "zh-CN": "用户名"
+        },
+        {
+          "sr": "Naslov",
+          "en": "Subject",
+          "zh-CN": "主题"
+        },
+        {
+          "sr": "Prilog",
+          "en": "Attachment",
+          "zh-CN": "附件"
+        },
+        {
+          "sr": "Poruka",
+          "en": "Message",
+          "zh-CN": "消息"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Korisničko ime je deo e-mail adrese.",
+        "en": "The username is a part of the e-mail address.",
+        "zh-CN": "用户名是电子邮件地址的一部分。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koja adresa je ispravna?",
+        "en": "Which address is correct?",
+        "zh-CN": "哪个地址是正确的？"
+      },
+      "options": [
+        {
+          "sr": "marko.markovic@os-skola.edu.rs",
+          "en": "marko.markovic@os-skola.edu.rs",
+          "zh-CN": "marko.markovic@os-skola.edu.rs"
+        },
+        {
+          "sr": "marko markovic@skola.rs",
+          "en": "marko markovic@skola.rs",
+          "zh-CN": "marko markovic@skola.rs"
+        },
+        {
+          "sr": "marko@@skola.rs",
+          "en": "marko@@skola.rs",
+          "zh-CN": "marko@@skola.rs"
+        },
+        {
+          "sr": "@skola.edu.rs",
+          "en": "@skola.edu.rs",
+          "zh-CN": "@skola.edu.rs"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ova adresa je ispravna jer ima tačno jedno @.",
+        "en": "This address is correct because it has exactly one @.",
+        "zh-CN": "该地址是正确的，因为它恰好有一个@。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta označava polje 'To' u e-mailu?",
+        "en": "What does the 'To' field in an e-mail indicate?",
+        "zh-CN": "'To'字段在电子邮件中表示什么？"
+      },
+      "options": [
+        {
+          "sr": "Glavni primalac",
+          "en": "Main recipient",
+          "zh-CN": "主要收件人"
+        },
+        {
+          "sr": "Kopija",
+          "en": "Copy",
+          "zh-CN": "副本"
+        },
+        {
+          "sr": "Skrivena kopija",
+          "en": "Blind copy",
+          "zh-CN": "密件抄送"
+        },
+        {
+          "sr": "Naslov",
+          "en": "Subject",
+          "zh-CN": "主题"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "'To' označava glavnog primaoca poruke.",
+        "en": "'To' indicates the main recipient of the message.",
+        "zh-CN": "'To'表示消息的主要收件人。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Koje od navedenog možeš koristiti u poruci?",
+        "en": "Which of the following can you use in a message?",
+        "zh-CN": "以下哪个可以在消息中使用？"
+      },
+      "options": [
+        {
+          "sr": "Podvučeno",
+          "en": "Underlined",
+          "zh-CN": "下划线"
+        },
+        {
+          "sr": "Samo slike",
+          "en": "Only images",
+          "zh-CN": "仅图片"
+        },
+        {
+          "sr": "Samo tekst",
+          "en": "Only text",
+          "zh-CN": "仅文本"
+        },
+        {
+          "sr": "Samo linkovi",
+          "en": "Only links",
+          "zh-CN": "仅链接"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Možeš koristiti podvučeno u poruci.",
+        "en": "You can use underlined text in a message.",
+        "zh-CN": "您可以在消息中使用下划线文本。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Šta treba proveriti pre slanja poruke?",
+        "en": "What should you check before sending a message?",
+        "zh-CN": "发送消息前应检查什么？"
+      },
+      "options": [
+        {
+          "sr": "Da li su sva polja popunjena",
+          "en": "Whether all fields are filled",
+          "zh-CN": "所有字段是否已填写"
+        },
+        {
+          "sr": "Da li je poruka dugačka",
+          "en": "Whether the message is long",
+          "zh-CN": "消息是否很长"
+        },
+        {
+          "sr": "Da li je poruka napisana u žurbi",
+          "en": "Whether the message is written in a hurry",
+          "zh-CN": "消息是否匆忙写成"
+        },
+        {
+          "sr": "Da li je poruka napisana u crvenoj boji",
+          "en": "Whether the message is written in red",
+          "zh-CN": "消息是否用红色写成"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Treba proveriti da li su sva polja popunjena pre slanja.",
+        "en": "You should check if all fields are filled before sending.",
+        "zh-CN": "发送前应检查所有字段是否已填写。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Šta je oznaka u e-mailu?",
+        "en": "What is a label in an e-mail?",
+        "zh-CN": "电子邮件中的标签是什么？"
+      },
+      "options": [
+        {
+          "sr": "Kategorija poruke",
+          "en": "Category of the message",
+          "zh-CN": "消息的类别"
+        },
+        {
+          "sr": "Tip datoteke",
+          "en": "Type of file",
+          "zh-CN": "文件类型"
+        },
+        {
+          "sr": "Veličina poruke",
+          "en": "Size of the message",
+          "zh-CN": "消息的大小"
+        },
+        {
+          "sr": "Datum slanja",
+          "en": "Date of sending",
+          "zh-CN": "发送日期"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Oznaka je kategorija koju dodaješ poruci.",
+        "en": "A label is a category you add to a message.",
+        "zh-CN": "标签是您添加到消息的类别。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Šta znači pisati velikim slovima?",
+        "en": "What does it mean to write in capital letters?",
+        "zh-CN": "用大写字母书写是什么意思？"
+      },
+      "options": [
+        {
+          "sr": "Da se viče",
+          "en": "That you are shouting",
+          "zh-CN": "你在喊叫"
+        },
+        {
+          "sr": "Da se piše brzo",
+          "en": "That you are writing quickly",
+          "zh-CN": "你在快速写作"
+        },
+        {
+          "sr": "Da se piše lepo",
+          "en": "That you are writing nicely",
+          "zh-CN": "你写得很好"
+        },
+        {
+          "sr": "Da se piše u šali",
+          "en": "That you are writing jokingly",
+          "zh-CN": "你在开玩笑"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Pisanje velikim slovima se smatra vikanjem.",
+        "en": "Writing in capital letters is considered shouting.",
+        "zh-CN": "用大写字母书写被视为喊叫。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Šta je spamer?",
+        "en": "What is a spammer?",
+        "zh-CN": "什么是垃圾邮件发送者？"
+      },
+      "options": [
+        {
+          "sr": "Pošiljalac nepoželjnih poruka",
+          "en": "Sender of unwanted messages",
+          "zh-CN": "不需要消息的发送者"
+        },
+        {
+          "sr": "Osoba koja piše poruke",
+          "en": "Person who writes messages",
+          "zh-CN": "写消息的人"
+        },
+        {
+          "sr": "Osoba koja šalje slike",
+          "en": "Person who sends images",
+          "zh-CN": "发送图片的人"
+        },
+        {
+          "sr": "Osoba koja odgovara na poruke",
+          "en": "Person who replies to messages",
+          "zh-CN": "回复消息的人"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Spamer je pošiljalac nepoželjnih poruka.",
+        "en": "A spammer is a sender of unwanted messages.",
+        "zh-CN": "垃圾邮件发送者是不需要消息的发送者。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Šta je phishing?",
+        "en": "What is phishing?",
+        "zh-CN": "什么是网络钓鱼？"
+      },
+      "options": [
+        {
+          "sr": "Pokušaj krađe podataka",
+          "en": "Attempt to steal data",
+          "zh-CN": "试图窃取数据"
+        },
+        {
+          "sr": "Slanje slika",
+          "en": "Sending images",
+          "zh-CN": "发送图片"
+        },
+        {
+          "sr": "Pisanje poruka",
+          "en": "Writing messages",
+          "zh-CN": "写消息"
+        },
+        {
+          "sr": "Odgovaranje na poruke",
+          "en": "Replying to messages",
+          "zh-CN": "回复消息"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Phishing je pokušaj krađe podataka putem lažnih poruka.",
+        "en": "Phishing is an attempt to steal data through fake messages.",
+        "zh-CN": "网络钓鱼是通过假消息窃取数据的尝试。"
+      }
+    },
+    {
+      "n": 12,
+      "q": {
+        "sr": "Koji znak ukazuje na phishing?",
+        "en": "Which sign indicates phishing?",
+        "zh-CN": "哪个标志表明网络钓鱼？"
+      },
+      "options": [
+        {
+          "sr": "Lažan pošiljalac",
+          "en": "Fake sender",
+          "zh-CN": "假发件人"
+        },
+        {
+          "sr": "Pozitivna poruka",
+          "en": "Positive message",
+          "zh-CN": "积极的信息"
+        },
+        {
+          "sr": "Obična poruka",
+          "en": "Regular message",
+          "zh-CN": "常规消息"
+        },
+        {
+          "sr": "Poruka bez potpisa",
+          "en": "Message without signature",
+          "zh-CN": "没有签名的消息"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Lažan pošiljalac je znak phishinga.",
+        "en": "A fake sender is a sign of phishing.",
+        "zh-CN": "假发件人是网络钓鱼的标志。"
+      }
+    },
+    {
+      "n": 13,
+      "q": {
+        "sr": "Šta je neprihvatljivo u e-mailu?",
+        "en": "What is unacceptable in an e-mail?",
+        "zh-CN": "电子邮件中不可接受的是什么？"
+      },
+      "options": [
+        {
+          "sr": "Poruka bez potpisa",
+          "en": "Message without signature",
+          "zh-CN": "没有签名的消息"
+        },
+        {
+          "sr": "Poruka sa pozdravom",
+          "en": "Message with greeting",
+          "zh-CN": "带问候的消息"
+        },
+        {
+          "sr": "Poruka sa jasnim naslovom",
+          "en": "Message with clear subject",
+          "zh-CN": "带清晰主题的消息"
+        },
+        {
+          "sr": "Poruka sa prilogom",
+          "en": "Message with attachment",
+          "zh-CN": "带附件的消息"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Poruka bez potpisa je neprihvatljiva.",
+        "en": "A message without a signature is unacceptable.",
+        "zh-CN": "没有签名的消息是不可接受的。"
+      }
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    },
+    {
+      "n": 16,
+      "skip": true
+    },
+    {
+      "n": 17,
+      "skip": true
+    }
+  ]
+}

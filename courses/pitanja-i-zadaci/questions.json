@@ -1,0 +1,384 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koje su ključne oblasti koje učenik treba da razume na kraju časa?",
+        "en": "What are the key areas that a student should understand by the end of the lesson?",
+        "zh-CN": "学生在课结束时应该理解哪些关键领域？"
+      },
+      "options": [
+        {
+          "sr": "Logička struktura, stilovi, raster i vektor grafika",
+          "en": "Logical structure, styles, raster and vector graphics",
+          "zh-CN": "逻辑结构、样式、光栅和矢量图形"
+        },
+        {
+          "sr": "Samo stilovi i grafika",
+          "en": "Only styles and graphics",
+          "zh-CN": "仅样式和图形"
+        },
+        {
+          "sr": "Samo animacija",
+          "en": "Only animation",
+          "zh-CN": "仅动画"
+        },
+        {
+          "sr": "Samo tekst",
+          "en": "Only text",
+          "zh-CN": "仅文本"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Učenik treba da razume sve navedene oblasti.",
+        "en": "The student should understand all the mentioned areas.",
+        "zh-CN": "学生应该理解所有提到的领域。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koje oblasti su uključene u pregled gradiva?",
+        "en": "Which areas are included in the curriculum overview?",
+        "zh-CN": "课程概述中包含哪些领域？"
+      },
+      "options": [
+        {
+          "sr": "Tekst, stilovi, raster i vektor grafika",
+          "en": "Text, styles, raster and vector graphics",
+          "zh-CN": "文本、样式、光栅和矢量图形"
+        },
+        {
+          "sr": "Samo video i animacija",
+          "en": "Only video and animation",
+          "zh-CN": "仅视频和动画"
+        },
+        {
+          "sr": "Samo grafika",
+          "en": "Only graphics",
+          "zh-CN": "仅图形"
+        },
+        {
+          "sr": "Samo tekst",
+          "en": "Only text",
+          "zh-CN": "仅文本"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Pregled uključuje sve navedene oblasti.",
+        "en": "The overview includes all the mentioned areas.",
+        "zh-CN": "概述包括所有提到的领域。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Šta čini logičku strukturu teksta?",
+        "en": "What constitutes the logical structure of a text?",
+        "zh-CN": "文本的逻辑结构由什么构成？"
+      },
+      "options": [
+        {
+          "sr": "Naslov, podnaslov, pasus, lista",
+          "en": "Title, subtitle, paragraph, list",
+          "zh-CN": "标题、副标题、段落、列表"
+        },
+        {
+          "sr": "Boja i font",
+          "en": "Color and font",
+          "zh-CN": "颜色和字体"
+        },
+        {
+          "sr": "Samo slike",
+          "en": "Only images",
+          "zh-CN": "仅图像"
+        },
+        {
+          "sr": "Samo pasusi",
+          "en": "Only paragraphs",
+          "zh-CN": "仅段落"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Logička struktura uključuje sve navedene elemente.",
+        "en": "The logical structure includes all the mentioned elements.",
+        "zh-CN": "逻辑结构包括所有提到的元素。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Koja je svrha stilova u dokumentu?",
+        "en": "What is the purpose of styles in a document?",
+        "zh-CN": "文档中样式的目的是什么？"
+      },
+      "options": [
+        {
+          "sr": "Doslednost i brza izmena izgleda",
+          "en": "Consistency and quick appearance changes",
+          "zh-CN": "一致性和快速外观更改"
+        },
+        {
+          "sr": "Samo za umetnički izgled",
+          "en": "Only for artistic appearance",
+          "zh-CN": "仅用于艺术外观"
+        },
+        {
+          "sr": "Samo za slike",
+          "en": "Only for images",
+          "zh-CN": "仅用于图像"
+        },
+        {
+          "sr": "Samo za naslove",
+          "en": "Only for titles",
+          "zh-CN": "仅用于标题"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Stilovi omogućavaju doslednost i brze izmene u dokumentu.",
+        "en": "Styles allow for consistency and quick changes in the document.",
+        "zh-CN": "样式允许文档中的一致性和快速更改。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Koja je karakteristika raster grafike?",
+        "en": "What is a characteristic of raster graphics?",
+        "zh-CN": "光栅图形的特点是什么？"
+      },
+      "options": [
+        {
+          "sr": "Gubi kvalitet pri uvećanju",
+          "en": "Loses quality when enlarged",
+          "zh-CN": "放大时失去质量"
+        },
+        {
+          "sr": "Skalira se bez gubitka",
+          "en": "Scales without loss",
+          "zh-CN": "无损缩放"
+        },
+        {
+          "sr": "Samo koristi vektore",
+          "en": "Only uses vectors",
+          "zh-CN": "仅使用向量"
+        },
+        {
+          "sr": "Uvek je oštra",
+          "en": "Always sharp",
+          "zh-CN": "始终清晰"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Raster grafika gubi kvalitet kada se uveća.",
+        "en": "Raster graphics lose quality when enlarged.",
+        "zh-CN": "光栅图形在放大时会失去质量。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Koje su osnovne tehnike obrade slike?",
+        "en": "What are the basic image editing techniques?",
+        "zh-CN": "基本图像编辑技术是什么？"
+      },
+      "options": [
+        {
+          "sr": "Selektovanje, isecanje, rotiranje",
+          "en": "Selection, cutting, rotating",
+          "zh-CN": "选择、剪切、旋转"
+        },
+        {
+          "sr": "Samo dodavanje efekata",
+          "en": "Only adding effects",
+          "zh-CN": "仅添加效果"
+        },
+        {
+          "sr": "Samo promene boje",
+          "en": "Only color changes",
+          "zh-CN": "仅颜色变化"
+        },
+        {
+          "sr": "Samo uklanjanje nedostataka",
+          "en": "Only removing flaws",
+          "zh-CN": "仅去除缺陷"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Osnovne tehnike uključuju selektovanje, isecanje i rotiranje.",
+        "en": "Basic techniques include selection, cutting, and rotating.",
+        "zh-CN": "基本技术包括选择、剪切和旋转。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Koji je prvi korak u pravljenju GIF animacije?",
+        "en": "What is the first step in creating a GIF animation?",
+        "zh-CN": "制作GIF动画的第一步是什么？"
+      },
+      "options": [
+        {
+          "sr": "Pripremi kadrove",
+          "en": "Prepare frames",
+          "zh-CN": "准备帧"
+        },
+        {
+          "sr": "Izvezi animaciju",
+          "en": "Export the animation",
+          "zh-CN": "导出动画"
+        },
+        {
+          "sr": "Podesi trajanje",
+          "en": "Set duration",
+          "zh-CN": "设置持续时间"
+        },
+        {
+          "sr": "Proveri petlju",
+          "en": "Check the loop",
+          "zh-CN": "检查循环"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Prvi korak je priprema kadrova za animaciju.",
+        "en": "The first step is to prepare the frames for the animation.",
+        "zh-CN": "第一步是准备动画的帧。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Koji je važan korak pre snimanja ekrana?",
+        "en": "What is an important step before screen recording?",
+        "zh-CN": "屏幕录制前的重要步骤是什么？"
+      },
+      "options": [
+        {
+          "sr": "Čišćenje radne površine",
+          "en": "Cleaning the desktop",
+          "zh-CN": "清理桌面"
+        },
+        {
+          "sr": "Samo pokretanje programa",
+          "en": "Just starting the program",
+          "zh-CN": "仅启动程序"
+        },
+        {
+          "sr": "Samo provera zvuka",
+          "en": "Only checking sound",
+          "zh-CN": "仅检查声音"
+        },
+        {
+          "sr": "Samo snimanje u više delova",
+          "en": "Only recording in parts",
+          "zh-CN": "仅分部分录制"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Čišćenje radne površine pomaže u izbegavanju ometanja.",
+        "en": "Cleaning the desktop helps avoid distractions.",
+        "zh-CN": "清理桌面有助于避免干扰。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Šta je hibridni pojam između hardvera i softvera?",
+        "en": "What is a hybrid term between hardware and software?",
+        "zh-CN": "硬件和软件之间的混合术语是什么？"
+      },
+      "options": [
+        {
+          "sr": "Fizicki delovi i programi",
+          "en": "Physical parts and programs",
+          "zh-CN": "物理部件和程序"
+        },
+        {
+          "sr": "Samo fizički delovi",
+          "en": "Only physical parts",
+          "zh-CN": "仅物理部件"
+        },
+        {
+          "sr": "Samo programi",
+          "en": "Only programs",
+          "zh-CN": "仅程序"
+        },
+        {
+          "sr": "Samo servisi",
+          "en": "Only services",
+          "zh-CN": "仅服务"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Hibridni pojam obuhvata i fizičke delove i softverske programe.",
+        "en": "The hybrid term encompasses both physical parts and software programs.",
+        "zh-CN": "混合术语包括物理部件和软件程序。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Koji projekat zahteva korišćenje stilova i slika?",
+        "en": "Which project requires the use of styles and images?",
+        "zh-CN": "哪个项目需要使用样式和图像？"
+      },
+      "options": [
+        {
+          "sr": "Školski projekat",
+          "en": "School project",
+          "zh-CN": "学校项目"
+        },
+        {
+          "sr": "Samo posteri",
+          "en": "Only posters",
+          "zh-CN": "仅海报"
+        },
+        {
+          "sr": "Samo prezentacije",
+          "en": "Only presentations",
+          "zh-CN": "仅演示文稿"
+        },
+        {
+          "sr": "Samo uputstva",
+          "en": "Only instructions",
+          "zh-CN": "仅说明"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Školski projekat zahteva kombinaciju stilova i slika.",
+        "en": "The school project requires a combination of styles and images.",
+        "zh-CN": "学校项目需要样式和图像的组合。"
+      }
+    },
+    {
+      "n": 12,
+      "skip": true
+    },
+    {
+      "n": 13,
+      "skip": true
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "lang": "en",
+  "deckSha": "f64ec16a1a4b85b351896741274f3464c6e76b67fe01a7db5c35aa5331c8a126",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "Microsoft WORD"
+      ],
+      "dst": [
+        "Microsoft WORD"
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "Подешавање странице"
+      ],
+      "dst": [
+        "Page setup"
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Подешавање странице"
+      ],
+      "dst": [
+        "Page setup"
+      ]
+    },
+    {
+      "n": 4,
+      "src": [
+        "Подешавање параграфа"
+      ],
+      "dst": [
+        "Paragraph setup"
+      ]
+    },
+    {
+      "n": 5,
+      "src": [
+        "Подешавање фонта"
+      ],
+      "dst": [
+        "Font setup"
+      ]
+    },
+    {
+      "n": 6,
+      "src": [
+        "Уметање елемената"
+      ],
+      "dst": [
+        "Inserting elements"
+      ]
+    },
+    {
+      "n": 7,
+      "src": [
+        "Елементи табеле",
+        "ЋЕЛИЈА",
+        "РЕД",
+        "КОЛОНА"
+      ],
+      "dst": [
+        "Table elements",
+        "CELL",
+        "ROW",
+        "COLUMN"
+      ]
+    },
+    {
+      "n": 8,
+      "src": [
+        "Уметање табела"
+      ],
+      "dst": [
+        "Inserting tables"
+      ]
+    }
+  ]
+}

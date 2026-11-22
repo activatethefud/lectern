@@ -1,0 +1,268 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Šta je cilj ovog kviza?",
+        "en": "What is the goal of this quiz?",
+        "zh-CN": "这个测验的目标是什么？"
+      },
+      "options": [
+        {
+          "sr": "Da naučiš matematičku logiku.",
+          "en": "To learn mathematical logic.",
+          "zh-CN": "学习数学逻辑。"
+        },
+        {
+          "sr": "Da rešiš sve zadatke bez greške.",
+          "en": "To solve all tasks without mistakes.",
+          "zh-CN": "毫无错误地解决所有任务。"
+        },
+        {
+          "sr": "Da se takmičiš sa drugima.",
+          "en": "To compete with others.",
+          "zh-CN": "与他人竞争。"
+        },
+        {
+          "sr": "Da se zabaviš bez učenja.",
+          "en": "To have fun without learning.",
+          "zh-CN": "在不学习的情况下玩得开心。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Cilj je da naučiš osnovne pojmove matematičke logike.",
+        "en": "The goal is to learn the basic concepts of mathematical logic.",
+        "zh-CN": "目标是学习数学逻辑的基本概念。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Šta se umeće u blokove za grananje?",
+        "en": "What is inserted into the branching blocks?",
+        "zh-CN": "什么被插入到分支块中？"
+      },
+      "options": [
+        {
+          "sr": "Uslovi.",
+          "en": "Conditions.",
+          "zh-CN": "条件。"
+        },
+        {
+          "sr": "Naredbe.",
+          "en": "Commands.",
+          "zh-CN": "命令。"
+        },
+        {
+          "sr": "Podaci.",
+          "en": "Data.",
+          "zh-CN": "数据。"
+        },
+        {
+          "sr": "Ciljevi.",
+          "en": "Goals.",
+          "zh-CN": "目标。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "U blokove za grananje se umeću uslovi koji određuju izvršenje naredbi.",
+        "en": "Conditions are inserted into branching blocks that determine the execution of commands.",
+        "zh-CN": "条件被插入到分支块中，以确定命令的执行。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Šta će se desiti ako je uslov ispunjen?",
+        "en": "What will happen if the condition is met?",
+        "zh-CN": "如果条件满足，会发生什么？"
+      },
+      "options": [
+        {
+          "sr": "Naredba će biti izvršena.",
+          "en": "The command will be executed.",
+          "zh-CN": "命令将被执行。"
+        },
+        {
+          "sr": "Naredba će biti ignorisana.",
+          "en": "The command will be ignored.",
+          "zh-CN": "命令将被忽略。"
+        },
+        {
+          "sr": "Naredba će biti promenjena.",
+          "en": "The command will be changed.",
+          "zh-CN": "命令将被更改。"
+        },
+        {
+          "sr": "Naredba će biti odložena.",
+          "en": "The command will be delayed.",
+          "zh-CN": "命令将被延迟。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ako je uslov ispunjen, naredba će biti izvršena.",
+        "en": "If the condition is met, the command will be executed.",
+        "zh-CN": "如果条件满足，命令将被执行。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta se dešava ako uslov nije ispunjen?",
+        "en": "What happens if the condition is not met?",
+        "zh-CN": "如果条件不满足，会发生什么？"
+      },
+      "options": [
+        {
+          "sr": "Izvršiće se druga naredba.",
+          "en": "The second command will be executed.",
+          "zh-CN": "第二个命令将被执行。"
+        },
+        {
+          "sr": "Izvršiće se prva naredba.",
+          "en": "The first command will be executed.",
+          "zh-CN": "第一个命令将被执行。"
+        },
+        {
+          "sr": "Naredba će biti ponovo proverena.",
+          "en": "The command will be checked again.",
+          "zh-CN": "命令将被重新检查。"
+        },
+        {
+          "sr": "Naredba će biti obrisana.",
+          "en": "The command will be deleted.",
+          "zh-CN": "命令将被删除。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ako uslov nije ispunjen, izvršiće se druga naredba.",
+        "en": "If the condition is not met, the second command will be executed.",
+        "zh-CN": "如果条件不满足，第二个命令将被执行。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Kada će se prva naredba izvršiti?",
+        "en": "When will the first command be executed?",
+        "zh-CN": "第一条命令何时执行？"
+      },
+      "options": [
+        {
+          "sr": "Kada su oba dela uslova ispunjena.",
+          "en": "When both parts of the condition are met.",
+          "zh-CN": "当条件的两个部分都满足时。"
+        },
+        {
+          "sr": "Kada je jedan deo uslova ispunjen.",
+          "en": "When one part of the condition is met.",
+          "zh-CN": "当条件的一部分满足时。"
+        },
+        {
+          "sr": "Kada su svi uslovi neispunjeni.",
+          "en": "When all conditions are unmet.",
+          "zh-CN": "当所有条件都未满足时。"
+        },
+        {
+          "sr": "Kada se uslovi ne proveravaju.",
+          "en": "When the conditions are not checked.",
+          "zh-CN": "当条件不被检查时。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Prva naredba će se izvršiti kada su oba dela uslova ispunjena.",
+        "en": "The first command will be executed when both parts of the condition are met.",
+        "zh-CN": "当条件的两个部分都满足时，第一条命令将被执行。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Kada će se druga naredba izvršiti?",
+        "en": "When will the second command be executed?",
+        "zh-CN": "第二条命令何时执行？"
+      },
+      "options": [
+        {
+          "sr": "Kada oba dela uslova nisu ispunjena.",
+          "en": "When both parts of the conditions are not met.",
+          "zh-CN": "当条件的两个部分都未满足时。"
+        },
+        {
+          "sr": "Kada je jedan deo uslova ispunjen.",
+          "en": "When one part of the condition is met.",
+          "zh-CN": "当条件的一部分满足时。"
+        },
+        {
+          "sr": "Kada su svi uslovi ispunjeni.",
+          "en": "When all conditions are met.",
+          "zh-CN": "当所有条件都满足时。"
+        },
+        {
+          "sr": "Kada se uslovi ne proveravaju.",
+          "en": "When the conditions are not checked.",
+          "zh-CN": "当条件不被检查时。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Druga naredba će se izvršiti kada oba dela uslova nisu ispunjena.",
+        "en": "The second command will be executed when both parts of the conditions are not met.",
+        "zh-CN": "当条件的两个部分都未满足时，第二条命令将被执行。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Kada je uslov ispunjen u obrnutom obliku?",
+        "en": "When is the condition met in the inverted form?",
+        "zh-CN": "反向条件何时满足？"
+      },
+      "options": [
+        {
+          "sr": "Kada nije tačno da je uslov ispunjen.",
+          "en": "When it is not true that the condition is met.",
+          "zh-CN": "当条件未满足时。"
+        },
+        {
+          "sr": "Kada je uslov tačan.",
+          "en": "When the condition is true.",
+          "zh-CN": "当条件为真时。"
+        },
+        {
+          "sr": "Kada se uslov ne proverava.",
+          "en": "When the condition is not checked.",
+          "zh-CN": "当条件不被检查时。"
+        },
+        {
+          "sr": "Kada su svi uslovi ispunjeni.",
+          "en": "When all conditions are met.",
+          "zh-CN": "当所有条件都满足时。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "U obrnutom obliku, uslov je ispunjen kada nije tačno da je uslov ispunjen.",
+        "en": "In inverted form, the condition is met when it is not true that the condition is met.",
+        "zh-CN": "在反向形式中，当条件未满足时，条件被满足。"
+      }
+    },
+    {
+      "n": 9,
+      "skip": true
+    },
+    {
+      "n": 10,
+      "skip": true
+    }
+  ]
+}

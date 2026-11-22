@@ -1,0 +1,22 @@
+{
+  "slug": "adresiranje-i-hipertekst",
+  "title": {
+    "sr": "Informatička nastava - 7. razred",
+    "en": "Informatics Lesson - Grade 7",
+    "zh-CN": "信息技术课程 - 七年级"
+  },
+  "description": {
+    "sr": "Ova prezentacija pokriva osnovne pojmove vezane za URL, DNS, IP adrese, hiperveze i hipertekste.",
+    "en": "This presentation covers basic concepts related to URL, DNS, IP addresses, hyperlinks, and hypertext.",
+    "zh-CN": "本演示文稿涵盖与URL、DNS、IP地址、超链接和超文本相关的基本概念。"
+  },
+  "tags": [
+    "informatika",
+    "7. razred",
+    "internet",
+    "hiperveze",
+    "DNS"
+  ],
+  "lang": "sr",
+  "order": 31
+}

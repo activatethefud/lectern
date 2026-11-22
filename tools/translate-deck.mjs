@@ -106,6 +106,9 @@ async function apply() {
     throw new Error(`${translationFile} is missing — run extract first`)
   }
   const translation = JSON.parse(await fs.readFile(translationFile, 'utf8'))
+  // a translator may deliberately blank the runs after the first one in a paragraph (keepEmpty),
+  // because whole paragraphs are what gets translated, not half-sentence fragments
+  const keepEmpty = translation.keepEmpty === true
   const buf = await fs.readFile(deck)
   const zip = await JSZip.loadAsync(buf)
 
@@ -128,7 +131,7 @@ async function apply() {
       throw new Error(`slide ${n}: expected ${src.length} translations, got ${entry.dst.length}`)
     }
 
-    const missing = entry.dst
+    const missing = keepEmpty ? [] : entry.dst
       .map((d, i) => (String(d ?? '').trim() === '' && String(src[i] ?? '').trim() !== '' ? i : -1))
       .filter((i) => i >= 0)
     if (missing.length) {

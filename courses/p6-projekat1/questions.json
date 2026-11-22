@@ -1,0 +1,156 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Koja je prva faza projekta?",
+        "en": "What is the first phase of the project?",
+        "zh-CN": "项目的第一阶段是什么？"
+      },
+      "options": [
+        {
+          "sr": "Izrada",
+          "en": "Execution",
+          "zh-CN": "执行"
+        },
+        {
+          "sr": "Planiranje",
+          "en": "Planning",
+          "zh-CN": "规划"
+        },
+        {
+          "sr": "Evaluacija",
+          "en": "Evaluation",
+          "zh-CN": "评估"
+        },
+        {
+          "sr": "Prezentacija",
+          "en": "Presentation",
+          "zh-CN": "演示"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Prva faza projekta je planiranje.",
+        "en": "The first phase of the project is planning.",
+        "zh-CN": "项目的第一阶段是规划。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Koja tema se ne nalazi na listi?",
+        "en": "Which topic is not on the list?",
+        "zh-CN": "哪个主题不在列表中？"
+      },
+      "options": [
+        {
+          "sr": "Zastita privatnosti",
+          "en": "Privacy protection",
+          "zh-CN": "隐私保护"
+        },
+        {
+          "sr": "Digitalni trag",
+          "en": "Digital footprint",
+          "zh-CN": "数字足迹"
+        },
+        {
+          "sr": "Korišćenje društvenih mreža",
+          "en": "Using social networks",
+          "zh-CN": "使用社交网络"
+        },
+        {
+          "sr": "Pravila bezbednog rada",
+          "en": "Rules for safe work",
+          "zh-CN": "安全工作规则"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Tema 'Korišćenje društvenih mreža' nije navedena.",
+        "en": "The topic 'Using social networks' is not listed.",
+        "zh-CN": "主题“使用社交网络”未列出。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Koji deo projekta obavlja ceo tim?",
+        "en": "Which part of the project is done by the whole team?",
+        "zh-CN": "项目的哪个部分由整个团队完成？"
+      },
+      "options": [
+        {
+          "sr": "Priprema prezentacije",
+          "en": "Preparing the presentation",
+          "zh-CN": "准备演示"
+        },
+        {
+          "sr": "Analiziranje podataka",
+          "en": "Analyzing data",
+          "zh-CN": "分析数据"
+        },
+        {
+          "sr": "Izrada dokumentacije",
+          "en": "Creating documentation",
+          "zh-CN": "创建文档"
+        },
+        {
+          "sr": "Odašiljanje intervjua",
+          "en": "Conducting interviews",
+          "zh-CN": "进行访谈"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Pripremu prezentacije obavlja ceo tim.",
+        "en": "The whole team prepares the presentation.",
+        "zh-CN": "整个团队准备演示。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Šta je deo izrade projekta?",
+        "en": "What is part of the project execution?",
+        "zh-CN": "项目执行的部分是什么？"
+      },
+      "options": [
+        {
+          "sr": "Analiza podataka",
+          "en": "Data analysis",
+          "zh-CN": "数据分析"
+        },
+        {
+          "sr": "Planiranje teme",
+          "en": "Planning the topic",
+          "zh-CN": "主题规划"
+        },
+        {
+          "sr": "Priprema za izlaganje",
+          "en": "Preparation for presentation",
+          "zh-CN": "准备演示"
+        },
+        {
+          "sr": "Izrada strategije",
+          "en": "Creating a strategy",
+          "zh-CN": "制定战略"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Analiza podataka je deo izrade projekta.",
+        "en": "Data analysis is part of project execution.",
+        "zh-CN": "数据分析是项目执行的一部分。"
+      }
+    },
+    {
+      "n": 6,
+      "skip": true
+    }
+  ]
+}

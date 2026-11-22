@@ -1,0 +1,21 @@
+{
+  "slug": "elektronska-komunikacija",
+  "title": {
+    "sr": "E-mail komunikacija",
+    "en": "E-mail Communication",
+    "zh-CN": "电子邮件沟通"
+  },
+  "description": {
+    "sr": "Učenje o delovima e-mail adrese, pravilima komunikacije i bezbednosti.",
+    "en": "Learning about the parts of an e-mail address, communication rules, and safety.",
+    "zh-CN": "学习电子邮件地址的组成部分、沟通规则和安全性。"
+  },
+  "tags": [
+    "informatika",
+    "7. razred",
+    "e-mail",
+    "bezbednost"
+  ],
+  "lang": "sr",
+  "order": 32
+}

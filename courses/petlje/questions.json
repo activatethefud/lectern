@@ -1,0 +1,116 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Шта је проблем у програму?",
+        "en": "What is the problem in the program?",
+        "zh-CN": "程序中有什么问题？"
+      },
+      "options": [
+        {
+          "sr": "Број блокова је превелики.",
+          "en": "The number of blocks is too large.",
+          "zh-CN": "块的数量太大。"
+        },
+        {
+          "sr": "Мачка не може да шета.",
+          "en": "The cat cannot walk.",
+          "zh-CN": "猫不能走。"
+        },
+        {
+          "sr": "Позадина није исправна.",
+          "en": "The background is not correct.",
+          "zh-CN": "背景不正确。"
+        },
+        {
+          "sr": "Програм не ради уопште.",
+          "en": "The program does not work at all.",
+          "zh-CN": "程序根本不工作。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Програм има превелики број блокова.",
+        "en": "The program has too many blocks.",
+        "zh-CN": "程序有太多块。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Шта треба да урадимо да мачка непрекидно шета?",
+        "en": "What should we do to make the cat walk continuously?",
+        "zh-CN": "我们应该怎么做才能让猫不停地走？"
+      },
+      "options": [
+        {
+          "sr": "Додати услов за понavljanje.",
+          "en": "Add a condition for repetition.",
+          "zh-CN": "添加重复条件。"
+        },
+        {
+          "sr": "Променити боју позадине.",
+          "en": "Change the background color.",
+          "zh-CN": "更改背景颜色。"
+        },
+        {
+          "sr": "Уклонити блокове из програма.",
+          "en": "Remove blocks from the program.",
+          "zh-CN": "从程序中删除块。"
+        },
+        {
+          "sr": "Додати новог лика.",
+          "en": "Add a new character.",
+          "zh-CN": "添加新角色。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Услов за понavljanje омогућава мачки да шета непрекидно.",
+        "en": "The repetition condition allows the cat to walk continuously.",
+        "zh-CN": "重复条件允许猫不停地走。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Шта треба да урадимо пре него што сложимо програм?",
+        "en": "What should we do before we assemble the program?",
+        "zh-CN": "在组装程序之前我们应该做什么？"
+      },
+      "options": [
+        {
+          "sr": "Поставити позадину и лика.",
+          "en": "Set the background and character.",
+          "zh-CN": "设置背景和角色。"
+        },
+        {
+          "sr": "Сачувати програм.",
+          "en": "Save the program.",
+          "zh-CN": "保存程序。"
+        },
+        {
+          "sr": "Проверити грешке у коду.",
+          "en": "Check for errors in the code.",
+          "zh-CN": "检查代码中的错误。"
+        },
+        {
+          "sr": "Додати нове блокове.",
+          "en": "Add new blocks.",
+          "zh-CN": "添加新块。"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Пре него што сложимо програм, треба да поставимо позадину и лика.",
+        "en": "Before assembling the program, we need to set the background and character.",
+        "zh-CN": "在组装程序之前，我们需要设置背景和角色。"
+      }
+    }
+  ]
+}

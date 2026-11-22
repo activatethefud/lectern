@@ -1,0 +1,133 @@
+{
+  "lang": "en",
+  "deckSha": "d89282a7a21f8b3e4687909b362ee0eca269f1a7ba73732c2db575aa7809a4a6",
+  "keepEmpty": true,
+  "slides": [
+    {
+      "n": 1,
+      "src": [
+        "Microsoft PAINT"
+      ],
+      "dst": [
+        "Microsoft PAINT"
+      ]
+    },
+    {
+      "n": 2,
+      "src": [
+        "Креирање, отварање и чување цртежа",
+        "ФОРМАТИ ЦРТЕЖА"
+      ],
+      "dst": [
+        "Creating, opening, and saving drawings",
+        "DRAWING FORMATS"
+      ]
+    },
+    {
+      "n": 3,
+      "src": [
+        "Управљање селекцијом"
+      ],
+      "dst": [
+        "Managing selection"
+      ]
+    },
+    {
+      "n": 4,
+      "src": [
+        "Цртање, уметање текста и готових облика...",
+        "Прва и друга боја..."
+      ],
+      "dst": [
+        "Drawing, inserting text and ready-made shapes...",
+        "First and second color..."
+      ]
+    },
+    {
+      "n": 5,
+      "src": [
+        "Gimp",
+        "(www.gimp.org/downloads",
+        ")",
+        "Програм за рачунарску графику."
+      ],
+      "dst": [
+        "Gimp",
+        "(www.gimp.org/downloads)",
+        "",
+        "A program for computer graphics."
+      ]
+    },
+    {
+      "n": 6,
+      "src": [
+        "Радно окружење ",
+        "Gimp",
+        "-а"
+      ],
+      "dst": [
+        "Gimp's working environment",
+        "",
+        ""
+      ]
+    },
+    {
+      "n": 7,
+      "src": [
+        "Почетно подешавање величине слике у ",
+        "Gimp",
+        "-у",
+        "640х400 – број пиксела по ширини (реду)",
+        " ",
+        "               и по висини (колони)",
+        "300",
+        "ppi",
+        " – број пиксела по квадратном инчу",
+        " ",
+        "            (",
+        " ",
+        "2,5",
+        " ",
+        "cm ",
+        "х",
+        " ",
+        "2,5 ",
+        "cm",
+        ")",
+        " "
+      ],
+      "dst": [
+        "Initial image size settings in Gimp",
+        "",
+        "",
+        "640x400 – number of pixels in width (row)",
+        "and in height (column)",
+        "",
+        "300ppi – number of pixels per square inch",
+        "",
+        "",
+        "(2.5 cm x 2.5 cm)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        " "
+      ]
+    },
+    {
+      "n": 8,
+      "src": [
+        "Позадина и слојеви"
+      ],
+      "dst": [
+        "Background and layers"
+      ]
+    }
+  ]
+}

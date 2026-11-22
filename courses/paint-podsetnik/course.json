@@ -1,0 +1,21 @@
+{
+  "slug": "paint-podsetnik",
+  "title": {
+    "sr": "Uvod u Microsoft PAINT i Gimp",
+    "en": "Introduction to Microsoft PAINT and Gimp",
+    "zh-CN": "微软画图和Gimp简介"
+  },
+  "description": {
+    "sr": "Ova lekcija pokriva osnove korišćenja Microsoft PAINT i Gimp.",
+    "en": "This lesson covers the basics of using Microsoft PAINT and Gimp.",
+    "zh-CN": "本课涵盖了使用微软画图和Gimp的基础知识。"
+  },
+  "tags": [
+    "informatika",
+    "6. razred",
+    "grafika",
+    "softver"
+  ],
+  "lang": "sr",
+  "order": 22
+}

@@ -1,0 +1,260 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "q": {
+        "sr": "Шта се подешава у подешавању странице?",
+        "en": "What is adjusted in page setup?",
+        "zh-CN": "页面设置中调整了什么？"
+      },
+      "options": [
+        {
+          "sr": "Величина странице",
+          "en": "Page size",
+          "zh-CN": "页面大小"
+        },
+        {
+          "sr": "Боја фонта",
+          "en": "Font color",
+          "zh-CN": "字体颜色"
+        },
+        {
+          "sr": "Облик параграфа",
+          "en": "Paragraph shape",
+          "zh-CN": "段落形状"
+        },
+        {
+          "sr": "Садржај документа",
+          "en": "Document content",
+          "zh-CN": "文档内容"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Подешавање странице укључује величину странице.",
+        "en": "Page setup includes the page size.",
+        "zh-CN": "页面设置包括页面大小。"
+      }
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Који параметар се не подешава у подешавању странице?",
+        "en": "Which parameter is not adjusted in page setup?",
+        "zh-CN": "页面设置中不调整哪个参数？"
+      },
+      "options": [
+        {
+          "sr": "Величина странице",
+          "en": "Page size",
+          "zh-CN": "页面大小"
+        },
+        {
+          "sr": "Маргине",
+          "en": "Margins",
+          "zh-CN": "边距"
+        },
+        {
+          "sr": "Боја текста",
+          "en": "Text color",
+          "zh-CN": "文本颜色"
+        },
+        {
+          "sr": "Оријентација",
+          "en": "Orientation",
+          "zh-CN": "方向"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "Боја текста се не подешава у подешавању странице.",
+        "en": "Text color is not adjusted in page setup.",
+        "zh-CN": "文本颜色不在页面设置中调整。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Шта се подешава у подешавању параграфа?",
+        "en": "What is adjusted in paragraph settings?",
+        "zh-CN": "段落设置中调整了什么？"
+      },
+      "options": [
+        {
+          "sr": "Величина странице",
+          "en": "Page size",
+          "zh-CN": "页面大小"
+        },
+        {
+          "sr": "Размак између редова",
+          "en": "Line spacing",
+          "zh-CN": "行间距"
+        },
+        {
+          "sr": "Боја позадине",
+          "en": "Background color",
+          "zh-CN": "背景颜色"
+        },
+        {
+          "sr": "Фонт документа",
+          "en": "Document font",
+          "zh-CN": "文档字体"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Подешавање параграфа укључује размак између редова.",
+        "en": "Paragraph settings include line spacing.",
+        "zh-CN": "段落设置包括行间距。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Који параметар се подешава у подешавању фонта?",
+        "en": "Which parameter is adjusted in font settings?",
+        "zh-CN": "字体设置中调整哪个参数？"
+      },
+      "options": [
+        {
+          "sr": "Величина фонта",
+          "en": "Font size",
+          "zh-CN": "字体大小"
+        },
+        {
+          "sr": "Размак између редова",
+          "en": "Line spacing",
+          "zh-CN": "行间距"
+        },
+        {
+          "sr": "Маргине",
+          "en": "Margins",
+          "zh-CN": "边距"
+        },
+        {
+          "sr": "Оријентација",
+          "en": "Orientation",
+          "zh-CN": "方向"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Подешавање фонта укључује величину фонта.",
+        "en": "Font settings include font size.",
+        "zh-CN": "字体设置包括字体大小。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Шта се умета у документу?",
+        "en": "What is inserted in the document?",
+        "zh-CN": "文档中插入了什么？"
+      },
+      "options": [
+        {
+          "sr": "Слике",
+          "en": "Images",
+          "zh-CN": "图片"
+        },
+        {
+          "sr": "Табеле",
+          "en": "Tables",
+          "zh-CN": "表格"
+        },
+        {
+          "sr": "Графикони",
+          "en": "Charts",
+          "zh-CN": "图表"
+        },
+        {
+          "sr": "Све горе наведено",
+          "en": "All of the above",
+          "zh-CN": "以上所有"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "sr": "У документу могу се уметати слике, табеле и графикони.",
+        "en": "Images, tables, and charts can be inserted in the document.",
+        "zh-CN": "文档中可以插入图片、表格和图表。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Који од следећих појмова се односи на структуру табеле?",
+        "en": "Which of the following terms relates to the structure of a table?",
+        "zh-CN": "以下哪个术语与表的结构有关？"
+      },
+      "options": [
+        {
+          "sr": "Ћелија",
+          "en": "Cell",
+          "zh-CN": "单元格"
+        },
+        {
+          "sr": "Параграф",
+          "en": "Paragraph",
+          "zh-CN": "段落"
+        },
+        {
+          "sr": "Фонт",
+          "en": "Font",
+          "zh-CN": "字体"
+        },
+        {
+          "sr": "Садржај",
+          "en": "Content",
+          "zh-CN": "内容"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "Ћелија је основна јединица табеле.",
+        "en": "A cell is the basic unit of a table.",
+        "zh-CN": "单元格是表的基本单元。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Шта се умета у табелу?",
+        "en": "What is inserted into a table?",
+        "zh-CN": "表中插入了什么？"
+      },
+      "options": [
+        {
+          "sr": "Текст",
+          "en": "Text",
+          "zh-CN": "文本"
+        },
+        {
+          "sr": "Слике",
+          "en": "Images",
+          "zh-CN": "图片"
+        },
+        {
+          "sr": "Графикони",
+          "en": "Charts",
+          "zh-CN": "图表"
+        },
+        {
+          "sr": "Све горе наведено",
+          "en": "All of the above",
+          "zh-CN": "以上所有"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "sr": "У табелу могу се уметати текст, слике и графикони.",
+        "en": "Text, images, and charts can be inserted into a table.",
+        "zh-CN": "可以在表中插入文本、图片和图表。"
+      }
+    }
+  ]
+}

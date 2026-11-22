@@ -1,0 +1,388 @@
+{
+  "slides": [
+    {
+      "n": 1,
+      "skip": true
+    },
+    {
+      "n": 2,
+      "skip": true
+    },
+    {
+      "n": 3,
+      "q": {
+        "sr": "Šta čini računarsku mrežu?",
+        "en": "What makes up a computer network?",
+        "zh-CN": "计算机网络由什么组成？"
+      },
+      "options": [
+        {
+          "sr": "Samo jedan računar",
+          "en": "Only one computer",
+          "zh-CN": "只有一台计算机"
+        },
+        {
+          "sr": "Dva ili više povezanih uređaja",
+          "en": "Two or more connected devices",
+          "zh-CN": "两个或多个连接的设备"
+        },
+        {
+          "sr": "Samo kablovi",
+          "en": "Only cables",
+          "zh-CN": "只有电缆"
+        },
+        {
+          "sr": "Samo softver",
+          "en": "Only software",
+          "zh-CN": "只有软件"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Računarska mreža se sastoji od dva ili više povezanih uređaja.",
+        "en": "A computer network consists of two or more connected devices.",
+        "zh-CN": "计算机网络由两个或多个连接的设备组成。"
+      }
+    },
+    {
+      "n": 4,
+      "q": {
+        "sr": "Šta su resursi u mreži?",
+        "en": "What are resources in a network?",
+        "zh-CN": "网络中的资源是什么？"
+      },
+      "options": [
+        {
+          "sr": "Samo hardver",
+          "en": "Only hardware",
+          "zh-CN": "只有硬件"
+        },
+        {
+          "sr": "Sve što uređaji koriste zajedno",
+          "en": "Everything that devices use together",
+          "zh-CN": "设备共同使用的所有内容"
+        },
+        {
+          "sr": "Samo softverski programi",
+          "en": "Only software programs",
+          "zh-CN": "只有软件程序"
+        },
+        {
+          "sr": "Samo internet konekcija",
+          "en": "Only internet connection",
+          "zh-CN": "只有互联网连接"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Resursi su sve što uređaji na mreži koriste zajedno.",
+        "en": "Resources are everything that devices on the network use together.",
+        "zh-CN": "资源是网络上设备共同使用的所有内容。"
+      }
+    },
+    {
+      "n": 5,
+      "q": {
+        "sr": "Koja vrsta mreže obuhvata nekoliko metara?",
+        "en": "Which type of network covers a few meters?",
+        "zh-CN": "哪种类型的网络覆盖几米？"
+      },
+      "options": [
+        {
+          "sr": "LAN",
+          "en": "LAN",
+          "zh-CN": "局域网"
+        },
+        {
+          "sr": "WAN",
+          "en": "WAN",
+          "zh-CN": "广域网"
+        },
+        {
+          "sr": "PAN",
+          "en": "PAN",
+          "zh-CN": "个人区域网络"
+        },
+        {
+          "sr": "MAN",
+          "en": "MAN",
+          "zh-CN": "城市区域网络"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "PAN je lična mreža koja pokriva nekoliko metara.",
+        "en": "PAN is a personal area network that covers a few meters.",
+        "zh-CN": "PAN是覆盖几米的个人区域网络。"
+      }
+    },
+    {
+      "n": 6,
+      "q": {
+        "sr": "Šta je karakteristika klijent-server mreže?",
+        "en": "What is a characteristic of a client-server network?",
+        "zh-CN": "客户端-服务器网络的特点是什么？"
+      },
+      "options": [
+        {
+          "sr": "Svi računari su ravnopravni",
+          "en": "All computers are equal",
+          "zh-CN": "所有计算机都是平等的"
+        },
+        {
+          "sr": "Postoji glavni računar - server",
+          "en": "There is a main computer - server",
+          "zh-CN": "有一台主计算机 - 服务器"
+        },
+        {
+          "sr": "Nema centralnog servera",
+          "en": "There is no central server",
+          "zh-CN": "没有中央服务器"
+        },
+        {
+          "sr": "Svi računari dele samo internet",
+          "en": "All computers only share the internet",
+          "zh-CN": "所有计算机仅共享互联网"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "U klijent-server mreži postoji glavni računar koji čuva resurse.",
+        "en": "In a client-server network, there is a main computer that stores resources.",
+        "zh-CN": "在客户端-服务器网络中，有一台主计算机存储资源。"
+      }
+    },
+    {
+      "n": 7,
+      "q": {
+        "sr": "Šta radi ruter?",
+        "en": "What does a router do?",
+        "zh-CN": "路由器的作用是什么？"
+      },
+      "options": [
+        {
+          "sr": "Povezuje uređaje u lokalnoj mreži",
+          "en": "Connects devices in a local network",
+          "zh-CN": "连接本地网络中的设备"
+        },
+        {
+          "sr": "Usmerava saobraćaj ka internetu",
+          "en": "Directs traffic to the internet",
+          "zh-CN": "将流量引导到互联网"
+        },
+        {
+          "sr": "Prikazuje web stranice",
+          "en": "Displays web pages",
+          "zh-CN": "显示网页"
+        },
+        {
+          "sr": "Čuva datoteke",
+          "en": "Stores files",
+          "zh-CN": "存储文件"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Ruter povezuje mreže i usmerava saobraćaj ka internetu.",
+        "en": "A router connects networks and directs traffic to the internet.",
+        "zh-CN": "路由器连接网络并将流量引导到互联网。"
+      }
+    },
+    {
+      "n": 8,
+      "q": {
+        "sr": "Šta je provajder?",
+        "en": "What is a provider?",
+        "zh-CN": "什么是提供者？"
+      },
+      "options": [
+        {
+          "sr": "Osoba koja koristi internet",
+          "en": "A person who uses the internet",
+          "zh-CN": "使用互联网的人"
+        },
+        {
+          "sr": "Organizacija koja obezbeđuje pristup internetu",
+          "en": "An organization that provides internet access",
+          "zh-CN": "提供互联网接入的组织"
+        },
+        {
+          "sr": "Računar koji čuva podatke",
+          "en": "A computer that stores data",
+          "zh-CN": "存储数据的计算机"
+        },
+        {
+          "sr": "Softver za pretragu interneta",
+          "en": "Software for searching the internet",
+          "zh-CN": "用于搜索互联网的软件"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Provajder je organizacija koja obezbeđuje pristup internetu.",
+        "en": "A provider is an organization that provides internet access.",
+        "zh-CN": "提供者是提供互联网接入的组织。"
+      }
+    },
+    {
+      "n": 9,
+      "q": {
+        "sr": "Šta je ispravna IP adresa?",
+        "en": "What is a valid IP address?",
+        "zh-CN": "什么是有效的IP地址？"
+      },
+      "options": [
+        {
+          "sr": "192.168.0.256",
+          "en": "192.168.0.256",
+          "zh-CN": "192.168.0.256"
+        },
+        {
+          "sr": "192.168.0.1",
+          "en": "192.168.0.1",
+          "zh-CN": "192.168.0.1"
+        },
+        {
+          "sr": "300.1.1.1",
+          "en": "300.1.1.1",
+          "zh-CN": "300.1.1.1"
+        },
+        {
+          "sr": "192.168.1.300",
+          "en": "192.168.1.300",
+          "zh-CN": "192.168.1.300"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": "Ispravna IP adresa mora imati oktete u opsegu 0-255.",
+        "en": "A valid IP address must have octets in the range of 0-255.",
+        "zh-CN": "有效的IP地址的八位字节必须在0-255的范围内。"
+      }
+    },
+    {
+      "n": 10,
+      "q": {
+        "sr": "Šta označava .rs u adresi www.mojaskola.edu.rs?",
+        "en": "What does .rs indicate in the address www.mojaskola.edu.rs?",
+        "zh-CN": ".rs在地址www.mojaskola.edu.rs中表示什么？"
+      },
+      "options": [
+        {
+          "sr": "Vrsta usluge",
+          "en": "Type of service",
+          "zh-CN": "服务类型"
+        },
+        {
+          "sr": "Država Srbija",
+          "en": "Country Serbia",
+          "zh-CN": "国家塞尔维亚"
+        },
+        {
+          "sr": "Naziv organizacije",
+          "en": "Name of the organization",
+          "zh-CN": "组织名称"
+        },
+        {
+          "sr": "Vrsta datoteke",
+          "en": "Type of file",
+          "zh-CN": "文件类型"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "sr": ".rs označava da je domen iz Srbije.",
+        "en": ".rs indicates that the domain is from Serbia.",
+        "zh-CN": ".rs表示该域名来自塞尔维亚。"
+      }
+    },
+    {
+      "n": 11,
+      "q": {
+        "sr": "Šta DNS radi?",
+        "en": "What does DNS do?",
+        "zh-CN": "DNS做什么？"
+      },
+      "options": [
+        {
+          "sr": "Prevodi ime u IP adresu",
+          "en": "Translates name to IP address",
+          "zh-CN": "将名称转换为IP地址"
+        },
+        {
+          "sr": "Čuva podatke",
+          "en": "Stores data",
+          "zh-CN": "存储数据"
+        },
+        {
+          "sr": "Povezuje uređaje",
+          "en": "Connects devices",
+          "zh-CN": "连接设备"
+        },
+        {
+          "sr": "Prikazuje web stranice",
+          "en": "Displays web pages",
+          "zh-CN": "显示网页"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "sr": "DNS prevodi imena u IP adrese kako bi računari mogli komunicirati.",
+        "en": "DNS translates names to IP addresses so computers can communicate.",
+        "zh-CN": "DNS将名称转换为IP地址，以便计算机可以通信。"
+      }
+    },
+    {
+      "n": 12,
+      "q": {
+        "sr": "Koja vrsta mreže povezuje računare u svim školama u jednom gradu?",
+        "en": "Which type of network connects computers in all schools in one city?",
+        "zh-CN": "哪种类型的网络连接一个城市中所有学校的计算机？"
+      },
+      "options": [
+        {
+          "sr": "PAN",
+          "en": "PAN",
+          "zh-CN": "个人区域网络"
+        },
+        {
+          "sr": "LAN",
+          "en": "LAN",
+          "zh-CN": "局域网"
+        },
+        {
+          "sr": "MAN",
+          "en": "MAN",
+          "zh-CN": "城市区域网络"
+        },
+        {
+          "sr": "WAN",
+          "en": "WAN",
+          "zh-CN": "广域网"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "sr": "MAN povezuje računare u svim školama u jednom gradu.",
+        "en": "MAN connects computers in all schools in one city.",
+        "zh-CN": "MAN连接一个城市中所有学校的计算机。"
+      }
+    },
+    {
+      "n": 13,
+      "skip": true
+    },
+    {
+      "n": 14,
+      "skip": true
+    },
+    {
+      "n": 15,
+      "skip": true
+    },
+    {
+      "n": 16,
+      "skip": true
+    }
+  ]
+}

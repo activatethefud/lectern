@@ -1,0 +1,21 @@
+{
+  "slug": "racunarske-mreze",
+  "title": {
+    "sr": "Racunarske mreže",
+    "en": "Computer Networks",
+    "zh-CN": "计算机网络"
+  },
+  "description": {
+    "sr": "Učenje o vrstama računaraskih mreža i njihovim resursima.",
+    "en": "Learning about types of computer networks and their resources.",
+    "zh-CN": "学习计算机网络的类型及其资源。"
+  },
+  "tags": [
+    "informatika",
+    "mreže",
+    "6. razred",
+    "resursi"
+  ],
+  "lang": "sr",
+  "order": 20
+}
