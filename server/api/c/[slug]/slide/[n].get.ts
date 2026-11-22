@@ -8,7 +8,7 @@ import { pickLocalized } from '#shared/course'
 export default defineEventHandler(async (event) => {
   const slug = getRouterParam(event, 'slug')!
   const n = Number(getRouterParam(event, 'n'))
-  const { locale = 'sr' } = getQuery(event) as { locale?: string }
+  const { locale = 'sr', lang: requestedLang } = getQuery(event) as { locale?: string, lang?: string }
 
   const course = await loadCourse(slug)
   if (!course?.manifest) throw createError({ statusCode: 404, statusMessage: `no such course: ${slug}` })
@@ -17,6 +17,12 @@ export default defineEventHandler(async (event) => {
   if (!Number.isInteger(n) || n < 1 || n > slideCount) {
     throw createError({ statusCode: 404, statusMessage: `slide ${n} is out of range (1..${slideCount})` })
   }
+
+  const langs = availableLangs(course.manifest)
+  const deckLang = requestedLang && course.manifest.variants[requestedLang]
+    ? requestedLang
+    : (course.manifest.variants[locale] ? locale : course.manifest.baseLang)
+  const variant = variantFor(course.manifest, deckLang)
 
   const lang = course.meta.lang ?? 'sr'
   const questions = await loadQuestions(course.dir, slug, slideCount)
@@ -36,7 +42,9 @@ export default defineEventHandler(async (event) => {
     slug,
     n,
     slideCount,
-    image: `/c/${slug}/slide/${n}?v=${course.manifest.deckSha.slice(0, 8)}`,
+    image: `/c/${slug}/slide/${n}?lang=${deckLang}&v=${variant.deckSha.slice(0, 8)}`,
+    deckLang,
+    langs,
     question,
     /** the choice this session already locked in, or null */
     answered: answers[n] ?? null,

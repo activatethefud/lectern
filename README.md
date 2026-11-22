@@ -42,9 +42,25 @@ curl -s localhost:8765/api/health   # ok + course count
 mkdir -p courses/moj-kurs
 cp ~/deck.pptx courses/moj-kurs/slides.pptx
 $EDITOR courses/moj-kurs/course.json      # title/description/tags (sr, en, zh-CN)
-$EDITOR courses/moj-kurs/questions.json   # one question per slide
+$EDITOR courses/moj-kurs/questions.json   # one question per slide (strings or {sr,en,zh-CN})
 ./bake moj-kurs                           # pptx → courses/moj-kurs/slides/*.jpg + manifest
 ```
+
+## Translate a deck
+
+A course can carry translated decks next to the original one (`slides.en.pptx`, `slides.zh-CN.pptx`).
+The tool rewrites only the text of each run, so layout, fonts and shapes are untouched:
+
+```bash
+node tools/translate-deck.mjs extract moj-kurs en   # → courses/moj-kurs/translation/en.json
+#   fill in every "dst" string, same order and count
+node tools/translate-deck.mjs apply moj-kurs en     # → slides.en.pptx
+./bake moj-kurs                                     # → slides/en/*.jpg, manifest variants
+```
+
+The player then offers a language switch (SR / EN / 中文) and the ⬇ button downloads the deck in
+the chosen language. If the deck is edited, `extract`/`apply` refuse until you re-extract — that
+is what keeps a stale translation from silently shipping.
 
 Nothing is registered anywhere: a folder under `courses/` is a course, and the home page picks
 it up on the next request. Baked images are committed, so a deploy never needs LibreOffice.
@@ -52,6 +68,6 @@ it up on the next request. Baked images are committed, so a deploy never needs L
 ## Tests
 
 ```bash
-./test               # 17 tests: search folding, player API, answer locking, no-answer leakage
+./test               # 23 tests: search folding, player API, answer locking, translation, report, certificate
 npm run bake:check   # every deck's baked images match its pptx hash
 ```

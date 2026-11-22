@@ -5,7 +5,7 @@
     <template v-else-if="course">
       <div class="cols">
         <div class="art">
-          <img :src="`/c/${course.slug}/slide/1`" :alt="course.title" loading="eager">
+          <img :src="course.cover" :alt="course.title" loading="eager">
         </div>
 
         <div class="info">
@@ -16,6 +16,7 @@
             <li>{{ t('course.slides', { n: course.slideCount }) }}</li>
             <li>{{ t('course.questions', { n: course.total }) }}</li>
             <li>{{ t('course.threshold', { p: threshold }) }}</li>
+            <li v-if="course.langs?.length > 1">{{ course.langs.join(' · ') }}</li>
           </ul>
 
           <p v-if="course.answeredCount > 0" class="progress muted">
@@ -32,7 +33,12 @@
             </NuxtLinkLocale>
             <span v-else class="done">{{ t('course.done') }}</span>
 
-            <a v-if="course.hasPptx" class="action ghost" :href="`/c/${course.slug}/slides.pptx`" download>
+            <a
+              v-if="course.hasPptx"
+              class="action ghost"
+              :href="`/c/${course.slug}/slides.pptx?lang=${course.deckLang}`"
+              download
+            >
               ⬇ {{ t('course.download') }}
             </a>
             <button v-if="course.answeredCount > 0" class="action ghost" :disabled="restarting" @click="restart">

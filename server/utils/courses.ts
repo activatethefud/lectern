@@ -13,10 +13,21 @@ export interface CourseJson {
   author?: string
 }
 
+export interface Variant {
+  /** deck file, e.g. `slides.zh-CN.pptx` */
+  deck: string
+  deckSha: string
+  /** image directory relative to the course folder */
+  dir: string
+  images: string[]
+}
+
 export interface Manifest {
   deckSha: string
+  baseLang: string
   slideCount: number
   images: string[]
+  variants: Record<string, Variant>
   builtAt: string
 }
 
@@ -94,4 +105,16 @@ export function toListEntry(c: LoadedCourse, locale: string): CourseListEntry {
 /** Per-course override, else the global 90 % from runtimeConfig. */
 export function thresholdOf(course: LoadedCourse): number {
   return course.meta.passThreshold ?? Number(useRuntimeConfig().passThreshold)
+}
+
+/**
+ * Which deck (and image set) to show for a requested UI language: the translated variant when it
+ * exists, otherwise the deck the course was written in.
+ */
+export function variantFor(manifest: Manifest, lang: string): Variant {
+  return manifest.variants[lang] ?? manifest.variants[manifest.baseLang] ?? Object.values(manifest.variants)[0]!
+}
+
+export function availableLangs(manifest: Manifest): string[] {
+  return Object.keys(manifest.variants)
 }

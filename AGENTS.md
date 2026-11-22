@@ -62,24 +62,31 @@ plain `COURSE_ROOT`/`DATA_DIR` only feed the dev shell).
 ```
 app/            pages (route = path), layouts, components, assets/css
   pages/index.vue            catalogue + search
-  pages/c/[slug]/index.vue   cover: start / resume / restart / download
-  pages/c/[slug]/[n].vue     player: slide + question, answers locked
-  pages/c/[slug]/report.vue  M3 · pages/verify/[id].vue  M4
+  pages/c/[slug]/index.vue   cover: start / resume / restart / download per language
+  pages/c/[slug]/[n].vue     player: slide + question, answers locked, SR/EN/中文 switch
+  pages/c/[slug]/report.vue  score, red/green per answer, name gate → certificate
+  pages/verify/[id].vue      public certificate check (locale-free)
 server/
   api/courses.get.ts         catalogue JSON
   api/health.get.ts          docker healthcheck
   api/c/[slug]/index.get.ts        cover payload (+ nextSlide)
-  api/c/[slug]/slide/[n].get.ts    player payload, strips answer/why
+  api/c/[slug]/slide/[n].get.ts    player payload, strips answer/why, picks deck by ?lang
   api/c/[slug]/answer.post.ts      records one final answer (409 on retry)
   api/c/[slug]/restart.post.ts     drops the open attempt
-  routes/c/[slug]/slide/[n].get.ts jpg stream, immutable cache
-  routes/c/[slug]/slides.pptx.get.ts   download, Content-Disposition: attachment
-  utils/courses.ts           folder discovery + validation
+  api/c/[slug]/report.get.ts       finalizes + per-item correct flags, `why` only on pass
+  api/c/[slug]/certificate.post.ts name → cert id
+  api/verify/[id].get.ts           public check
+  routes/c/[slug]/slide/[n].get.ts jpg stream (?lang=), immutable cache
+  routes/c/[slug]/slides.pptx.get.ts   download (?lang=), Content-Disposition: attachment
+  routes/certificate/[id].get.ts   pdfkit PDF by certificate id
+  utils/courses.ts           folder discovery, validation, variantFor()
   utils/questions.ts         questions.json schema validation + localization
   utils/store.ts             sqlite attempts/answers (node:sqlite), sid cookie
-  utils/grading.ts           M3 · utils/certificate.ts  M4
+  utils/grading.ts           score, pass mark, certificate id
+  utils/certificate.ts       pdfkit rendering (fonts in server/assets/fonts)
 shared/course.ts             types + fold()/matchesQuery()/pickLocalized() (client & server)
-scripts/bake-courses.mjs     pptx → jpg, manifest, bake:check
+scripts/bake-courses.mjs     pptx → jpg everywhere, manifest variants, bake:check
+tools/translate-deck.mjs     extract / apply translated decks (layout-preserving)
 tests/                       search.test.ts (unit), api.test.ts (Nuxt integration), e2e/ (M6)
 ```
 

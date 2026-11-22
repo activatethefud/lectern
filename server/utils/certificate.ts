@@ -76,8 +76,8 @@ function formatDate(iso: string, locale: string): string {
 }
 
 /** Name font: whichever file's subset covers the characters actually typed. */
-function pickFont(name: string): 'cjk' | 'latin' {
-  return hasCjk(name) ? 'cjk' : 'latin'
+function pickFont(text: string): 'cjk' | 'latin' {
+  return hasCjk(text) ? 'cjk' : 'latin'
 }
 
 export function renderCertificate(input: CertificateInput): Promise<Buffer> {
@@ -110,10 +110,10 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
   doc.lineWidth(2).strokeColor(ACCENT).rect(pad, pad, W - pad * 2, H - pad * 2).stroke()
   doc.lineWidth(0.7).strokeColor(ACCENT).rect(pad + 9, pad + 9, W - (pad + 9) * 2, H - (pad + 9) * 2).stroke()
 
-  doc.fillColor(ACCENT).font('latin').fontSize(11)
+  doc.fillColor(ACCENT).font(pickFont(labels.title)).fontSize(11)
   doc.text(labels.title, 0, 78, { width: W, align: 'center', characterSpacing: 2.4 })
 
-  doc.fillColor(MUTED).fontSize(10)
+  doc.fillColor(MUTED).font(pickFont(labels.awarded)).fontSize(10)
   doc.text(labels.awarded, 0, 132, { width: W, align: 'center', characterSpacing: 1.6 })
 
   // learner name, shrunk to fit
@@ -123,10 +123,10 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
   doc.fillColor(INK).fontSize(nameSize)
   doc.text(input.name, 100, 158, { width: W - 200, align: 'center' })
 
-  doc.fillColor(INK).font('latin').fontSize(17)
+  doc.fillColor(INK).font(pickFont(input.courseTitle)).fontSize(17)
   doc.text(input.courseTitle, 100, 246, { width: W - 200, align: 'center' })
 
-  // meta row
+  // meta row — every string picks its own font, so a translated label never renders as boxes
   const metaY = 330
   const cols = [
     { label: labels.score, value: `${input.score} / ${input.total} · ${input.percent} %` },
@@ -136,15 +136,17 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
   const colW = (W - 240) / cols.length
   cols.forEach((col, i) => {
     const x = 120 + colW * i
-    doc.fillColor(MUTED).font('latin').fontSize(8.5)
-    doc.text(col.label.toUpperCase(), x, metaY, { width: colW, align: 'center', characterSpacing: 1 })
-    doc.fillColor(INK).fontSize(13)
+    const label = col.label.toUpperCase()
+    doc.fillColor(MUTED).font(pickFont(label)).fontSize(8.5)
+    doc.text(label, x, metaY, { width: colW, align: 'center', characterSpacing: 1 })
+    doc.fillColor(INK).font(pickFont(col.value)).fontSize(13)
     doc.text(col.value, x, metaY + 15, { width: colW, align: 'center' })
   })
 
   // footer: how to check this document later
-  doc.fillColor(MUTED).font('latin').fontSize(8.5)
-  doc.text(`${labels.verify}: ${input.verifyUrl}`, 0, H - pad - 46, { width: W, align: 'center' })
+  const footer = `${labels.verify}: ${input.verifyUrl}`
+  doc.fillColor(MUTED).font(pickFont(footer)).fontSize(8.5)
+  doc.text(footer, 0, H - pad - 46, { width: W, align: 'center' })
 
   doc.end()
   return finished

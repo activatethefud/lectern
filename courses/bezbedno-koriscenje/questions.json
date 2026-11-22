@@ -3,104 +3,189 @@
     { "n": 1, "skip": true },
 
     { "n": 2,
-      "q": "Koji pojam NIJE naveden kao ključni pojam časa?",
-      "options": ["lični podaci", "privatnost", "digitalni otisak", "fajl sistem"],
+      "q": {
+        "sr": "Koji pojam NIJE naveden kao ključni pojam časa?",
+        "en": "Which concept is NOT listed as a key concept of the lesson?",
+        "zh-CN": "哪个概念不是本课列出的关键概念？"
+      },
+      "options": [
+        { "sr": "lični podaci", "en": "personal data", "zh-CN": "个人数据" },
+        { "sr": "privatnost", "en": "privacy", "zh-CN": "隐私" },
+        { "sr": "digitalni otisak", "en": "digital footprint", "zh-CN": "数字足迹" },
+        { "sr": "fajl sistem", "en": "file system", "zh-CN": "文件系统" }
+      ],
       "answer": 3,
-      "why": "Ključni pojmovi časa su lični podaci, privatnost, digitalni otisak, jaka lozinka i sajberbuling. Fajl sistem je pojam iz druge teme." },
+      "why": {
+        "sr": "Ključni pojmovi časa su lični podaci, privatnost, digitalni otisak, jaka lozinka i sajberbuling. Fajl sistem je pojam iz druge teme.",
+        "en": "The key concepts are personal data, privacy, digital footprint, a strong password and cyberbullying. A file system belongs to another topic.",
+        "zh-CN": "关键概念是个人数据、隐私、数字足迹、强密码和网络欺凌。“文件系统”属于另一个主题。"
+      } },
 
     { "n": 3,
-      "q": "Šta sve ostavlja trag kada koristimo internet?",
+      "q": {
+        "sr": "Šta sve ostavlja trag kada koristimo internet?",
+        "en": "What leaves a trace when we use the internet?",
+        "zh-CN": "我们上网时会留下哪些痕迹？"
+      },
       "options": [
-        "samo ono što svesno objavimo",
-        "samo komentari i poruke",
-        "profil, slike, komentari, lokacija, vreme, uređaj i pretrage",
-        "ništa, ako koristimo privatni režim pregledača"
+        { "sr": "samo ono što svesno objavimo", "en": "only what we consciously post", "zh-CN": "只有我们主动发布的内容" },
+        { "sr": "samo komentari i poruke", "en": "only comments and messages", "zh-CN": "只有评论和消息" },
+        { "sr": "profil, slike, komentari, lokacija, vreme, uređaj i pretrage", "en": "profile, photos, comments, location, time, device and searches", "zh-CN": "资料、照片、评论、位置、时间、设备和搜索记录" },
+        { "sr": "ništa, ako koristimo privatni režim pregledača", "en": "nothing, if we use private browsing", "zh-CN": "如果使用无痕浏览，就什么都不会留下" }
       ],
       "answer": 2,
-      "why": "Trag ostavljaju i podaci koje ne unosimo svesno: lokacija, vreme, uređaj i sadržaji koje gledamo." },
+      "why": {
+        "sr": "Trag ostavljaju i podaci koje ne unosimo svesno: lokacija, vreme, uređaj i sadržaji koje gledamo.",
+        "en": "Data we do not consciously enter leaves a trace too: location, time, device and the content we watch.",
+        "zh-CN": "我们并未主动输入的信息也会留下痕迹：位置、时间、设备以及观看的内容。"
+      } },
 
     { "n": 4,
-      "q": "Šta spada u lične podatke prema slajdu?",
+      "q": {
+        "sr": "Šta spada u lične podatke prema slajdu?",
+        "en": "What counts as personal data on the slide?",
+        "zh-CN": "根据幻灯片，哪些属于个人数据？"
+      },
       "options": [
-        "ime i prezime, datum rođenja, adresa, telefon, e-pošta",
-        "samo lozinke i brojevi kartica",
-        "samo fotografije u školskoj uniformi",
-        "samo ocene iz škole"
+        { "sr": "ime i prezime, datum rođenja, adresa, telefon, e-pošta", "en": "full name, date of birth, address, phone, e-mail", "zh-CN": "姓名、出生日期、住址、电话、电子邮件" },
+        { "sr": "samo lozinke i brojevi kartica", "en": "only passwords and card numbers", "zh-CN": "只有密码和银行卡号" },
+        { "sr": "samo fotografije u školskoj uniformi", "en": "only photos in school uniform", "zh-CN": "只有穿校服的照片" },
+        { "sr": "samo ocene iz škole", "en": "only school grades", "zh-CN": "只有学校成绩" }
       ],
       "answer": 0,
-      "why": "Slajd deli lične podatke u četiri grupe: identitet, škola i uzrast, digitalni pristup i privatnost." },
+      "why": {
+        "sr": "Slajd deli lične podatke u četiri grupe: identitet, škola i uzrast, digitalni pristup i privatnost.",
+        "en": "The slide groups personal data into four buckets: identity, school and age, digital access and privacy.",
+        "zh-CN": "幻灯片把个人数据分为四类：身份、学校与年龄、数字访问、隐私。"
+      } },
 
     { "n": 5,
-      "q": "Šta je digitalni otisak?",
+      "q": {
+        "sr": "Šta je digitalni otisak?",
+        "en": "What is a digital footprint?",
+        "zh-CN": "什么是数字足迹？"
+      },
       "options": [
-        "greška koja se pojavi na ekranu",
-        "ukupan trag koji ostavljamo na internetu i koji stvara sliku o nama",
-        "broj uređaja povezanih na istu mrežu",
-        "kopija fajla na drugom računaru"
+        { "sr": "greška koja se pojavi na ekranu", "en": "an error that appears on the screen", "zh-CN": "屏幕上出现的错误" },
+        { "sr": "ukupan trag koji ostavljamo na internetu i koji stvara sliku o nama", "en": "the whole trace we leave online, which builds a picture of us", "zh-CN": "我们在网上留下的全部痕迹，它塑造了别人对我们的印象" },
+        { "sr": "broj uređaja povezanih na istu mrežu", "en": "the number of devices connected to one network", "zh-CN": "连接同一网络的设备数量" },
+        { "sr": "kopija fajla na drugom računaru", "en": "a copy of a file on another computer", "zh-CN": "另一台电脑上的文件副本" }
       ],
       "answer": 1,
-      "why": "Digitalni otisak je sve što smo ostavili na internetu; može da pomogne, ali i da naškodi." },
+      "why": {
+        "sr": "Digitalni otisak je sve što smo ostavili na internetu; može da pomogne, ali i da naškodi.",
+        "en": "A digital footprint is everything we have left online; it can help us, but it can also harm us.",
+        "zh-CN": "数字足迹是我们在网上留下的一切；它既可能带来帮助，也可能造成伤害。"
+      } },
 
     { "n": 6,
-      "q": "Koja od navedenih lozinki je najsigurnija?",
+      "q": {
+        "sr": "Koja od navedenih lozinki je najsigurnija?",
+        "en": "Which of these passwords is the safest?",
+        "zh-CN": "下列哪个密码最安全？"
+      },
       "options": ["123456", "ana2010", "P@ssw0rd!2024", "mojpas"],
       "answer": 2,
-      "why": "Najduža je i najraznovrsnija. Ipak, i takvu lozinku treba koristiti samo na jednom servisu i uz dvofaktorsku prijavu." },
+      "why": {
+        "sr": "Najduža je i najraznovrsnija. Ipak, i takvu lozinku treba koristiti samo na jednom servisu i uz dvofaktorsku prijavu.",
+        "en": "It is the longest and the most varied. Even so, use it on one service only and with two-factor authentication.",
+        "zh-CN": "它最长、最丰富。但仍应只在一个服务上使用，并开启双重验证。"
+      } },
 
     { "n": 7,
-      "q": "Koje podešavanje treba prvo proveriti na novom telefonu ili nalogu?",
+      "q": {
+        "sr": "Koje podešavanje treba prvo proveriti na novom telefonu ili nalogu?",
+        "en": "Which setting should you check first on a new phone or account?",
+        "zh-CN": "换新手机或新账号时，应先检查哪项设置？"
+      },
       "options": [
-        "ko može da vidi profil, objave i fotografije",
-        "koju ćemo pozadinu postaviti",
-        "koliko ćemo aplikacija instalirati",
-        "koji jezik tastature koristimo"
+        { "sr": "ko može da vidi profil, objave i fotografije", "en": "who can see your profile, posts and photos", "zh-CN": "谁能看到你的资料、帖子和照片" },
+        { "sr": "koju ćemo pozadinu postaviti", "en": "which wallpaper to set", "zh-CN": "设置哪张壁纸" },
+        { "sr": "koliko ćemo aplikacija instalirati", "en": "how many apps to install", "zh-CN": "安装多少个应用" },
+        { "sr": "koji jezik tastature koristimo", "en": "which keyboard language to use", "zh-CN": "使用哪种键盘语言" }
       ],
       "answer": 0,
-      "why": "Vidljivost profila i dozvole aplikacija (kamera, mikrofon, kontakti) su prve dve stvari koje treba podesiti." },
+      "why": {
+        "sr": "Vidljivost profila i dozvole aplikacija (kamera, mikrofon, kontakti) su prve dve stvari koje treba podesiti.",
+        "en": "Profile visibility and app permissions (camera, microphone, contacts) are the first two things to set up.",
+        "zh-CN": "资料可见范围和应用的权限（摄像头、麦克风、通讯录）是最先要设置的两件事。"
+      } },
 
     { "n": 8,
-      "q": "Koje ponašanje je BEZBEDNO?",
+      "q": {
+        "sr": "Koje ponašanje je BEZBEDNO?",
+        "en": "Which behaviour is SAFE?",
+        "zh-CN": "哪种行为是安全的？"
+      },
       "options": [
-        "objavljivanje slike rođendanske pozivnice sa adresom",
-        "slanje lozinke prijatelju u grupni čet",
-        "prijava na bankovni nalog preko javnog Wi-Fi-ja",
-        "provera ko može da vidi profil i ograničavanje nepoznatih"
+        { "sr": "objavljivanje slike rođendanske pozivnice sa adresom", "en": "posting a photo of a birthday invitation with the address", "zh-CN": "发布带有地址的生日邀请函照片" },
+        { "sr": "slanje lozinke prijatelju u grupni čet", "en": "sending your password to a friend in a group chat", "zh-CN": "在群聊里把密码发给朋友" },
+        { "sr": "prijava na bankovni nalog preko javnog Wi-Fi-ja", "en": "logging in to your bank over public Wi-Fi", "zh-CN": "用公共 Wi-Fi 登录网上银行" },
+        { "sr": "provera ko može da vidi profil i ograničavanje nepoznatih", "en": "checking who can see your profile and restricting strangers", "zh-CN": "检查谁能看到你的资料并限制陌生人" }
       ],
       "answer": 3,
-      "why": "Ostala tri primera otkrivaju lične podatke ili pristup nalogu. Provera vidljivosti profila je jedina bezbedna radnja." },
+      "why": {
+        "sr": "Ostala tri primera otkrivaju lične podatke ili pristup nalogu. Provera vidljivosti profila je jedina bezbedna radnja.",
+        "en": "The other three disclose personal data or account access. Checking profile visibility is the only safe action.",
+        "zh-CN": "其他三项都会泄露个人数据或账户访问权限。检查资料可见范围是唯一安全的行为。"
+      } },
 
     { "n": 9,
-      "q": "Šta treba uraditi kada te kontaktira nepoznata osoba?",
+      "q": {
+        "sr": "Šta treba uraditi kada te kontaktira nepoznata osoba?",
+        "en": "What should you do when a stranger contacts you?",
+        "zh-CN": "陌生人联系你时应该怎么做？"
+      },
       "options": [
-        "podeliti ime škole da bi se predstavio",
-        "prihvatiti sastanak ako osoba deluje ljubazno",
-        "ne deliti lične podatke, reći odrasloj osobi i prijaviti/blokirati nalog",
-        "poslati fotografiju da bi se proverilo ko je"
+        { "sr": "podeliti ime škole da bi se predstavio", "en": "share your school name to introduce yourself", "zh-CN": "说出学校名称来做自我介绍" },
+        { "sr": "prihvatiti sastanak ako osoba deluje ljubazno", "en": "accept a meeting if the person seems kind", "zh-CN": "如果对方看起来友善就答应见面" },
+        { "sr": "ne deliti lične podatke, reći odrasloj osobi i prijaviti/blokirati nalog", "en": "share nothing personal, tell an adult and report/block the account", "zh-CN": "不分享个人信息，告诉成年人，并举报/拉黑该账号" },
+        { "sr": "poslati fotografiju da bi se proverilo ko je", "en": "send a photo to check who it is", "zh-CN": "发送照片来确认对方是谁" }
       ],
       "answer": 2,
-      "why": "Redosled je: ne deliti podatke, ne pristajati na sastanak, reći odrasloj osobi, prijaviti i blokirati nalog." },
+      "why": {
+        "sr": "Redosled je: ne deliti podatke, ne pristajati na sastanak, reći odrasloj osobi, prijaviti i blokirati nalog.",
+        "en": "The order is: share no data, do not agree to a meeting, tell an adult, report and block the account.",
+        "zh-CN": "顺序是：不提供信息、不答应见面、告诉成年人、举报并拉黑该账号。"
+      } },
 
     { "n": 10,
-      "q": "Šta NE treba raditi kada dobiješ uvredljive poruke?",
+      "q": {
+        "sr": "Šta NE treba raditi kada dobiješ uvredljive poruke?",
+        "en": "What should you NOT do when you receive hurtful messages?",
+        "zh-CN": "收到侮辱性信息时，不应该做什么？"
+      },
       "options": [
-        "sačuvati skrinšot i vreme poruke",
-        "odgovoriti uvredom",
-        "prijaviti odrasloj osobi",
-        "blokirati i prijaviti nalog"
+        { "sr": "sačuvati skrinšot i vreme poruke", "en": "keep a screenshot and the time of the message", "zh-CN": "保存截图和消息时间" },
+        { "sr": "odgovoriti uvredom", "en": "answer with an insult", "zh-CN": "用侮辱回击" },
+        { "sr": "prijaviti odrasloj osobi", "en": "report it to an adult", "zh-CN": "告诉成年人" },
+        { "sr": "blokirati i prijaviti nalog", "en": "block and report the account", "zh-CN": "拉黑并举报该账号" }
       ],
       "answer": 1,
-      "why": "Odgovor uvredom daje pažnju i raspiruje sukob. Ostalo su koraci koji pomažu: dokaz, prijava odrasloj osobi, blokiranje." },
+      "why": {
+        "sr": "Odgovor uvredom daje pažnju i raspiruje sukob. Ostalo su koraci koji pomažu: dokaz, prijava odrasloj osobi, blokiranje.",
+        "en": "Answering with an insult rewards attention and fuels the conflict. The others help: evidence, telling an adult, blocking.",
+        "zh-CN": "用侮辱回击只会带来关注、助长冲突。其他做法才有帮助：保留证据、告诉成年人、拉黑。"
+      } },
 
     { "n": 11,
-      "q": "Koje pravilo je deo plana za bezbedan internet?",
+      "q": {
+        "sr": "Koje pravilo je deo plana za bezbedan internet?",
+        "en": "Which rule is part of the safe-internet plan?",
+        "zh-CN": "哪条规则属于安全上网计划？"
+      },
       "options": [
-        "razmisli pre nego što objaviš",
-        "deli lokaciju da bi prijatelji znali gde si",
-        "koristi istu lozinku na svim servisima",
-        "sumnjivo ponašanje rešavaj sam, bez odraslih"
+        { "sr": "razmisli pre nego što objaviš", "en": "think before you post", "zh-CN": "发布前先想一想" },
+        { "sr": "deli lokaciju da bi prijatelji znali gde si", "en": "share your location so friends know where you are", "zh-CN": "分享位置，让朋友知道你在哪里" },
+        { "sr": "koristi istu lozinku na svim servisima", "en": "use the same password everywhere", "zh-CN": "在所有服务上使用同一个密码" },
+        { "sr": "sumnjivo ponašanje rešavaj sam, bez odraslih", "en": "deal with suspicious behaviour alone, without adults", "zh-CN": "独自处理可疑行为，不告诉成年人" }
       ],
       "answer": 0,
-      "why": "Plan je: razmisli pre objave, štiti podatke i lokaciju, koristi jaku i različitu lozinku, prijavi sumnjivo ponašanje odrasloj osobi." },
+      "why": {
+        "sr": "Plan je: razmisli pre objave, štiti podatke i lokaciju, koristi jaku i različitu lozinku, prijavi sumnjivo ponašanje odrasloj osobi.",
+        "en": "The plan is: think before posting, protect data and location, use a strong and unique password, report suspicious behaviour to an adult.",
+        "zh-CN": "计划是：发布前先思考、保护数据和位置、使用强而唯一的密码、把可疑行为告诉成年人。"
+      } },
 
     { "n": 12, "skip": true },
     { "n": 13, "skip": true },

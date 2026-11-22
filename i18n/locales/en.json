@@ -20,6 +20,7 @@
   "player.progress": "Slide {n} of {total}",
   "player.answered": "Answered",
   "player.locked": "Answer recorded — it cannot be changed.",
+  "player.slideLang": "Slide language",
   "player.finish": "Finish",
   "report.title": "Result",
   "report.notReady": "No result yet.",

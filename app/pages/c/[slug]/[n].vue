@@ -3,6 +3,16 @@
     <div class="bar wrap">
       <NuxtLinkLocale :to="`/c/${slug}`" class="back muted">← {{ t('nav.home') }}</NuxtLinkLocale>
       <span class="muted small">{{ t('player.progress', { n, total: slide?.slideCount ?? 0 }) }}</span>
+      <div v-if="(slide?.langs?.length ?? 0) > 1" class="langs">
+        <button
+          v-for="l in slide!.langs"
+          :key="l"
+          class="lang"
+          :class="{ on: slide!.deckLang === l }"
+          :title="t('player.slideLang')"
+          @click="setSlideLang(l)"
+        >{{ langName(l) }}</button>
+      </div>
     </div>
 
     <div v-if="error" class="wrap">
@@ -60,9 +70,21 @@ const router = useRouter()
 const slug = String(route.params.slug)
 const n = Number(route.params.n)
 
+// Which deck to show: the requested one, else the course's own language.
+const slideLang = computed(() => (route.query.lang as string | undefined) ?? undefined)
+
 const { data: slide, error, refresh } = await useFetch(`/api/c/${slug}/slide/${n}`, {
-  query: { locale },
+  query: { locale, lang: slideLang },
 })
+
+function langName(code: string): string {
+  return ({ sr: 'SR', en: 'EN', 'zh-CN': '中文' } as Record<string, string>)[code] ?? code.toUpperCase()
+}
+
+async function setSlideLang(code: string) {
+  await router.replace({ query: { ...route.query, lang: code } })
+  await refresh()
+}
 
 const answered = ref<number | null>(slide.value?.answered ?? null)
 watch(slide, (s) => { answered.value = s?.answered ?? null })
@@ -99,6 +121,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 .bar { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1.25rem; font-size: 0.85rem; }
 .back { text-decoration: none; }
 .small { font-size: 0.8rem; }
+.langs { display: flex; gap: 0.25rem; }
+.lang { padding: 0.15rem 0.45rem; font-size: 0.72rem; border-radius: 6px; border: 1px solid var(--line); background: transparent; color: var(--muted); }
+.lang.on { border-color: var(--accent); color: var(--accent); }
 .stage { margin: 0; padding: 0 1.25rem; display: flex; justify-content: center; }
 .stage img { max-width: min(100%, 1200px); width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
 .panel { border-top: 1px solid var(--line); background: var(--card); margin-top: 1rem; }

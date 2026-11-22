@@ -154,6 +154,32 @@ describe('player api', async () => {
     expect(course!.hasPptx).toBe(true)
   })
 
+  it('serves translated decks per language', async () => {
+    const zh = await getJson<{ deckLang: string, langs: string[], image: string, question: { options: string[] } }>(
+      learner,
+      `/api/c/${COURSE}/slide/2?locale=zh-CN`,
+    )
+    expect(zh.deckLang).toBe('zh-CN')
+    expect(zh.langs).toEqual(expect.arrayContaining(['sr', 'en', 'zh-CN']))
+    expect(zh.image).toContain('lang=zh-CN')
+    expect(zh.question.options.join(' ')).toContain('文件系统')
+
+    // the three image sets really are different renders of the same slide
+    const sizes = []
+    for (const lang of ['sr', 'en', 'zh-CN']) {
+      const res = await learner(`/c/${COURSE}/slide/2?lang=${lang}`)
+      expect(res.status).toBe(200)
+      sizes.push((await res.arrayBuffer()).byteLength)
+    }
+    expect(new Set(sizes).size).toBe(3)
+
+    // …and so are the downloadable decks
+    const en = await learner(`/c/${COURSE}/slides.pptx?lang=en`)
+    expect(en.headers.get('content-disposition')).toContain('en.pptx')
+    const bytes = new Uint8Array((await en.arrayBuffer()).slice(0, 2))
+    expect([...bytes]).toEqual([0x50, 0x4b])
+  })
+
   it('409s on the report while questions are still unanswered', async () => {
     const res = await learner(`/api/c/${COURSE}/report`)
     expect(res.status).toBe(409)

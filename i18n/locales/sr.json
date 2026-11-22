@@ -20,6 +20,7 @@
   "player.progress": "Slajd {n} od {total}",
   "player.answered": "Odgovoreno",
   "player.locked": "Odgovor je zabeležen i ne može se menjati.",
+  "player.slideLang": "Jezik slajdova",
   "player.finish": "Završi",
   "report.title": "Rezultat",
   "report.notReady": "Rezultat još nije spreman.",

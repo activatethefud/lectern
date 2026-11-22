@@ -20,6 +20,7 @@
   "player.progress": "第 {n} 张，共 {total} 张",
   "player.answered": "已作答",
   "player.locked": "答案已记录，不可更改。",
+  "player.slideLang": "幻灯片语言",
   "player.finish": "完成",
   "report.title": "成绩",
   "report.notReady": "成绩尚未生成。",
