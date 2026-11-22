@@ -119,6 +119,14 @@ export function findOpenAttempt(slug: string, sid: string): Attempt | null {
   return row ? rowToAttempt(row) : null
 }
 
+/** The newest attempt of this browser for a course — open or finished. Never creates one. */
+export function latestAttempt(slug: string, sid: string): Attempt | null {
+  const row = getDb()
+    .prepare('SELECT * FROM attempts WHERE slug = ? AND sid = ? ORDER BY started_at DESC LIMIT 1')
+    .get(slug, sid) as Record<string, unknown> | undefined
+  return row ? rowToAttempt(row) : null
+}
+
 export function currentAttempt(event: H3Event, slug: string, lang: string): Attempt {
   const sid = sessionId(event)
   const open = findOpenAttempt(slug, sid)
@@ -145,10 +153,17 @@ export function answersOf(attemptId: string): Record<number, number> {
   return Object.fromEntries(rows.map((r) => [Number(r.n), Number(r.choice)]))
 }
 
-/** Answers are final. The second call for the same slide is rejected by the primary key. */
+/**
+ * Records an answer. Answers are editable until the attempt is finished — the last click wins, and
+ * only the value stored at finalization is graded. (Once the attempt is finished it is closed; a
+ * new attempt starts with the next visit.)
+ */
 export function recordAnswer(attemptId: string, n: number, choice: number): void {
   getDb()
-    .prepare('INSERT INTO answers (attempt_id, n, choice, answered_at) VALUES (?, ?, ?, ?)')
+    .prepare(`
+      INSERT INTO answers (attempt_id, n, choice, answered_at) VALUES (?, ?, ?, ?)
+      ON CONFLICT (attempt_id, n) DO UPDATE SET choice = excluded.choice, answered_at = excluded.answered_at
+    `)
     .run(attemptId, n, choice, new Date().toISOString())
 }
 

@@ -62,6 +62,7 @@
             </NuxtLinkLocale>
           </div>
           <p class="muted hint">{{ t('cert.boundHint') }}</p>
+          <p class="muted hint">{{ t('cert.disclaimer') }}</p>
         </template>
         <template v-else>
           <h2>{{ t('cert.generate') }}</h2>

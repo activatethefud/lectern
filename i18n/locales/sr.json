@@ -19,7 +19,6 @@
   "player.prev": "Nazad",
   "player.progress": "Slajd {n} od {total}",
   "player.answered": "Odgovoreno",
-  "player.locked": "Odgovor je zabeležen i ne može se menjati.",
   "player.slideLang": "Jezik slajdova",
   "player.finish": "Završi",
   "report.title": "Rezultat",
@@ -61,5 +60,9 @@
   "verify.signatureBad": "ne poklapa se",
   "verify.revoked": "Sertifikat je poništen.",
   "verify.holderHint": "Ova strana proverava broj. PDF preuzima samo osoba koja je položila kurs.",
-  "cert.issued": "Izdato"
+  "cert.issued": "Izdato",
+  "player.answerEditable": "Odgovor je zapisan. Možeš ga promeniti dok ne završiš kurs.",
+  "cert.disclaimer": "Sertifikat nije akademski dokument i služi samo kao potvrda da je kurs završen.",
+  "verify.disclaimer": "Ovo je potvrda o završetku kursa, ne akademski dokument.",
+  "player.finishedNote": "Kurs je završen — odgovori su zaključani."
 }

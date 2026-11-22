@@ -22,6 +22,7 @@ interface Labels {
   score: string
   id: string
   verify: string
+  disclaimer: string
 }
 
 const LABELS: Record<string, Labels> = {
@@ -32,6 +33,7 @@ const LABELS: Record<string, Labels> = {
     score: 'Rezultat',
     id: 'Broj sertifikata',
     verify: 'Provera',
+    disclaimer: 'Ovaj sertifikat nije akademski dokument i služi samo kao potvrda da je kurs završen.',
   },
   en: {
     title: 'CERTIFICATE OF COMPLETION',
@@ -40,6 +42,7 @@ const LABELS: Record<string, Labels> = {
     score: 'Score',
     id: 'Certificate ID',
     verify: 'Verify',
+    disclaimer: 'This certificate is not an academic document; it only confirms that the course was completed.',
   },
   'zh-CN': {
     title: '课程结业证书',
@@ -48,6 +51,7 @@ const LABELS: Record<string, Labels> = {
     score: '成绩',
     id: '证书编号',
     verify: '验证',
+    disclaimer: '本证书不是学历证明，仅用于证明该课程已经完成。',
   },
 }
 
@@ -146,6 +150,10 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
     doc.fillColor(INK).font(pickFont(col.value)).fontSize(13)
     doc.text(col.value, x, metaY + 15, { width: colW, align: 'center' })
   })
+
+  // disclaimer: the document is a course-completion record, nothing more
+  doc.fillColor(MUTED).font(pickFont(labels.disclaimer)).fontSize(7.5)
+  doc.text(labels.disclaimer, 60, H - pad - 66, { width: W - 120, align: 'center' })
 
   // footer: how to check this document later, and the signature that makes edits visible
   const footer = `${labels.verify}: ${input.verifyUrl}   ·   sig ${input.signature}`

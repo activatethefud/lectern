@@ -31,7 +31,9 @@
             >
               {{ course.answeredCount ? t('course.resume', { n: course.nextSlide ?? 1 }) : t('course.start') }}
             </NuxtLinkLocale>
-            <span v-else class="done">{{ t('course.done') }}</span>
+            <NuxtLinkLocale v-else class="btn-primary action" :to="`/c/${course.slug}/report`">
+              {{ t('report.title') }}
+            </NuxtLinkLocale>
 
             <a
               v-if="course.hasPptx"

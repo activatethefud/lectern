@@ -19,7 +19,6 @@
   "player.prev": "Back",
   "player.progress": "Slide {n} of {total}",
   "player.answered": "Answered",
-  "player.locked": "Answer recorded — it cannot be changed.",
   "player.slideLang": "Slide language",
   "player.finish": "Finish",
   "report.title": "Result",
@@ -61,5 +60,9 @@
   "verify.signatureBad": "does not match",
   "verify.revoked": "This certificate has been revoked.",
   "verify.holderHint": "This page checks the number. Only the learner who passed can download the PDF.",
-  "cert.issued": "Issued"
+  "cert.issued": "Issued",
+  "player.answerEditable": "Answer saved. You can change it until you finish the course.",
+  "cert.disclaimer": "The certificate is not an academic document; it only confirms that the course was completed.",
+  "verify.disclaimer": "This is a course-completion record, not an academic document.",
+  "player.finishedNote": "Course finished — the answers are locked."
 }

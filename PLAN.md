@@ -246,6 +246,10 @@ course, score, **date and exact time of issue**, tracking number, verify URL, an
 - The name is frozen at issue (409 for any other name) and one attempt yields exactly one serial.
 - The PDF is regenerated on demand from the row, so it can always be re-downloaded by its owner.
 
+**Disclaimer** (small print on the PDF, and on the report and verify pages): the certificate is
+not an academic document, only proof that the course was completed. Independent of the signature,
+which covers the printed facts.
+
 **`/verify/<serial>`**: public, no login, no JS: valid/revoked, name, course, date+time, score, signature status — or 404.
 
 ## 10. Data model

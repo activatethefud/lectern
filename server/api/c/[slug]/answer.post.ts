@@ -1,9 +1,9 @@
 /**
  * POST /api/c/:slug/answer  { n, choice }
  *
- * Records the answer and answers nothing else — no correctness, no score, no explanation.
- * A second answer for the same slide is a 409: the client may render "locked", the server
- * enforces it.
+ * Records (or replaces) the answer for one slide and answers nothing else — no correctness, no
+ * score, no explanation. Answers stay editable until the attempt is finished; only the value
+ * stored when the report is generated is graded.
  */
 export default defineEventHandler(async (event) => {
   const slug = getRouterParam(event, 'slug')!
@@ -24,12 +24,14 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 422, statusMessage: 'choice must be 0..3' })
   }
 
-  const attempt = currentAttempt(event, slug, lang)
-  const existing = answersOf(attempt.id)[n]
-  if (existing !== undefined) {
-    throw createError({ statusCode: 409, statusMessage: `slide ${n} is already answered` })
+  // A finished attempt is closed: its answers are what was graded. Changing them now would mean
+  // rewriting a certificate, so the learner starts a retake instead (POST /restart).
+  const open = findOpenAttempt(slug, sessionId(event))
+  if (!open && latestAttempt(slug, sessionId(event))?.finishedAt) {
+    throw createError({ statusCode: 409, statusMessage: 'the attempt is finished — start a retake' })
   }
 
+  const attempt = open ?? currentAttempt(event, slug, lang)
   recordAnswer(attempt.id, n, choice)
-  return { ok: true, n, choice }
+  return { ok: true, n, choice, editable: true }
 })

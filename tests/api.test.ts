@@ -108,14 +108,14 @@ describe('player api', async () => {
     expect(html).not.toMatch(/"why"\s*:/)
   })
 
-  it('locks an answer on the server: the second attempt is a 409', async () => {
+  it('lets the answer be changed, and keeps only the last one', async () => {
     expect((await postJson(learner, `/api/c/${COURSE}/answer`, { n: 3, choice: 2 })).status).toBe(200)
-    expect((await postJson(learner, `/api/c/${COURSE}/answer`, { n: 3, choice: 0 })).status).toBe(409)
-  })
+    expect((await postJson(learner, `/api/c/${COURSE}/answer`, { n: 3, choice: 0 })).status).toBe(200)
+    // …and again, because nothing is locked until the course is finished
+    expect((await postJson(learner, `/api/c/${COURSE}/answer`, { n: 3, choice: 3 })).status).toBe(200)
 
-  it('remembers the answer for the same session', async () => {
     const slide = await getJson<{ answered: number | null }>(learner, `/api/c/${COURSE}/slide/3`)
-    expect(slide.answered).toBe(2)
+    expect(slide.answered).toBe(3)
   })
 
   it('rejects an answer for a slide that has no question, and out-of-range choices', async () => {
@@ -298,6 +298,35 @@ describe('player api', async () => {
     const second = await $fetchCert(other, `/api/c/${COURSE}/certificate`, { name: 'Marko Marković' })
     expect(second.serial).not.toBe(first.serial)
     expect(second.verifyId).not.toBe(first.verifyId)
+  })
+
+  it('grades the answers as they stand when the attempt is finished', async () => {
+    const s = newSession()
+    await answerAll(s, true)
+
+    // change one answer to a wrong option *before* finishing: only the final value counts
+    const n = questionSlides[0]!
+    const wrong = (answerKey.get(n)! + 1) % 4
+    expect((await postJson(s, `/api/c/${COURSE}/answer`, { n, choice: wrong })).status).toBe(200)
+
+    const report = await getJson<Report>(s, `/api/c/${COURSE}/report`)
+    expect(report.score).toBe(report.total - 1) // 9/10 → still a pass at 90 %
+    expect(report.passed).toBe(true)
+    expect(report.items.find((i) => i.n === n)!.correct).toBe(false)
+  })
+
+  it('locks the answers once the report has been generated', async () => {
+    const s = newSession()
+    await answerAll(s, true)
+
+    const report = await getJson<Report>(s, `/api/c/${COURSE}/report`)
+    expect(report.passed).toBe(true)
+
+    // the attempt is closed: improving an answer now would rewrite a signed certificate
+    expect((await postJson(s, `/api/c/${COURSE}/answer`, { n: questionSlides[0]!, choice: 0 })).status).toBe(409)
+
+    const again = await getJson<Report>(s, `/api/c/${COURSE}/report`)
+    expect(again.score).toBe(report.score)
   })
 
   it('rejects a too-short name and an unfinished attempt', async () => {

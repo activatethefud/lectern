@@ -12,10 +12,12 @@ export default defineEventHandler(async (event) => {
 
   const lang = course.meta.lang ?? 'sr'
   const questions = await loadQuestions(course.dir, slug, course.manifest.slideCount)
-  const attempt = currentAttempt(event, slug, lang)
-  const answers = answersOf(attempt.id)
-  const nextSlide = questions.questionSlides.find((n) => answers[n] === undefined) ?? null
-  const last = latestFinished(slug, attempt.sid)
+  const sid = sessionId(event)
+  const attempt = latestAttempt(slug, sid)
+  const answers = attempt ? answersOf(attempt.id) : {}
+  const finished = Boolean(attempt?.finishedAt)
+  const nextSlide = finished ? null : (questions.questionSlides.find((n) => answers[n] === undefined) ?? null)
+  const last = latestFinished(slug, sid)
   const lastCert = last ? certificateForAttempt(last.id) : null
 
   return {
@@ -32,6 +34,7 @@ export default defineEventHandler(async (event) => {
     answeredCount: Object.keys(answers).length,
     nextSlide,
     done: nextSlide === null,
+    finished,
     hasPptx: course.hasPptx,
     /** a previously finished attempt for this browser, so its certificate stays reachable */
     lastFinished: last

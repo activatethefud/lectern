@@ -32,8 +32,9 @@
               <li v-for="(opt, i) in slide.question.options" :key="i">
                 <button
                   class="opt"
-                  :class="{ picked: answered === i, locked: answered !== null && answered !== i }"
-                  :disabled="answered !== null"
+                  :class="{ picked: answered === i }"
+                  :aria-pressed="answered === i"
+                  :disabled="slide.finished"
                   @click="pick(i)"
                 >
                   <span class="key">{{ 'ABCD'[i] }}</span>
@@ -45,11 +46,16 @@
           <p v-else class="muted no-q">—</p>
 
           <div class="nav">
-            <span v-if="answered !== null" class="muted locked-note">{{ t('player.locked') }}</span>
+            <span v-if="slide.finished" class="muted locked-note">{{ t('player.finishedNote') }}</span>
+            <span v-else-if="answered !== null" class="muted locked-note">{{ t('player.answerEditable') }}</span>
+            <NuxtLinkLocale v-if="slide.finished" :to="`/c/${slug}/report`" class="btn-primary btn">
+              {{ t('report.title') }}
+            </NuxtLinkLocale>
             <NuxtLinkLocale v-if="slide.prev" :to="`/c/${slug}/${slide.prev}`" class="ghost btn">
               {{ t('player.prev') }}
             </NuxtLinkLocale>
             <button
+              v-if="!slide.finished"
               class="btn-primary btn"
               :disabled="slide.question !== null && answered === null"
               @click="next"
@@ -89,8 +95,9 @@ async function setSlideLang(code: string) {
 const answered = ref<number | null>(slide.value?.answered ?? null)
 watch(slide, (s) => { answered.value = s?.answered ?? null })
 
+/** Answers may be changed as often as you like; the value at "finish" is what counts. */
 async function pick(choice: number) {
-  if (answered.value !== null) return
+  if (answered.value === choice) return
   answered.value = choice // optimistic; the server is the authority
   try {
     await $fetch(`/api/c/${slug}/answer`, { method: 'POST', body: { n, choice } })
@@ -134,8 +141,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 .opt { display: flex; gap: 0.6rem; align-items: baseline; width: 100%; text-align: left; padding: 0.55rem 0.7rem; }
 .opt .key { font-weight: 700; color: var(--muted); font-size: 0.85rem; }
 .opt.picked { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-.opt.locked { opacity: 0.5; }
-.opt:disabled { cursor: default; }
 .nav { display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end; }
 .locked-note { font-size: 0.8rem; margin-right: auto; }
 .btn { padding: 0.5rem 0.9rem; border-radius: var(--radius); text-decoration: none; }

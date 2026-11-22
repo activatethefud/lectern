@@ -26,8 +26,9 @@ export default defineEventHandler(async (event) => {
 
   const lang = course.meta.lang ?? 'sr'
   const questions = await loadQuestions(course.dir, slug, slideCount)
-  const attempt = currentAttempt(event, slug, lang)
-  const answers = answersOf(attempt.id)
+  const attempt = latestAttempt(slug, sessionId(event))
+  const answers = attempt ? answersOf(attempt.id) : {}
+  const finished = Boolean(attempt?.finishedAt)
 
   const stored = questions.byNumber.get(n)
   const question = stored
@@ -46,7 +47,9 @@ export default defineEventHandler(async (event) => {
     deckLang,
     langs,
     question,
-    /** the choice this session already locked in, or null */
+    /** the attempt is closed once the report has been generated */
+    finished,
+    /** the choice currently stored for this slide, or null */
     answered: answers[n] ?? null,
     total: questions.total,
     answeredCount: Object.keys(answers).length,

@@ -19,7 +19,6 @@
   "player.prev": "上一张",
   "player.progress": "第 {n} 张，共 {total} 张",
   "player.answered": "已作答",
-  "player.locked": "答案已记录，不可更改。",
   "player.slideLang": "幻灯片语言",
   "player.finish": "完成",
   "report.title": "成绩",
@@ -61,5 +60,9 @@
   "verify.signatureBad": "不匹配",
   "verify.revoked": "该证书已被撤销。",
   "verify.holderHint": "本页仅用于验证编号；只有通过课程的人才能下载 PDF。",
-  "cert.issued": "签发时间"
+  "cert.issued": "签发时间",
+  "player.answerEditable": "答案已保存，在完成课程前可以随时修改。",
+  "cert.disclaimer": "本证书不是学历证明，仅用于证明该课程已经完成。",
+  "verify.disclaimer": "本证书仅证明课程已完成，不是学历证明。",
+  "player.finishedNote": "课程已结束——答案已锁定。"
 }

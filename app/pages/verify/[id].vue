@@ -22,6 +22,7 @@
       </dl>
       <p v-if="result.revoked" class="bad-line">✗ {{ t('verify.revoked') }}</p>
       <p class="muted hint">{{ t('verify.holderHint') }}</p>
+      <p class="muted hint">{{ t('verify.disclaimer') }}</p>
     </template>
 
     <p v-else-if="result" class="bad-line">✗ {{ t('verify.invalid') }}</p>

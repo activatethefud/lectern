@@ -45,8 +45,10 @@ plain `COURSE_ROOT`/`DATA_DIR` only feed the dev shell).
    `tests/leak.test.ts` enforces this; extend it, never weaken it.
 2. **`why` is revealed only on the report page of a *passed* attempt.** Failed attempts show which
    slides were wrong, never the correct option or the explanation.
-3. **Answers are locked when clicked.** The client may not change an answer; the server rejects
-   `POST /api/c/[slug]/answer` for a slide that already has one (`409`).
+3. **Answers are editable until the attempt is finished.** `POST /api/c/[slug]/answer` upserts —
+   the last click wins — and nothing is graded before the report is generated. Once the report has
+   been generated the attempt is closed and further answers are rejected with `409`; the learner
+   starts a retake instead (`POST /restart`). GETs must never create or mutate an attempt.
 4. **Scoring is server-side**, from the DB, never from a client-supplied score.
 5. **Baked images are committed.** If you edit a `slides.pptx`, run `npm run bake <slug>` and commit
    the resulting `slides/*.jpg` + `manifest.json` in the same commit. CI runs `bake:check`.
