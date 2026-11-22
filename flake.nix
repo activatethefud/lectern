@@ -1,5 +1,5 @@
 {
-  description = "slide-course — courses that are pptx decks";
+  description = "slide-course — courses that are pptx decks (Nuxt 4 + baked slide images)";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -11,15 +11,16 @@
       devShells = forAll (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            python3            # stdlib only: http.server, sqlite3, unittest
-            poppler_utils      # pdfinfo, pdftoppm  (pptx -> pdf -> webp)
-            libreoffice        # soffice: pptx -> pdf, and certificate html -> pdf
-            qrencode           # optional QR on the certificate
+            nodejs_22          # >=22.11; node:sqlite for the attempt store
+            poppler_utils      # pdfinfo, pdftoppm — bake: pptx -> pdf -> webp
+            libreoffice        # soffice --convert-to pdf
+            qrencode           # QR on the certificate
             git
           ];
           shellHook = ''
-            export COURSE_ROOT="''${COURSE_ROOT:-$PWD}"
-            echo "slide-course dev shell: $(python3 -V)"
+            export COURSE_ROOT="''${COURSE_ROOT:-$PWD/courses}"
+            export DATA_DIR="''${DATA_DIR:-$PWD/data}"
+            echo "slide-course: node $(node -v) · $(soffice --version 2>/dev/null | head -1)"
           '';
         };
       });

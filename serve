@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Launch the site.  ./serve [--port N] [--host H] [--no-open]
+# Dev server.  ./serve [--port N]
 set -euo pipefail
 cd "$(dirname "$(readlink -f "$0")")"
-export COURSE_ROOT="$PWD"
-exec nix develop --quiet . -c python3 app/server.py "$@"
+export COURSE_ROOT="${COURSE_ROOT:-$PWD/courses}"
+export DATA_DIR="${DATA_DIR:-$PWD/data}"
+exec nix develop --quiet . -c npm run dev -- "$@"
