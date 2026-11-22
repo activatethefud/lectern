@@ -1,0 +1,17 @@
+{
+  "slug": "bezbedno-koriscenje",
+  "title": {
+    "sr": "Odgovorno i bezbedno korišćenje tehnologija",
+    "en": "Responsible and safe use of technology",
+    "zh-CN": "负责任且安全地使用技术"
+  },
+  "description": {
+    "sr": "Lični podaci, privatnost, jaka lozinka, digitalni otisak, sajberbuling i kontakt sa nepoznatima — čas za 5. razred.",
+    "en": "Personal data, privacy, strong passwords, digital footprint, cyberbullying and strangers online — a 5th-grade lesson.",
+    "zh-CN": "个人数据、隐私、强密码、数字足迹、网络欺凌与陌生人接触——五年级课程。"
+  },
+  "tags": ["informatika", "5. razred", "bezbednost", "internet", "privatnost"],
+  "lang": "sr",
+  "order": 10,
+  "author": "Nastavni materijal, čas 010"
+}

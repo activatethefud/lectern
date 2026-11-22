@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bake deck → slide images.  ./bake [slug…] [--force|--check]
+set -euo pipefail
+cd "$(dirname "$(readlink -f "$0")")"
+export COURSE_ROOT="${COURSE_ROOT:-$PWD/courses}"
+exec nix develop --quiet . -c node scripts/bake-courses.mjs "$@"

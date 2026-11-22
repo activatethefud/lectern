@@ -7,7 +7,10 @@ right answers *not* revealed), and if you score ≥ 90 % a certificate.
 * [PLAN.md](PLAN.md) — design, formats, milestones
 * [AGENTS.md](AGENTS.md) — conventions and invariants for coding agents
 
-**Status:** scaffold + plan. Home page renders; the player/report/certificate are M2–M4.
+**Status:** working end to end up to the report. Catalogue (search, 3 locales), per-course cover,
+player with server-locked answers and resume, `.pptx` download, baked slides, Docker image.
+Report (M3) and certificate (M4) are next. One real course is in the repo:
+`courses/bezbedno-koriscenje` — 15 slides, 10 questions.
 
 ## Run
 
@@ -40,7 +43,7 @@ mkdir -p courses/moj-kurs
 cp ~/deck.pptx courses/moj-kurs/slides.pptx
 $EDITOR courses/moj-kurs/course.json      # title/description/tags (sr, en, zh-CN)
 $EDITOR courses/moj-kurs/questions.json   # one question per slide
-npm run bake moj-kurs                     # pptx → courses/moj-kurs/slides/*.webp + manifest
+./bake moj-kurs                           # pptx → courses/moj-kurs/slides/*.jpg + manifest
 ```
 
 Nothing is registered anywhere: a folder under `courses/` is a course, and the home page picks
@@ -49,6 +52,6 @@ it up on the next request. Baked images are committed, so a deploy never needs L
 ## Tests
 
 ```bash
+./test               # 17 tests: search folding, player API, answer locking, no-answer leakage
 npm run bake:check   # every deck's baked images match its pptx hash
-npm run test:e2e     # playwright: answer locking, resume, no answer leakage
 ```

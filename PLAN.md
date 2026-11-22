@@ -1,7 +1,8 @@
 # slide-course — plan (v2)
 
-**Status:** scaffolded. Nuxt 4 app boots; catalogue + search + course-folder loading + 3 locales
-work; Docker runtime image builds and reports healthy; tests green. Player/report/certificate are M2–M4.
+**Status:** working up to the report. Nuxt 4 app; catalogue + search + 3 locales; per-course cover;
+player with server-enforced answer locking and resume; `.pptx` download; slide images baked and
+committed; Docker runtime image healthy. M3 (report/name gate) and M4 (certificate) are next.
 
 **One sentence:** a no-login course site where a course *is* a `.pptx` deck — read a slide, answer
 the 4-option question under it, and at the end get a report (wrong ones marked, answers withheld)
@@ -27,7 +28,7 @@ plus a certificate at ≥ 90 %.
 | Area | Choice | Why / what was rejected |
 |---|---|---|
 | Framework | **Nuxt 4.6** (Vue 3 + Nitro) | File-based routing maps 1:1 to the URL plan (`app/pages/c/[slug]/[n].vue`), one Nitro process serves API + slide images + ssr, and `@nuxtjs/i18n` v10 gives sr/en/zh-CN with locale-prefixed routes for free. Next 16 would need `next-intl` wiring, and its RSC/server-action split adds nothing here. Neither is heavy once built: `node .output/server/index.mjs`. |
-| Slide rendering | **Bake at author time**: `soffice --convert-to pdf` → `pdftoppm -webp` → `courses/<slug>/slides/00N.webp`, **committed** | Pixel-faithful (no browser pptx engine to mangle themes/tables), and production needs **no LibreOffice** — deploy is a node container plus a read-only `courses/` mount. Baking at request time would put a 500 MB office suite in the prod image. |
+| Slide rendering | **Bake at author time**: `soffice --convert-to pdf` → `pdftoppm -jpeg` → `courses/<slug>/slides/00N.jpg`, **committed** | Pixel-faithful (no browser pptx engine to mangle themes/tables), and production needs **no LibreOffice** — deploy is a node container plus a read-only `courses/` mount. Baking at request time would put a 500 MB office suite in the prod image. |
 | Questions | `questions.json` next to the deck, validated at load | Diffable in git, no authoring UI. Validation errors are fatal at startup, not at slide 9. |
 | Store | **`node:sqlite`** (built into Node 22) behind `server/utils/store.ts` | Attempts, answers, certificates: a handful of rows, needs durability and atomicity, no ORM. `better-sqlite3` needs native builds (painful on NixOS); swapping to it later is one file. |
 | Certificate | `pdf-lib` + `@pdf-lib/fontkit` with **subsetted Noto Sans + Noto Sans SC** | Pure JS, exact A4 landscape control, and CJK names work because a real font is embedded. Rejected: `soffice` HTML→PDF (needs LibreOffice in prod), headless Chrome (heavy), print-only HTML (can't guarantee the artifact). |
@@ -80,7 +81,7 @@ courses/podaci-i-informacije/
   questions.json
   slides.pptx
   manifest.json          # generated, committed
-  slides/001.webp …  016.webp   # generated, committed
+  slides/001.jpg …  016.jpg   # generated, committed
 ```
 
 `course.json`
@@ -137,20 +138,22 @@ decks in `tmp-archive-2026-11` are 3–17 slides, mostly 10–16 → fine.
 
 1. `sha256(slides.pptx)`; if `manifest.deckSha` matches **and** every listed image exists → skip (`--force` to redo).
 2. `soffice --headless --convert-to pdf` into a temp dir (serialised: LibreOffice can't run concurrently).
-3. `pdfinfo` page count, then `pdftoppm -webp -r 110 -scale-to-x 1600` → `001.webp …`.
+3. `pdftoppm -jpeg -jpegopt quality=88 -scale-to-x 1600 -scale-to-y -1` → `001.jpg …`
+   (JPEG, not WebP: poppler is built with or without libwebp depending on the distro, and a course
+   must bake identically on NixOS and in the Docker bake stage.)
 4. Write `manifest.json`:
    ```json
-   { "deckSha": "…", "slideCount": 16, "images": ["001.webp", …],
-     "slideXmlSha": ["…", …], "builtAt": "…" }
+   { "deckSha": "…", "slideCount": 15, "answeredSlides": 10,
+     "images": ["001.jpg", …], "builtAt": "…" }
    ```
-   `slideXmlSha[i]` = hash of `ppt/slides/slideN.xml` from the pptx zip, so later edits can report
-   "slide 7 changed since its question was written" (authoring aid, warning only).
+   (`slideXmlSha[]` — per-slide hashes to warn "slide 7 changed since its question was written" —
+   is deferred to M6; today the deck hash covers the whole deck.)
 5. Cross-check against `questions.json` (slide count, numbering) and fail with the slide number.
 6. `bake:check` (CI + `./test`) fails when a deck's hash ≠ manifest, i.e. someone edited a deck
    without re-baking — that's the only way a stale slide can reach a learner.
 
 Warns (does not fail) on: embedded video/audio, notes-only slides, images wider than ~2 MP.
-Deck size budget: 10–16 slides ≈ 1–2 MB of webp per course.
+Deck size budget: 10–16 slides ≈ 1–2 MB of jpg per course.
 
 ## 6. Routes
 
@@ -159,15 +162,18 @@ Deck size budget: 10–16 slides ≈ 1–2 MB of webp per course.
 | `/` | catalogue: cards, search, ⬇ pptx, last result badge, locale switcher |
 | `/c/<slug>` | cover: title, description, slide count, **start/resume at slide n**, restart, download |
 | `/c/<slug>/<n>` | player: slide *n* + its question (1-based, deep-linkable) |
-| `/c/<slug>/reply` | (internal) name gate → report |
-| `/c/<slug>/certificate` | HTML certificate (only if passed), print-styled |
-| `/verify/<id>` | public certificate check, locale-free URL, works without JS |
-| `GET /c/<slug>/slides.pptx` | `Content-Disposition: attachment`, ETag = deckSha, `Accept-Ranges` |
-| `GET /c/<slug>/slides/<n>.webp` | `Cache-Control: public, max-age=31536000, immutable`; `?v=<deckSha8>` in the img src |
+| `/c/<slug>/reply` | (internal) name gate → report — **M3** |
+| `/c/<slug>/certificate` | HTML certificate (only if passed) — **M4** |
+| `/verify/<id>` | public certificate check, locale-free URL — **M4** |
+| `GET /c/<slug>/slides.pptx` | `Content-Disposition: attachment`, ETag = deckSha |
+| `GET /c/<slug>/slide/<n>` | `image/jpeg`, `Cache-Control: immutable`; `?v=<deckSha8>` in the img src |
 | `GET /api/courses?q=&locale=` | catalogue JSON (search folding server-side too, for tests) |
-| `POST /api/c/<slug>/answer` | `{n, choice}` → `{ok:true}`; `409` if already answered, `422` if out of range |
-| `POST /api/c/<slug>/report` | `{name}` → finalizes attempt, returns score + wrong slide numbers (+ `why` if passed) |
-| `GET /c/<slug>/certificate.pdf` | pdf-lib output |
+| `GET /api/c/<slug>` | cover: title/description, totals, `nextSlide`, `done` |
+| `GET /api/c/<slug>/slide/<n>` | player payload: question + 4 options + already-chosen option; **no** `answer`/`why` |
+| `POST /api/c/<slug>/answer` | `{n, choice}` → `{ok:true}`; `409` if already answered, `422` if not a question slide / bad choice |
+| `POST /api/c/<slug>/restart` | drops the open attempt |
+| `POST /api/c/<slug>/report` | **M3** `{name}` → finalizes attempt, returns score + wrong slide numbers (+ `why` if passed) |
+| `GET /c/<slug>/certificate.pdf` | **M4** pdf-lib output |
 
 i18n: `prefix_except_default` (`sr` unprefixed, `/en/…`, `/zh-CN/…`), browser detection via `sc_lang`
 cookie. `/verify/<id>` is excluded from the i18n prefix because certificate IDs are printed.
@@ -245,7 +251,7 @@ client-side pptx rendering; a CMS (git *is* the CMS); auth (explicitly not wante
 | `tests/grading.test.ts` | threshold with `ceil` (e.g. 9/10 pass, 8/10 fail; 4/4 pass; 13/15 fail/14/15 pass), cert id determinism + collision handling |
 | `tests/api.nuxt.test.ts` | `/api/courses`, answer POST (`409` on second answer), report requires all slides, unknown slug 404, pptx route content-type + zip magic + ETag |
 | `tests/leak.test.ts` | **the one that matters**: no correct option text / `answer` / `why` in SSR HTML or any API response before the report; on a *failed* report still no `why`; on a *passed* report `why` appears |
-| `tests/bake.test.ts` | `@skipUnless(soffice && pdftoppm)` — bake `tests/fixtures/mini.pptx`, 3 webp with valid magic bytes, manifest hashes, second run is a cache hit |
+| `tests/bake.test.ts` | `@skipUnless(soffice && pdftoppm)` — bake `tests/fixtures/mini.pptx`, 3 jpg with valid magic bytes, manifest hashes, second run is a cache hit |
 | `tests/e2e/player.spec.ts` | playwright: answer → locked → reload → same slide → finish → name → report; download icon returns a `.pptx` |
 
 `tests/fixtures/mini.pptx` = a copied 3-slide deck (`scenario-i-algoritam.pptx`) so the bake test is
@@ -272,14 +278,14 @@ Deck binaries: commit as-is (~100 KB); no LFS unless decks start exceeding a few
 
 ```bash
 docker compose up -d --build        # app on 127.0.0.1:8765 → container :3000
-docker compose run --rm bake        # re-bake courses/*/slides/*.webp in a container
+docker compose run --rm bake        # re-bake courses/*/slides/*.jpg in a container
 ```
 
 - Runtime image is Node-only (~180 MB); LibreOffice lives only in the `bake` stage/profile,
   keeping the design honest: **production serves pre-baked images and a small Node process.**
 - `course-data` volume → `NUXT_DATA_DIR=/data` (SQLite survives rebuilds); `courses/` is read-only
   inside the image (bind-mount it if you prefer adding decks without a rebuild).
-- Behind Caddy/nginx: TLS, brotli/gzip, `immutable` caching for `/c/*/slides/*.webp`.
+- Behind Caddy/nginx: TLS, brotli/gzip, `immutable` caching for `/c/*/slides/*.jpg`.
 - CI/deploy gate: `npm run bake:check` fails when a deck changed without re-baking.
 - Single instance only (SQLite + in-process state). Health: `GET /api/health` → `{ok, courses, uptime}`.
 
@@ -288,8 +294,8 @@ docker compose run --rm bake        # re-bake courses/*/slides/*.webp in a conta
 | M | Content | Done when |
 |---|---|---|
 | **M0** ✅ | scaffold: nuxt config, flake, layout, catalogue page, course loader, locales, Dockerfile + compose, README/AGENTS/PLAN | `./serve` shows the catalogue with locale switcher; `./test` runs; `docker compose up` serves `/api/health` → healthy |
-| **M1** | `bake-courses.mjs`, `questions.ts` validation, `new-course` script, `mini.pptx` fixture, first real deck | `npm run bake` renders a deck; bad `questions.json` fails with the exact slide; `bake:check` works |
-| **M2** | player page, `store.ts`, answer POST, resume, cover page, download route, slide image route | a course can be answered end to end; reload resumes; ⬇ works |
+| **M1** ✅ | `bake-courses.mjs`, `questions.ts` validation, first real deck (`bezbedno-koriscenje`, 15 slides / 10 questions) | `npm run bake` renders a deck; bad `questions.json` fails with the exact slide; `bake:check` works |
+| **M2** ✅ | player page, `store.ts`, answer POST, resume, cover page, download route, slide image route | a course can be answered end to end; reload resumes; ⬇ works |
 | **M3** | report + name gate + scoring + retakes + `why` on pass | 8/10 → "failed, slide 3 wrong", no answer; 10/10 → explanation shown |
 | **M4** | certificate PDF + HTML page + `/verify/<id>` | PDF has name/date/score/ID; verify resolves 200/404 |
 | **M5** | content: 3–4 courses from `tmp-archive-2026-11`, zh-CN translations of the UI strings checked by eye | home page looks like a real site |
@@ -301,7 +307,7 @@ Effort: M0–M1 ≈ 5 h, M2 ≈ 6 h, M3 ≈ 3 h, M4 ≈ 4 h, M5 ≈ 1 h per deck
 
 | Risk | Mitigation |
 |---|---|
-| LibreOffice render differs from PowerPoint (font fallback, overflow) | Fonts pinned in the dev shell; baking is author-time, so problems are seen immediately; webp images are the artifact, so **prod is stable** even if a later LibreOffice changes |
+| LibreOffice render differs from PowerPoint (font fallback, overflow) | Fonts pinned in the dev shell; baking is author-time, so problems are seen immediately; jpg images are the artifact, so **prod is stable** even if a later LibreOffice changes |
 | Deck edited, questions/bakes out of sync | `bake:check` in CI + `slideXmlSha` mismatch warning; slide-count validation |
 | Answer leak via SSR state / devtools | `tests/leak.test.ts` + answers never serialized; report built from server-side grading only |
 | 90 % too strict on short decks | Warn when < 10 answered slides; per-course `passThreshold` override |

@@ -12,7 +12,7 @@
         default = pkgs.mkShell {
           packages = with pkgs; [
             nodejs_22          # >=22.11; node:sqlite for the attempt store
-            poppler_utils      # pdfinfo, pdftoppm — bake: pptx -> pdf -> webp
+            poppler-utils      # pdftoppm — bake: pptx -> pdf -> jpg
             libreoffice        # soffice --convert-to pdf
             qrencode           # QR on the certificate
             git

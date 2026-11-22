@@ -1,0 +1,110 @@
+{
+  "slides": [
+    { "n": 1, "skip": true },
+
+    { "n": 2,
+      "q": "Koji pojam NIJE naveden kao ključni pojam časa?",
+      "options": ["lični podaci", "privatnost", "digitalni otisak", "fajl sistem"],
+      "answer": 3,
+      "why": "Ključni pojmovi časa su lični podaci, privatnost, digitalni otisak, jaka lozinka i sajberbuling. Fajl sistem je pojam iz druge teme." },
+
+    { "n": 3,
+      "q": "Šta sve ostavlja trag kada koristimo internet?",
+      "options": [
+        "samo ono što svesno objavimo",
+        "samo komentari i poruke",
+        "profil, slike, komentari, lokacija, vreme, uređaj i pretrage",
+        "ništa, ako koristimo privatni režim pregledača"
+      ],
+      "answer": 2,
+      "why": "Trag ostavljaju i podaci koje ne unosimo svesno: lokacija, vreme, uređaj i sadržaji koje gledamo." },
+
+    { "n": 4,
+      "q": "Šta spada u lične podatke prema slajdu?",
+      "options": [
+        "ime i prezime, datum rođenja, adresa, telefon, e-pošta",
+        "samo lozinke i brojevi kartica",
+        "samo fotografije u školskoj uniformi",
+        "samo ocene iz škole"
+      ],
+      "answer": 0,
+      "why": "Slajd deli lične podatke u četiri grupe: identitet, škola i uzrast, digitalni pristup i privatnost." },
+
+    { "n": 5,
+      "q": "Šta je digitalni otisak?",
+      "options": [
+        "greška koja se pojavi na ekranu",
+        "ukupan trag koji ostavljamo na internetu i koji stvara sliku o nama",
+        "broj uređaja povezanih na istu mrežu",
+        "kopija fajla na drugom računaru"
+      ],
+      "answer": 1,
+      "why": "Digitalni otisak je sve što smo ostavili na internetu; može da pomogne, ali i da naškodi." },
+
+    { "n": 6,
+      "q": "Koja od navedenih lozinki je najsigurnija?",
+      "options": ["123456", "ana2010", "P@ssw0rd!2024", "mojpas"],
+      "answer": 2,
+      "why": "Najduža je i najraznovrsnija. Ipak, i takvu lozinku treba koristiti samo na jednom servisu i uz dvofaktorsku prijavu." },
+
+    { "n": 7,
+      "q": "Koje podešavanje treba prvo proveriti na novom telefonu ili nalogu?",
+      "options": [
+        "ko može da vidi profil, objave i fotografije",
+        "koju ćemo pozadinu postaviti",
+        "koliko ćemo aplikacija instalirati",
+        "koji jezik tastature koristimo"
+      ],
+      "answer": 0,
+      "why": "Vidljivost profila i dozvole aplikacija (kamera, mikrofon, kontakti) su prve dve stvari koje treba podesiti." },
+
+    { "n": 8,
+      "q": "Koje ponašanje je BEZBEDNO?",
+      "options": [
+        "objavljivanje slike rođendanske pozivnice sa adresom",
+        "slanje lozinke prijatelju u grupni čet",
+        "prijava na bankovni nalog preko javnog Wi-Fi-ja",
+        "provera ko može da vidi profil i ograničavanje nepoznatih"
+      ],
+      "answer": 3,
+      "why": "Ostala tri primera otkrivaju lične podatke ili pristup nalogu. Provera vidljivosti profila je jedina bezbedna radnja." },
+
+    { "n": 9,
+      "q": "Šta treba uraditi kada te kontaktira nepoznata osoba?",
+      "options": [
+        "podeliti ime škole da bi se predstavio",
+        "prihvatiti sastanak ako osoba deluje ljubazno",
+        "ne deliti lične podatke, reći odrasloj osobi i prijaviti/blokirati nalog",
+        "poslati fotografiju da bi se proverilo ko je"
+      ],
+      "answer": 2,
+      "why": "Redosled je: ne deliti podatke, ne pristajati na sastanak, reći odrasloj osobi, prijaviti i blokirati nalog." },
+
+    { "n": 10,
+      "q": "Šta NE treba raditi kada dobiješ uvredljive poruke?",
+      "options": [
+        "sačuvati skrinšot i vreme poruke",
+        "odgovoriti uvredom",
+        "prijaviti odrasloj osobi",
+        "blokirati i prijaviti nalog"
+      ],
+      "answer": 1,
+      "why": "Odgovor uvredom daje pažnju i raspiruje sukob. Ostalo su koraci koji pomažu: dokaz, prijava odrasloj osobi, blokiranje." },
+
+    { "n": 11,
+      "q": "Koje pravilo je deo plana za bezbedan internet?",
+      "options": [
+        "razmisli pre nego što objaviš",
+        "deli lokaciju da bi prijatelji znali gde si",
+        "koristi istu lozinku na svim servisima",
+        "sumnjivo ponašanje rešavaj sam, bez odraslih"
+      ],
+      "answer": 0,
+      "why": "Plan je: razmisli pre objave, štiti podatke i lokaciju, koristi jaku i različitu lozinku, prijavi sumnjivo ponašanje odrasloj osobi." },
+
+    { "n": 12, "skip": true },
+    { "n": 13, "skip": true },
+    { "n": 14, "skip": true },
+    { "n": 15, "skip": true }
+  ]
+}
