@@ -14,9 +14,14 @@
         <dt>{{ t('cert.score') }}</dt>
         <dd>{{ result.score }} / {{ result.total }}</dd>
         <dt>{{ t('cert.id') }}</dt>
-        <dd class="mono">{{ result.certId }}</dd>
+        <dd class="mono">{{ result.serial }}</dd>
+        <dt>{{ t('verify.signature') }}</dt>
+        <dd :class="result.signatureOk ? 'ok-line' : 'bad-line'">
+          {{ result.signatureOk ? t('verify.signatureOk') : t('verify.signatureBad') }}
+        </dd>
       </dl>
-      <a class="btn-primary btn" :href="`/certificate/${result.certId}?locale=${locale}`" download>⬇ {{ t('cert.download') }}</a>
+      <p v-if="result.revoked" class="bad-line">✗ {{ t('verify.revoked') }}</p>
+      <p class="muted hint">{{ t('verify.holderHint') }}</p>
     </template>
 
     <p v-else-if="result" class="bad-line">✗ {{ t('verify.invalid') }}</p>
@@ -38,20 +43,23 @@ const { data } = await useFetch(`/api/verify/${id}`, {
 
 const result = computed(() => data.value as {
   valid: boolean
+  signatureOk?: boolean
+  revoked?: boolean
   name?: string
   courseTitle?: string
   finishedAt?: string
   score?: number
   total?: number
-  certId?: string
+  serial?: string
 } | null)
 
 const formattedDate = computed(() => {
   if (!result.value?.finishedAt) return ''
   try {
-    return new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(result.value.finishedAt))
+    return new Intl.DateTimeFormat(locale.value, { dateStyle: 'medium', timeStyle: 'short' })
+      .format(new Date(result.value.finishedAt))
   } catch {
-    return result.value.finishedAt.slice(0, 10)
+    return result.value.finishedAt.slice(0, 16).replace('T', ' ')
   }
 })
 </script>
@@ -67,4 +75,5 @@ dd { margin: 0; }
 .mono { font-family: ui-monospace, monospace; }
 .btn { display: inline-block; padding: 0.5rem 0.9rem; border-radius: var(--radius); text-decoration: none; }
 .back { margin-top: 2rem; }
+.hint { font-size: 0.85rem; }
 </style>

@@ -58,7 +58,10 @@ export interface CertificateInput {
   score: number
   total: number
   percent: number
-  certId: string
+  /** sequential tracking number, printed on the document */
+  serial: string
+  /** HMAC over every field, printed small — a doctored copy no longer matches */
+  signature: string
   verifyUrl: string
   locale: string
 }
@@ -67,11 +70,12 @@ function hasCjk(text: string): boolean {
   return /[\u3400-\u9fff\uf900-\ufaff]/.test(text)
 }
 
+/** Issued at: the exact date *and time* the certificate was generated, in the reader's locale. */
 function formatDate(iso: string, locale: string): string {
   try {
-    return new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(iso))
+    return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(iso))
   } catch {
-    return iso.slice(0, 10)
+    return iso.slice(0, 16).replace('T', ' ')
   }
 }
 
@@ -131,7 +135,7 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
   const cols = [
     { label: labels.score, value: `${input.score} / ${input.total} · ${input.percent} %` },
     { label: labels.date, value: formatDate(input.finishedAt, input.locale === 'zh-CN' ? 'zh-CN' : input.locale) },
-    { label: labels.id, value: input.certId },
+    { label: labels.id, value: input.serial },
   ]
   const colW = (W - 240) / cols.length
   cols.forEach((col, i) => {
@@ -143,8 +147,8 @@ export function renderCertificate(input: CertificateInput): Promise<Buffer> {
     doc.text(col.value, x, metaY + 15, { width: colW, align: 'center' })
   })
 
-  // footer: how to check this document later
-  const footer = `${labels.verify}: ${input.verifyUrl}`
+  // footer: how to check this document later, and the signature that makes edits visible
+  const footer = `${labels.verify}: ${input.verifyUrl}   ·   sig ${input.signature}`
   doc.fillColor(MUTED).font(pickFont(footer)).fontSize(8.5)
   doc.text(footer, 0, H - pad - 46, { width: W, align: 'center' })
 

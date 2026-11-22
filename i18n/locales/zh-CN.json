@@ -54,5 +54,12 @@
   "verify.loading": "正在验证……",
   "verify.valid": "证书有效。",
   "verify.invalid": "未知的证书编号。",
-  "nav.home": "课程"
+  "nav.home": "课程",
+  "cert.boundHint": "证书只能由通过课程的会话下载；编号用于验证。",
+  "verify.signature": "签名",
+  "verify.signatureOk": "有效",
+  "verify.signatureBad": "不匹配",
+  "verify.revoked": "该证书已被撤销。",
+  "verify.holderHint": "本页仅用于验证编号；只有通过课程的人才能下载 PDF。",
+  "cert.issued": "签发时间"
 }

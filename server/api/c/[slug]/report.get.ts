@@ -45,6 +45,8 @@ export default defineEventHandler(async (event) => {
     }
   }
 
+  if (!attempt) throw createError({ statusCode: 409, statusMessage: 'no attempt yet', data: { nextSlide: 1 } })
+
   // Grade from stored answers — the client has never seen `answer`, and it cannot submit a score.
   const stored = answersOf(attempt.id)
   const threshold = thresholdOf(course)
@@ -65,6 +67,8 @@ export default defineEventHandler(async (event) => {
     }
   })
 
+  const issued = certificateForAttempt(attempt.id)
+
   return {
     slug,
     title: pickLocalized(course.meta.title, locale, lang),
@@ -76,7 +80,7 @@ export default defineEventHandler(async (event) => {
     passMark: grade.passMark,
     threshold: grade.threshold,
     passed: grade.passed,
-    certId: attempt.certId,
+    certificate: issued ? { serial: issued.serial, verifyId: issued.verifyId, issuedAt: issued.issuedAt } : null,
     items,
   }
 })

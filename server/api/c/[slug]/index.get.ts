@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
   const answers = answersOf(attempt.id)
   const nextSlide = questions.questionSlides.find((n) => answers[n] === undefined) ?? null
   const last = latestFinished(slug, attempt.sid)
+  const lastCert = last ? certificateForAttempt(last.id) : null
 
   return {
     slug,
@@ -34,7 +35,10 @@ export default defineEventHandler(async (event) => {
     hasPptx: course.hasPptx,
     /** a previously finished attempt for this browser, so its certificate stays reachable */
     lastFinished: last
-      ? { passed: last.passed, score: last.score, total: last.total, certId: last.certId, finishedAt: last.finishedAt }
+      ? {
+          passed: last.passed, score: last.score, total: last.total, finishedAt: last.finishedAt,
+          certificate: lastCert ? { serial: lastCert.serial, verifyId: lastCert.verifyId } : null,
+        }
       : null,
   }
 })

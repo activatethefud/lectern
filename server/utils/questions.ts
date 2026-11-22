@@ -6,6 +6,8 @@ import { pickLocalized, type Localized } from '#shared/course'
 /** A question exactly as it is stored on disk. `answer`/`why` must never leave the server early. */
 export interface StoredQuestion {
   n: number
+  /** title/section slides have no question */
+  skip?: boolean
   q: Localized
   options: Localized[]
   answer: number

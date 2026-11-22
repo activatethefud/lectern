@@ -3,6 +3,7 @@ import { mkdirSync } from 'node:fs'
 import { randomBytes, randomUUID } from 'node:crypto'
 import { join, resolve } from 'node:path'
 import type { H3Event } from 'h3'
+import type { CertificateFields } from './certauth'
 
 /**
  * Attempts live server-side only: the browser gets an opaque session cookie and never a score.
@@ -38,6 +39,29 @@ export function getDb(): DatabaseSync {
       PRIMARY KEY (attempt_id, n)
     );
     CREATE INDEX IF NOT EXISTS attempts_slug_sid ON attempts (slug, sid, started_at);
+
+    -- one row per issued certificate: the tracking number, the unguessable document key, and the
+    -- holder (sid) that is allowed to download the PDF.
+    CREATE TABLE IF NOT EXISTS certificates (
+      serial      TEXT PRIMARY KEY,
+      verify_id   TEXT NOT NULL UNIQUE,
+      attempt_id  TEXT NOT NULL,
+      slug        TEXT NOT NULL,
+      sid         TEXT NOT NULL,
+      name        TEXT NOT NULL,
+      score       INTEGER NOT NULL,
+      total       INTEGER NOT NULL,
+      passed      INTEGER NOT NULL,
+      issued_at   TEXT NOT NULL,
+      signature   TEXT NOT NULL,
+      revoked_at  TEXT
+    );
+    CREATE UNIQUE INDEX IF NOT EXISTS certificates_attempt ON certificates (attempt_id);
+    CREATE TABLE IF NOT EXISTS certificate_seq (
+      id    INTEGER PRIMARY KEY CHECK (id = 1),
+      value INTEGER NOT NULL
+    );
+    INSERT OR IGNORE INTO certificate_seq (id, value) VALUES (1, 0);
   `)
   return db
 }
@@ -163,18 +187,107 @@ export function finalizeAttempt(
   }
 }
 
-/** Attaches the learner's name and the certificate id; both are immutable afterwards. */
+/** Attaches the learner's name and the certificate serial to the attempt (immutable afterwards). */
 export function attachCertificate(attemptId: string, name: string, certId: string): void {
   getDb()
     .prepare('UPDATE attempts SET name = COALESCE(name, ?), cert_id = COALESCE(cert_id, ?) WHERE id = ?')
     .run(name, certId, attemptId)
 }
 
-/** Public lookup: the certificate id is the only key the document itself carries. */
-export function attemptByCertId(certId: string): (Attempt & { courseLang: string | null }) | null {
+export interface Certificate {
+  serial: string
+  verifyId: string
+  attemptId: string
+  slug: string
+  /** owning session — the PDF is only downloadable by the learner who earned it */
+  sid: string
+  name: string
+  score: number
+  total: number
+  passed: boolean
+  issuedAt: string
+  signature: string
+  revokedAt: string | null
+}
+
+function rowToCertificate(row: Record<string, unknown>): Certificate {
+  return {
+    serial: String(row.serial),
+    verifyId: String(row.verify_id),
+    attemptId: String(row.attempt_id),
+    slug: String(row.slug),
+    sid: String(row.sid),
+    name: String(row.name),
+    score: Number(row.score),
+    total: Number(row.total),
+    passed: Number(row.passed) === 1,
+    issuedAt: String(row.issued_at),
+    signature: String(row.signature),
+    revokedAt: row.revoked_at == null ? null : String(row.revoked_at),
+  }
+}
+
+/**
+ * Issues (or returns) the certificate of an attempt. One certificate per attempt: re-submitting the
+ * name does not mint a second tracking number, and the name cannot change after issue.
+ */
+export function issueCertificate(input: {
+  attemptId: string
+  slug: string
+  sid: string
+  name: string
+  score: number
+  total: number
+  passed: boolean
+  issuedAt: string
+  verifyId: string
+  buildSerial: (seq: number, issuedAt: string) => string
+  sign: (fields: CertificateFields) => string
+}): Certificate {
+  const conn = getDb()
+  const existing = certificateForAttempt(input.attemptId)
+  if (existing) return existing
+
+  const row = conn
+    .prepare('UPDATE certificate_seq SET value = value + 1 WHERE id = 1 RETURNING value')
+    .get() as { value: number } | undefined
+  const seq = Number(row?.value ?? 1)
+  const serial = input.buildSerial(seq, input.issuedAt)
+
+  const base = {
+    serial,
+    verifyId: input.verifyId,
+    name: input.name,
+    slug: input.slug,
+    score: input.score,
+    total: input.total,
+    issuedAt: input.issuedAt,
+  }
+  const signature = input.sign(base)
+
+  conn.prepare(`
+    INSERT INTO certificates (serial, verify_id, attempt_id, slug, sid, name, score, total, passed, issued_at, signature)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `).run(
+    serial, input.verifyId, input.attemptId, input.slug, input.sid, input.name,
+    input.score, input.total, input.passed ? 1 : 0,
+    input.issuedAt, signature,
+  )
+
+  return certificateForAttempt(input.attemptId)!
+}
+
+export function certificateForAttempt(attemptId: string): Certificate | null {
   const row = getDb()
-    .prepare('SELECT * FROM attempts WHERE cert_id = ? LIMIT 1')
-    .get(certId) as Record<string, unknown> | undefined
-  if (!row) return null
-  return { ...rowToAttempt(row), courseLang: (row.lang as string) ?? null }
+    .prepare('SELECT * FROM certificates WHERE attempt_id = ? LIMIT 1')
+    .get(attemptId) as Record<string, unknown> | undefined
+  return row ? rowToCertificate(row) : null
+}
+
+/** Public lookup by tracking number, or by document key — both print on the PDF. */
+export function certificateByAnyId(id: string): Certificate | null {
+  const row = getDb()
+    .prepare('SELECT * FROM certificates WHERE serial = ? OR verify_id = ? LIMIT 1')
+    .get(id, id) as Record<string, unknown> | undefined
+  return row ? rowToCertificate(row) : null
 }

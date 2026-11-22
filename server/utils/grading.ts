@@ -44,13 +44,3 @@ export function gradeAttempt(
     wrong,
   }
 }
-
-const BASE32 = '0123456789ABCDEFGHJKMNPQRSTVWXYZ' // Crockford: no I, L, O, U
-
-/** Deterministic, human-readable certificate id derived from the attempt itself. */
-export function certificateId(attemptId: string, slug: string, finishedAt: string): string {
-  const digest = createHash('sha256').update(`${attemptId}|${slug}|${finishedAt}`).digest()
-  let out = ''
-  for (let i = 0; i < 12; i++) out += BASE32[digest[i]! % 32]
-  return out.slice(0, 4) + '-' + out.slice(4, 8) + '-' + out.slice(8, 12)
-}

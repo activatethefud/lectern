@@ -10,6 +10,10 @@ services:
     environment:
       NUXT_COURSE_ROOT: /app/courses
       NUXT_DATA_DIR: /data
+      # certificate dates/times are rendered in this zone
+      TZ: ${TZ:-Europe/Belgrade}
+      # set in production: keeps certificate signatures valid if the data volume is lost
+      NUXT_CERTIFICATE_SECRET: ${CERTIFICATE_SECRET:-}
     volumes:
       # attempts + certificates db; survives image rebuilds
       - course-data:/data

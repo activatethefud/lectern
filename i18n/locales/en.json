@@ -54,5 +54,12 @@
   "verify.loading": "Checking…",
   "verify.valid": "This certificate is valid.",
   "verify.invalid": "Unknown certificate ID.",
-  "nav.home": "Courses"
+  "nav.home": "Courses",
+  "cert.boundHint": "The PDF can only be downloaded from the session that earned it; the tracking number is for verification.",
+  "verify.signature": "Signature",
+  "verify.signatureOk": "valid",
+  "verify.signatureBad": "does not match",
+  "verify.revoked": "This certificate has been revoked.",
+  "verify.holderHint": "This page checks the number. Only the learner who passed can download the PDF.",
+  "cert.issued": "Issued"
 }

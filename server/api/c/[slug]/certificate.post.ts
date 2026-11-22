@@ -1,9 +1,13 @@
+import { pickLocalized } from '#shared/course'
+
 /**
  * POST /api/c/:slug/certificate  { name }
  *
- * Only for a passed attempt. The name is written once (COALESCE), the certificate id is derived
- * from the attempt itself, and the PDF is regenerated on demand from that id — so a certificate
- * can always be re-downloaded from `/certificate/<id>`.
+ * Issues the certificate for a passed attempt: a sequential tracking number (printed), a random
+ * document key (only the learner's session may download the PDF with it), and an HMAC signature
+ * over the printed fields.
+ *
+ * Idempotent per attempt: submitting again returns the same serial. The name is frozen at issue.
  */
 export default defineEventHandler(async (event) => {
   const slug = getRouterParam(event, 'slug')!
@@ -19,17 +23,36 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 422, statusMessage: 'name must be 2–60 characters' })
   }
 
-  const attempt = latestFinished(slug, sessionId(event))
+  const sid = sessionId(event)
+  const attempt = latestFinished(slug, sid)
   if (!attempt) throw createError({ statusCode: 409, statusMessage: 'no finished attempt' })
   if (!attempt.passed) throw createError({ statusCode: 403, statusMessage: 'the attempt was not passed' })
+  if (attempt.name && attempt.name !== name) {
+    throw createError({ statusCode: 409, statusMessage: 'this certificate was already issued to another name' })
+  }
 
-  const certId = attempt.certId ?? certificateId(attempt.id, slug, attempt.finishedAt!)
-  attachCertificate(attempt.id, name, certId)
+  const certificate = issueCertificate({
+    attemptId: attempt.id,
+    slug,
+    sid,
+    name,
+    score: attempt.score ?? 0,
+    total: attempt.total ?? 0,
+    passed: true,
+    issuedAt: attempt.finishedAt ?? new Date().toISOString(),
+    verifyId: newVerifyId(),
+    buildSerial: formatSerial,
+    sign: signCertificate,
+  })
+
+  attachCertificate(attempt.id, certificate.name, certificate.serial)
 
   return {
-    certId,
-    name: attempt.name ?? name,
-    pdf: `/certificate/${certId}`,
-    verify: `/verify/${certId}`,
+    serial: certificate.serial,
+    verifyId: certificate.verifyId,
+    name: certificate.name,
+    issuedAt: certificate.issuedAt,
+    pdf: `/certificate/${certificate.verifyId}`,
+    verify: `/verify/${certificate.serial}`,
   }
 })

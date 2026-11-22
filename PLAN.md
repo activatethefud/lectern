@@ -186,8 +186,9 @@ Deck size budget: 10–16 slides ≈ 1–2 MB of jpg per course.
 | `GET /api/c/<slug>/slide/<n>` | player payload: question + 4 options + already-chosen option; **no** `answer`/`why` |
 | `POST /api/c/<slug>/answer` | `{n, choice}` → `{ok:true}`; `409` if already answered, `422` if not a question slide / bad choice |
 | `POST /api/c/<slug>/restart` | drops the open attempt |
-| `GET /certificate/<id>` | PDF by certificate id only (shareable; no session) |
-| `GET /api/verify/<id>` + `/verify/<id>` | public check: name, course, date, score — or 404 |
+| `GET /certificate/<verifyId>` | PDF, **owner session only** — 404 for everyone else |
+| `GET /api/verify/<serial \| verifyId>` | public check: valid, name, course, date+time, score, `signatureOk` |
+| `GET /verify/<serial>` | public page — no login, no JS |
 | `POST /api/c/<slug>/report` | *(superseded)* finalize happens on `GET /api/c/<slug>/report` — idempotent |
 | `GET /api/c/<slug>/report` | finalizes the attempt if complete; per-item `chosen` + `correct` flags; `why` only when passed |
 | `POST /api/c/<slug>/certificate` | `{name}` → `{certId, pdf, verify}`; 403 when not passed |
@@ -227,22 +228,38 @@ and — only when passed — a collapsible `why` per wrong/answered slide. Faile
 slides were wrong and nothing else. Actions: back to course, "try again" (new attempt, unlimited),
 "download certificate" (only if passed).
 
-**Certificate PDF** (A4 landscape, pdf-lib): border, `cert.title`, learner name (large), course
-title, date passed, score, `cert.id`, `verify/<id>` URL text + QR (from `qrencode`, optional).
-Fonts subset per render via fontkit, CJK bytes only when the name needs them.
-`cert_id = base32(sha256(attempt_id | slug | finished_at))[:12]`, uniqueness-checked against the DB.
-PDF is regenerated on demand from the DB row, so it can always be re-downloaded.
+**Certificate PDF** (A4 landscape, pdfkit): border, title, learner name (large),
+course, score, **date and exact time of issue**, tracking number, verify URL, and an HMAC signature.
 
-**`/verify/<id>`**: "valid", name, course, date — or 404 "unknown ID". No login, no JS needed.
+**Certificate identity.** Two keys, two jobs:
+
+| | | |
+|---|---|---|
+| `serial` | `SC-2026-000001` | sequential tracking number, printed; public and guessable, proves nothing alone |
+| `verifyId` | `35P2-KPS4-…` | 120 random bits; the key to the PDF, handed only to the session that earned it |
+| `signature` | `RFM6-QBB9-…` | HMAC-SHA256 over serial\|verifyId\|name\|slug\|score\|total\|issuedAt (secret: `NUXT_CERTIFICATE_SECRET`, or auto-generated into `data/.certificate-secret`); `/verify` recomputes it, so a doctored copy is detectable |
+
+- The PDF is downloadable **only by the owning session** (`sid` on the certificate row): the link
+  cannot be forwarded to another person, and a wrong session gets a plain 404.
+- `/verify/<serial>` is public: name, course, exact date+time, score, signature status — enough
+  for a recipient to check that the holder's name is the registered one.
+- The name is frozen at issue (409 for any other name) and one attempt yields exactly one serial.
+- The PDF is regenerated on demand from the row, so it can always be re-downloaded by its owner.
+
+**`/verify/<serial>`**: public, no login, no JS: valid/revoked, name, course, date+time, score, signature status — or 404.
 
 ## 10. Data model
 
 ```sql
 attempts(id TEXT PK, slug TEXT, sid TEXT, name TEXT, lang TEXT,
          started_at TEXT, finished_at TEXT, score INT, total INT,
-         passed INT, cert_id TEXT UNIQUE)
+         passed INT, cert_id TEXT UNIQUE)          -- cert_id = tracking serial
 answers(attempt_id TEXT, n INT, choice INT, answered_at TEXT,
         PRIMARY KEY (attempt_id, n))
+certificates(serial PK, verify_id TEXT UNIQUE, attempt_id TEXT UNIQUE, slug TEXT,
+             sid TEXT, name TEXT, score INT, total INT, passed INT,
+             issued_at TEXT, signature TEXT, revoked_at TEXT)
+certificate_seq(id=1, value)                       -- monotonic: SC-<year>-<6 digits>
 ```
 `total` excludes skipped slides; `score` counts `choice == answer` at finalize time (recomputed
 server-side from `answers` and the validated question set, never taken from the request).

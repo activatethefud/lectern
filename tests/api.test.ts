@@ -67,7 +67,7 @@ interface Report {
   percent: number
   passMark: number
   passed: boolean
-  certId: string | null
+  certificate: { serial: string, verifyId: string } | null
   items: Array<{ n: number, chosen: number, correct: boolean, why?: string }>
 }
 
@@ -220,35 +220,70 @@ describe('player api', async () => {
     // idempotent: reloading the report neither rescores nor duplicates
     const again = await getJson<Report>(s, `/api/c/${COURSE}/report`)
     expect(again.score).toBe(report.score)
-    expect(again.certId).toBeNull()
+    expect(again.certificate).toBeNull()
   })
 
-  it('issues a certificate pdf that anyone can verify by its id', async () => {
+  it('issues a certificate with a tracking number, and only its holder can download the pdf', async () => {
     const s = newSession()
     await answerAll(s, true)
     await s(`/api/c/${COURSE}/report`)
 
     const cert = await $fetchCert(s, `/api/c/${COURSE}/certificate`, { name: 'Đorđe Petrović' })
-    expect(cert.certId).toMatch(/^[0-9A-Z]{4}-[0-9A-Z]{4}-[0-9A-Z]{4}$/)
-    expect(cert.pdf).toBe(`/certificate/${cert.certId}`)
+    // sequential, human-readable tracking number + unguessable document key
+    expect(cert.serial).toMatch(/^SC-\d{4}-\d{6}$/)
+    expect(cert.verifyId).toMatch(/^[0-9A-Z]{4}(-[0-9A-Z]{4}){5}$/)
+    expect(cert.pdf).toBe(`/certificate/${cert.verifyId}`)
+    expect(cert.verify).toBe(`/verify/${cert.serial}`)
 
-    // the PDF: no session needed, that is the point of the id
-    const anon = newSession()
-    const pdf = await anon(cert.pdf)
+    // the learner's own session can download it…
+    const pdf = await s(cert.pdf)
     expect(pdf.status).toBe(200)
     expect(pdf.headers.get('content-type')).toBe('application/pdf')
-    expect(pdf.headers.get('content-disposition')).toContain(`certificate-${cert.certId}.pdf`)
+    expect(pdf.headers.get('content-disposition')).toContain(`certificate-${cert.serial}.pdf`)
     const bytes = Buffer.from(await pdf.arrayBuffer())
     expect(bytes.subarray(0, 5).toString()).toBe('%PDF-')
     expect(bytes.length).toBeGreaterThan(2000)
 
-    const verified = await getJson<{ valid: boolean, name: string, score: number }>(anon, `/api/verify/${cert.certId}`)
+    // …nobody else can, even with the exact document key
+    const anon = newSession()
+    expect((await anon(cert.pdf)).status).toBe(404)
+
+    // verification is public and works by tracking number or by document key
+    const verified = await getJson<{ valid: boolean, name: string, score: number, serial: string, signatureOk: boolean }>(
+      anon,
+      `/api/verify/${cert.serial}`,
+    )
     expect(verified.valid).toBe(true)
+    expect(verified.signatureOk).toBe(true)
+    expect(verified.serial).toBe(cert.serial)
     expect(verified.name).toBe('Đorđe Petrović')
     expect(verified.score).toBe(questionSlides.length)
+    expect((await getJson<{ serial: string }>(anon, `/api/verify/${cert.verifyId}`)).serial).toBe(cert.serial)
 
-    expect((await anon(`/api/verify/0000-0000-0000`)).status).toBe(404)
-    expect((await anon('/certificate/0000-0000-0000')).status).toBe(404)
+    expect((await anon('/api/verify/SC-2026-999999')).status).toBe(404)
+    expect((await anon('/certificate/0000-0000-0000-0000-0000-0000')).status).toBe(404)
+  })
+
+  it('keeps one serial per attempt and refuses to rename an issued certificate', async () => {
+    const s = newSession()
+    await answerAll(s, true)
+    await s(`/api/c/${COURSE}/report`)
+
+    const first = await $fetchCert(s, `/api/c/${COURSE}/certificate`, { name: 'Ana Anić' })
+    const again = await $fetchCert(s, `/api/c/${COURSE}/certificate`, { name: 'Ana Anić' })
+    expect(again.serial).toBe(first.serial) // no second tracking number for the same attempt
+    expect(again.verifyId).toBe(first.verifyId)
+
+    // a certificate cannot be "re-issued" to somebody else
+    expect((await postJson(s, `/api/c/${COURSE}/certificate`, { name: 'Neko Treći' })).status).toBe(409)
+
+    // and serials never repeat across learners
+    const other = newSession()
+    await answerAll(other, true)
+    await other(`/api/c/${COURSE}/report`)
+    const second = await $fetchCert(other, `/api/c/${COURSE}/certificate`, { name: 'Marko Marković' })
+    expect(second.serial).not.toBe(first.serial)
+    expect(second.verifyId).not.toBe(first.verifyId)
   })
 
   it('rejects a too-short name and an unfinished attempt', async () => {
@@ -261,7 +296,14 @@ describe('player api', async () => {
   })
 })
 
-interface IssuedCertificate { certId: string, name: string, pdf: string, verify: string }
+interface IssuedCertificate {
+  serial: string
+  verifyId: string
+  name: string
+  issuedAt: string
+  pdf: string
+  verify: string
+}
 
 async function $fetchCert(s: Session, path: string, body: unknown): Promise<IssuedCertificate> {
   const res = await postJson(s, path, body)

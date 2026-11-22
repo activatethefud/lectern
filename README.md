@@ -65,6 +65,20 @@ is what keeps a stale translation from silently shipping.
 Nothing is registered anywhere: a folder under `courses/` is a course, and the home page picks
 it up on the next request. Baked images are committed, so a deploy never needs LibreOffice.
 
+## Certificates
+
+Passing (≥ 90 %) issues a certificate carrying a **tracking number** (`SC-2026-000001`), the exact
+date and time of issue, and an HMAC signature over those fields.
+
+- `/verify/<serial>` — public: name, course, date+time, score, signature status. This is what a
+  recipient checks to see that the printed name is the registered one.
+- `/certificate/<verifyId>` — the PDF, downloadable **only by the browser session that earned it**
+  (404 for anyone else), so the link cannot be forwarded to another person.
+- `NUXT_CERTIFICATE_SECRET` signs certificates. Set it in production so signatures survive a lost
+  data volume; in dev one is generated into `data/.certificate-secret`.
+- One attempt ⇒ one serial. The name is frozen at issue, so a certificate cannot be re-issued to
+  somebody else.
+
 ## Tests
 
 ```bash

@@ -46,11 +46,12 @@
             </button>
           </div>
 
-          <div v-if="course.lastFinished?.certId" class="cert-line">
-            <a class="action ghost" :href="`/certificate/${course.lastFinished.certId}?locale=${locale}`" download>
+          <div v-if="course.lastFinished?.certificate" class="cert-line">
+            <span class="muted mono">{{ course.lastFinished.certificate.serial }}</span>
+            <a class="action ghost" :href="`/certificate/${course.lastFinished.certificate.verifyId}?locale=${locale}`" download>
               ⬇ {{ t('cert.download') }}
             </a>
-            <NuxtLinkLocale class="action ghost" :to="`/verify/${course.lastFinished.certId}`">
+            <NuxtLinkLocale class="action ghost" :to="`/verify/${course.lastFinished.certificate.serial}`">
               {{ t('cert.verifyLink') }}
             </NuxtLinkLocale>
           </div>
@@ -95,5 +96,6 @@ h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.5rem; letter-spacing: 
 .action { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1rem; border-radius: var(--radius); text-decoration: none; font-size: 0.95rem; }
 .ghost { border: 1px solid var(--line); background: transparent; }
 .done { color: var(--good); font-weight: 600; }
-.cert-line { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.cert-line { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.mono { font-family: ui-monospace, monospace; font-size: 0.85rem; }
 </style>

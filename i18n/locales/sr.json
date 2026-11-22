@@ -54,5 +54,12 @@
   "verify.loading": "Proveravam…",
   "verify.valid": "Sertifikat je važeći.",
   "verify.invalid": "Nepoznat broj sertifikata.",
-  "nav.home": "Kursevi"
+  "nav.home": "Kursevi",
+  "cert.boundHint": "PDF se preuzima samo iz sesije u kojoj je kurs položen; broj služi za proveru.",
+  "verify.signature": "Potpis",
+  "verify.signatureOk": "važeći",
+  "verify.signatureBad": "ne poklapa se",
+  "verify.revoked": "Sertifikat je poništen.",
+  "verify.holderHint": "Ova strana proverava broj. PDF preuzima samo osoba koja je položila kurs.",
+  "cert.issued": "Izdato"
 }

@@ -41,17 +41,27 @@
       </ol>
 
       <section v-if="report.passed" class="cert">
-        <template v-if="cert || report.certId">
+        <template v-if="serial">
           <h2>{{ t('cert.title') }}</h2>
           <p class="muted">{{ t('cert.readyFor', { name: report.name ?? cert?.name }) }}</p>
+          <p class="serial">
+            <span class="muted">{{ t('cert.id') }}:</span>
+            <strong class="mono">{{ serial }}</strong>
+            <span class="muted">· {{ t('cert.issued') }} {{ issuedAt }}</span>
+          </p>
           <div class="actions">
-            <a class="btn-primary btn" :href="`/certificate/${cert?.certId ?? report.certId}?locale=${locale}`" download>
+            <a
+              class="btn-primary btn"
+              :href="`/certificate/${verifyId}?locale=${locale}`"
+              download
+            >
               ⬇ {{ t('cert.download') }}
             </a>
-            <NuxtLinkLocale class="ghost btn" :to="`/verify/${cert?.certId ?? report.certId}`">
+            <NuxtLinkLocale class="ghost btn" :to="`/verify/${serial}`">
               {{ t('cert.verifyLink') }}
             </NuxtLinkLocale>
           </div>
+          <p class="muted hint">{{ t('cert.boundHint') }}</p>
         </template>
         <template v-else>
           <h2>{{ t('cert.generate') }}</h2>
@@ -100,7 +110,20 @@ if (error.value?.statusCode === 409) {
 }
 
 const name = ref((report.value?.name as string | null) ?? '')
-const cert = ref<{ certId: string, name: string, pdf: string, verify: string } | null>(null)
+const serial = computed(() => cert.value?.serial ?? report.value?.certificate?.serial ?? '')
+const verifyId = computed(() => cert.value?.verifyId ?? report.value?.certificate?.verifyId ?? '')
+const cert = ref<{ serial: string, verifyId: string, name: string, issuedAt: string, pdf: string, verify: string } | null>(null)
+
+/** Exact moment the certificate was generated (falls back to the stored issue time). */
+const issuedAt = computed(() => {
+  const iso = cert.value?.issuedAt ?? report.value?.certificate?.issuedAt
+  if (!iso) return ''
+  try {
+    return new Intl.DateTimeFormat(locale.value, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(iso))
+  } catch {
+    return iso.slice(0, 16).replace('T', ' ')
+  }
+})
 const busy = ref(false)
 const certError = ref('')
 
@@ -108,10 +131,11 @@ async function createCertificate() {
   busy.value = true
   certError.value = ''
   try {
-    cert.value = await $fetch(`/api/c/${slug}/certificate`, {
-      method: 'POST',
-      body: { name: name.value.trim() },
-    })
+    // typed-route inference recurses too deep on this literal; a plain string keeps it simple
+    const url: string = `/api/c/${slug}/certificate`
+    cert.value = await $fetch<{
+      serial: string, verifyId: string, name: string, issuedAt: string, pdf: string, verify: string
+    }>(url, { method: 'POST', body: { name: name.value.trim() } })
     await refresh()
   } catch (e) {
     certError.value = (e as { statusMessage?: string }).statusMessage ?? t('cert.failed')
@@ -154,6 +178,9 @@ async function retake() {
 .cert h2 { font-size: 1.05rem; margin: 0 0 0.3rem; }
 .name-form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.7rem; }
 .name-form input { max-width: 22rem; }
+.serial { margin: 0.2rem 0 0.7rem; }
+.mono { font-family: ui-monospace, monospace; }
+.hint { font-size: 0.8rem; margin: 0.6rem 0 0; }
 .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
 .bottom { margin-top: 1.5rem; }
 .btn { padding: 0.5rem 0.9rem; border-radius: var(--radius); text-decoration: none; }
