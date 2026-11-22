@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Launch the site.  ./serve [--port N] [--host H] [--no-open]
+set -euo pipefail
+cd "$(dirname "$(readlink -f "$0")")"
+export COURSE_ROOT="$PWD"
+exec nix develop --quiet . -c python3 app/server.py "$@"

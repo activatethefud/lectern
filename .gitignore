@@ -1,0 +1,9 @@
+data/
+courses/*/.build/
+__pycache__/
+*.pyc
+.direnv/
+.envrc
+result
+result-*
+*.log
