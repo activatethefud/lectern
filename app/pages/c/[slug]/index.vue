@@ -39,6 +39,15 @@
               {{ t('course.restart') }}
             </button>
           </div>
+
+          <div v-if="course.lastFinished?.certId" class="cert-line">
+            <a class="action ghost" :href="`/certificate/${course.lastFinished.certId}?locale=${locale}`" download>
+              ⬇ {{ t('cert.download') }}
+            </a>
+            <NuxtLinkLocale class="action ghost" :to="`/verify/${course.lastFinished.certId}`">
+              {{ t('cert.verifyLink') }}
+            </NuxtLinkLocale>
+          </div>
         </div>
       </div>
     </template>
@@ -80,4 +89,5 @@ h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.5rem; letter-spacing: 
 .action { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1rem; border-radius: var(--radius); text-decoration: none; font-size: 0.95rem; }
 .ghost { border: 1px solid var(--line); background: transparent; }
 .done { color: var(--good); font-weight: 600; }
+.cert-line { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
 </style>

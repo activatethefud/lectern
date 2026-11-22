@@ -90,3 +90,8 @@ export function toListEntry(c: LoadedCourse, locale: string): CourseListEntry {
     pptxBytes: c.pptxBytes,
   }
 }
+
+/** Per-course override, else the global 90 % from runtimeConfig. */
+export function thresholdOf(course: LoadedCourse): number {
+  return course.meta.passThreshold ?? Number(useRuntimeConfig().passThreshold)
+}

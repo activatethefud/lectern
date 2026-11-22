@@ -31,7 +31,7 @@ plus a certificate at ≥ 90 %.
 | Slide rendering | **Bake at author time**: `soffice --convert-to pdf` → `pdftoppm -jpeg` → `courses/<slug>/slides/00N.jpg`, **committed** | Pixel-faithful (no browser pptx engine to mangle themes/tables), and production needs **no LibreOffice** — deploy is a node container plus a read-only `courses/` mount. Baking at request time would put a 500 MB office suite in the prod image. |
 | Questions | `questions.json` next to the deck, validated at load | Diffable in git, no authoring UI. Validation errors are fatal at startup, not at slide 9. |
 | Store | **`node:sqlite`** (built into Node 22) behind `server/utils/store.ts` | Attempts, answers, certificates: a handful of rows, needs durability and atomicity, no ORM. `better-sqlite3` needs native builds (painful on NixOS); swapping to it later is one file. |
-| Certificate | `pdf-lib` + `@pdf-lib/fontkit` with **subsetted Noto Sans + Noto Sans SC** | Pure JS, exact A4 landscape control, and CJK names work because a real font is embedded. Rejected: `soffice` HTML→PDF (needs LibreOffice in prod), headless Chrome (heavy), print-only HTML (can't guarantee the artifact). |
+| Certificate | **pdfkit** + two committed fonts (Noto Sans, Noto Sans SC) | Pure JS, no browser and no office suite in the image. pdfkit/fontkit can subset a *single* font file, so `NotoSansSC-Regular.otf` (8.3 MB, 31k glyphs, OFL) is committed; the emoji-era alternative — the variable `NotoSansCJK-VF.otf.ttc` that every distro ships now — cannot be embedded (`Not a supported font format`). Latin/Cyrillic names use `NotoSans-Regular.ttf`; the font is chosen by the script of the typed name. |
 | Cert artifact | HTML celebration page + `/c/<slug>/certificate.pdf` download | The PDF is the record; `/verify/<id>` is the authoritative check. |
 | Auth | none. `sid` cookie (32 hex) identifies an attempt | Requirement. Certificates are *claimed*; the value is the row in the DB and the verify page. |
 | CSS | one hand-written `main.css` (~100 lines) + scoped styles | No Tailwind/UI kit; the site is 4 screens. |
@@ -172,8 +172,11 @@ Deck size budget: 10–16 slides ≈ 1–2 MB of jpg per course.
 | `GET /api/c/<slug>/slide/<n>` | player payload: question + 4 options + already-chosen option; **no** `answer`/`why` |
 | `POST /api/c/<slug>/answer` | `{n, choice}` → `{ok:true}`; `409` if already answered, `422` if not a question slide / bad choice |
 | `POST /api/c/<slug>/restart` | drops the open attempt |
-| `POST /api/c/<slug>/report` | **M3** `{name}` → finalizes attempt, returns score + wrong slide numbers (+ `why` if passed) |
-| `GET /c/<slug>/certificate.pdf` | **M4** pdf-lib output |
+| `GET /certificate/<id>` | PDF by certificate id only (shareable; no session) |
+| `GET /api/verify/<id>` + `/verify/<id>` | public check: name, course, date, score — or 404 |
+| `POST /api/c/<slug>/report` | *(superseded)* finalize happens on `GET /api/c/<slug>/report` — idempotent |
+| `GET /api/c/<slug>/report` | finalizes the attempt if complete; per-item `chosen` + `correct` flags; `why` only when passed |
+| `POST /api/c/<slug>/certificate` | `{name}` → `{certId, pdf, verify}`; 403 when not passed |
 
 i18n: `prefix_except_default` (`sr` unprefixed, `/en/…`, `/zh-CN/…`), browser detection via `sc_lang`
 cookie. `/verify/<id>` is excluded from the i18n prefix because certificate IDs are printed.
@@ -232,8 +235,9 @@ server-side from `answers` and the validated question set, never taken from the 
 
 ## 11. Dependencies (and what was rejected)
 
-Runtime: `nuxt` 4.6, `@nuxtjs/i18n` 10, `pdf-lib`, `@pdf-lib/fontkit`. Dev: `vitest` 4,
-`@nuxt/test-utils` 4, `@vue/test-utils`, `happy-dom`, `playwright`, `typescript`, `vue-tsc`.
+Runtime: `nuxt` 4.6, `@nuxtjs/i18n` 10, `pdfkit` (certificate PDF). Dev: `vitest` 4,
+`@nuxt/test-utils` 4, `@vue/test-utils`, `happy-dom`, `playwright`, `typescript`, `vue-tsc`,
+`@types/pdfkit`.
 (`@nuxt/test-utils` 3 + vitest 3 is NOT a valid pair with Nuxt 4 — the config silently produces an
 unhandled collection error; 4.x/4.x is the working combination.)
 
@@ -296,8 +300,8 @@ docker compose run --rm bake        # re-bake courses/*/slides/*.jpg in a contai
 | **M0** ✅ | scaffold: nuxt config, flake, layout, catalogue page, course loader, locales, Dockerfile + compose, README/AGENTS/PLAN | `./serve` shows the catalogue with locale switcher; `./test` runs; `docker compose up` serves `/api/health` → healthy |
 | **M1** ✅ | `bake-courses.mjs`, `questions.ts` validation, first real deck (`bezbedno-koriscenje`, 15 slides / 10 questions) | `npm run bake` renders a deck; bad `questions.json` fails with the exact slide; `bake:check` works |
 | **M2** ✅ | player page, `store.ts`, answer POST, resume, cover page, download route, slide image route | a course can be answered end to end; reload resumes; ⬇ works |
-| **M3** | report + name gate + scoring + retakes + `why` on pass | 8/10 → "failed, slide 3 wrong", no answer; 10/10 → explanation shown |
-| **M4** | certificate PDF + HTML page + `/verify/<id>` | PDF has name/date/score/ID; verify resolves 200/404 |
+| **M3** ✅ | report + scoring + retakes + `why` on pass | failed attempt: wrong answers red, no answer, no `why`; passed attempt: `why` shown |
+| **M4** ✅ | certificate PDF + `/verify/<id>` + name gate | PDF has name/date/score/ID; verify resolves 200/404 |
 | **M5** | content: 3–4 courses from `tmp-archive-2026-11`, zh-CN translations of the UI strings checked by eye | home page looks like a real site |
 | **M6** | polish: `?preview=1` author mode (localhost only, shows answers), keyboard help, mobile sheet, reduced motion, OG meta | — |
 

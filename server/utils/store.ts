@@ -49,6 +49,10 @@ export interface Attempt {
   name: string | null
   startedAt: string
   finishedAt: string | null
+  score: number | null
+  total: number | null
+  passed: boolean | null
+  certId: string | null
 }
 
 const SID_COOKIE = 'sid'
@@ -76,25 +80,37 @@ function rowToAttempt(row: Record<string, unknown>): Attempt {
     name: row.name == null ? null : String(row.name),
     startedAt: String(row.started_at),
     finishedAt: row.finished_at == null ? null : String(row.finished_at),
+    score: row.score == null ? null : Number(row.score),
+    total: row.total == null ? null : Number(row.total),
+    passed: row.passed == null ? null : Number(row.passed) === 1,
+    certId: row.cert_id == null ? null : String(row.cert_id),
   }
 }
 
-/** The learner's current (unfinished) attempt for a course, created on first visit. */
-export function currentAttempt(event: H3Event, slug: string, lang: string): Attempt {
-  const sid = sessionId(event)
-  const conn = getDb()
-
-  const open = conn
+/** The learner's current (unfinished) attempt, created on first visit. */
+export function findOpenAttempt(slug: string, sid: string): Attempt | null {
+  const row = getDb()
     .prepare('SELECT * FROM attempts WHERE slug = ? AND sid = ? AND finished_at IS NULL ORDER BY started_at DESC LIMIT 1')
     .get(slug, sid) as Record<string, unknown> | undefined
-  if (open) return rowToAttempt(open)
+  return row ? rowToAttempt(row) : null
+}
 
+export function currentAttempt(event: H3Event, slug: string, lang: string): Attempt {
+  const sid = sessionId(event)
+  const open = findOpenAttempt(slug, sid)
+  if (open) return open
+
+  const conn = getDb()
   const id = randomUUID()
+  const startedAt = new Date().toISOString()
   conn
     .prepare('INSERT INTO attempts (id, slug, sid, lang, started_at) VALUES (?, ?, ?, ?, ?)')
-    .run(id, slug, sid, lang, new Date().toISOString())
+    .run(id, slug, sid, lang, startedAt)
 
-  return { id, slug, sid, name: null, startedAt: new Date().toISOString(), finishedAt: null }
+  return {
+    id, slug, sid, name: null, startedAt, finishedAt: null,
+    score: null, total: null, passed: null, certId: null,
+  }
 }
 
 export function answersOf(attemptId: string): Record<number, number> {
@@ -118,4 +134,47 @@ export function restartAttempt(event: H3Event, slug: string, lang: string): Atte
     .prepare('DELETE FROM attempts WHERE slug = ? AND sid = ? AND finished_at IS NULL')
     .run(slug, sid)
   return currentAttempt(event, slug, lang)
+}
+
+/** The most recent finished attempt for this browser, if any. */
+export function latestFinished(slug: string, sid: string): Attempt | null {
+  const row = getDb()
+    .prepare('SELECT * FROM attempts WHERE slug = ? AND sid = ? AND finished_at IS NOT NULL ORDER BY finished_at DESC LIMIT 1')
+    .get(slug, sid) as Record<string, unknown> | undefined
+  return row ? rowToAttempt(row) : null
+}
+
+/** Freezes the score. Returns the stored attempt; a second call is a no-op. */
+export function finalizeAttempt(
+  attempt: Attempt,
+  grade: { score: number, total: number, passed: boolean },
+): Attempt {
+  const finishedAt = new Date().toISOString()
+  getDb()
+    .prepare('UPDATE attempts SET finished_at = ?, score = ?, total = ?, passed = ? WHERE id = ? AND finished_at IS NULL')
+    .run(finishedAt, grade.score, grade.total, grade.passed ? 1 : 0, attempt.id)
+
+  return {
+    ...attempt,
+    finishedAt,
+    score: grade.score,
+    total: grade.total,
+    passed: grade.passed,
+  }
+}
+
+/** Attaches the learner's name and the certificate id; both are immutable afterwards. */
+export function attachCertificate(attemptId: string, name: string, certId: string): void {
+  getDb()
+    .prepare('UPDATE attempts SET name = COALESCE(name, ?), cert_id = COALESCE(cert_id, ?) WHERE id = ?')
+    .run(name, certId, attemptId)
+}
+
+/** Public lookup: the certificate id is the only key the document itself carries. */
+export function attemptByCertId(certId: string): (Attempt & { courseLang: string | null }) | null {
+  const row = getDb()
+    .prepare('SELECT * FROM attempts WHERE cert_id = ? LIMIT 1')
+    .get(certId) as Record<string, unknown> | undefined
+  if (!row) return null
+  return { ...rowToAttempt(row), courseLang: (row.lang as string) ?? null }
 }

@@ -33,6 +33,7 @@ WORKDIR /app
 
 COPY --from=build --chown=node:node /app/.output ./.output
 COPY --from=build --chown=node:node /app/courses ./courses
+COPY --from=build --chown=node:node /app/server/assets ./server/assets
 
 RUN mkdir -p /data && chown node:node /data
 VOLUME ["/data"]

@@ -45,8 +45,7 @@
               @click="next"
             >
               {{ slide.next ? t('player.next') : t('player.finish') }}
-            </button>
-          </div>
+            </button>          </div>
         </div>
       </section>
     </template>
@@ -81,7 +80,8 @@ async function pick(choice: number) {
 
 function next() {
   if (!slide.value) return
-  router.push(slide.value.next ? `/c/${slug}/${slide.value.next}` : `/c/${slug}`)
+  // The end of the deck is the report — not the cover page.
+  router.push(slide.value.next ? `/c/${slug}/${slide.value.next}` : `/c/${slug}/report`)
 }
 
 // 1-4 pick, Enter advances — the whole course is doable from the keyboard.

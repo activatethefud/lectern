@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
   const attempt = currentAttempt(event, slug, lang)
   const answers = answersOf(attempt.id)
   const nextSlide = questions.questionSlides.find((n) => answers[n] === undefined) ?? null
+  const last = latestFinished(slug, attempt.sid)
 
   return {
     slug,
@@ -28,5 +29,9 @@ export default defineEventHandler(async (event) => {
     nextSlide,
     done: nextSlide === null,
     hasPptx: course.hasPptx,
+    /** a previously finished attempt for this browser, so its certificate stays reachable */
+    lastFinished: last
+      ? { passed: last.passed, score: last.score, total: last.total, certId: last.certId, finishedAt: last.finishedAt }
+      : null,
   }
 })
