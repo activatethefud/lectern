@@ -337,7 +337,7 @@ docker compose run --rm bake        # re-bake courses/*/slides/*.jpg in a contai
 | **M2** ✅ | player page, `store.ts`, answer POST, resume, cover page, download route, slide image route | a course can be answered end to end; reload resumes; ⬇ works |
 | **M3** ✅ | report + scoring + retakes + `why` on pass | failed attempt: wrong answers red, no answer, no `why`; passed attempt: `why` shown |
 | **M4** ✅ | certificate PDF + `/verify/<id>` + name gate | PDF has name/date/score/ID; verify resolves 200/404 |
-| **M5** ✅ | content: `bezbedno-koriscenje` 15 slides × **sr + en + zh-CN**, 10 questions in three languages | home page and player look like a real site in all three languages |
+| **M5** ✅ | content: **20 courses** (18 imported from the Novo deck folder via `tools/auto-course.mjs`) — 145 questions, every deck in sr + en + zh-CN | catalogue, search and player work in all three languages |
 | **M6** | polish: `?preview=1` author mode (localhost only, shows answers), keyboard help, mobile sheet, reduced motion, OG meta | — |
 
 Effort: M0–M1 ≈ 5 h, M2 ≈ 6 h, M3 ≈ 3 h, M4 ≈ 4 h, M5 ≈ 1 h per deck, M6 ≈ 3 h.

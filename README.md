@@ -65,6 +65,20 @@ is what keeps a stale translation from silently shipping.
 Nothing is registered anywhere: a folder under `courses/` is a course, and the home page picks
 it up on the next request. Baked images are committed, so a deploy never needs LibreOffice.
 
+## Bulk-import a folder of decks
+
+`tools/auto-course.mjs` turns a single `.pptx` into a full course folder (metadata, trilingual
+questions, trilingual deck translation), using a model to draft and this script to *enforce* the
+invariants (numbering, four distinct options, answer range, paragraph-for-paragraph translations):
+
+```bash
+OPENROUTER_API_KEY=… node tools/auto-course.mjs deck.pptx --slug moj-kurs --grade 6 --order 21
+./bake moj-kurs
+```
+
+Model output is a draft: it is validated mechanically and worth a human read before publishing.
+Slides the model leaves out are stored as `skip: true`, so the deck/question count always lines up.
+
 ## Certificates
 
 Passing (≥ 90 %) issues a certificate carrying a **tracking number** (`SC-2026-000001`), the exact

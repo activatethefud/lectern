@@ -27,6 +27,7 @@ courses/<slug>/
 | `./serve` | dev server on 127.0.0.1:8765 (inside `nix develop`) |
 | `./test` | `vitest run` — unit + `@nuxt/test-utils` integration |
 | `npm run bake` | pptx → pdf → jpg for every course (needs libreoffice + poppler) |
+| `node tools/auto-course.mjs <deck> --slug … --grade …` | draft a whole course folder from one deck (needs an OpenRouter key; output must be reviewed) |
 | `npm run bake:check` | fails if `manifest.deckSha` ≠ sha256 of `slides.pptx` |
 | `npm run build && npm start` | production node server on `.output/server/index.mjs` |
 | `npm run typecheck` | `vue-tsc` over app + server |
