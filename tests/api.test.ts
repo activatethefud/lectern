@@ -180,6 +180,20 @@ describe('player api', async () => {
     expect([...bytes]).toEqual([0x50, 0x4b])
   })
 
+  it('the test course passes when every answer is B (option 1)', async () => {
+    const s = newSession()
+    const slides = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    for (const n of slides) {
+      expect((await postJson(s, '/api/c/test-course/answer', { n, choice: 1 })).status).toBe(200)
+    }
+
+    const report = await getJson<Report>(s, '/api/c/test-course/report')
+    expect(report.total).toBe(slides.length)
+    expect(report.score).toBe(slides.length)
+    expect(report.passed).toBe(true)
+    expect(report.items.every((i) => i.chosen === 1 && i.correct)).toBe(true)
+  })
+
   it('409s on the report while questions are still unanswered', async () => {
     const res = await learner(`/api/c/${COURSE}/report`)
     expect(res.status).toBe(409)

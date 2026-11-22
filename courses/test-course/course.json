@@ -1,0 +1,16 @@
+{
+  "slug": "test-course",
+  "title": {
+    "sr": "Test kurs — svaki tačan odgovor je B",
+    "en": "Test course — every correct answer is B",
+    "zh-CN": "测试课程——正确答案都是 B"
+  },
+  "description": {
+    "sr": "Kurs za proveru rada sajta: 15 slajdova i 10 pitanja, tačan odgovor je uvek drugi (B).",
+    "en": "Site check course: 15 slides, 10 questions, the correct option is always the second (B).",
+    "zh-CN": "用于检查站点：15 张幻灯片、10 道题，正确答案始终是第二项（B）。"
+  },
+  "tags": ["test", "qa"],
+  "lang": "sr",
+  "order": 999
+}
